@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Vanilla Nutrient Paste Expanded: Reimagined Progression</name>
+	<author>MrHydralisk</author>
+	<packageId>MrHydralisk.VNPEReimaginedProgression</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">Things/Building/Grinder/NutrientPasteGrinderT3</modIconPath>
+	<description>Revisit of Vanilla Nutrient Paste Expanded to add new functionality and improve it progression</description>
+	<modDependencies>
+		<li>
+			<packageId>VanillaExpanded.VNutrientE</packageId>
+			<displayName>Vanilla Nutrient Paste Expanded</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>VanillaExpanded.VNutrientE</li>
+	</loadAfter>
+</ModMetaData>

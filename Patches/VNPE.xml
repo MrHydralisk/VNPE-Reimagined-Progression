@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeAdd">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]</xpath>
+				<attribute>Name</attribute>
+				<value>VNPE_NutrientPasteGrinder</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]</xpath>
+				<value>
+					<designatorDropdown>VNPE_NutrientPasteGrinder_SET</designatorDropdown>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

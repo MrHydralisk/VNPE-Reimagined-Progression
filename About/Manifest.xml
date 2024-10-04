@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+	<identifier>MrHydralisk.VNPEReimaginedProgression</identifier>
+	<version>1.0.0.0</version>
+	<dependencies>
+		<li>VanillaExpanded.VNutrientE</li>
+	</dependencies>
+	<suggests>
+		<li>VanillaExpanded.VNutrientE</li>
+		<li>MrHydralisk.VNPEDeepVat</li>
+		<li>MrHydralisk.VNPENPDTiers</li>
+		<li>MrHydralisk.VOEAdditionalOutposts</li>
+		<li>MrHydralisk.UndergroundVault</li>
+		<li>MrHydralisk.AnomaliesExpected</li>
+	</suggests>
+	<showCrossPromotions>true</showCrossPromotions>
+</Manifest>
