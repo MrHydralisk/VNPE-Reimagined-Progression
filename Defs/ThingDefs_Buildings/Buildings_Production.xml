@@ -152,7 +152,8 @@
 	<ThingDef ParentName="VNPE_NutrientPasteDripper">
 		<defName>VNPE_NutrientPasteFeedingTube0T</defName>
 		<label>nutrient paste feeding tube</label>
-		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
+		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
+		<thingClass>VNPEReimaginedProgression.Building_NutrientPasteFeedingTube</thingClass>
 		<graphicData>
 			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTube</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>

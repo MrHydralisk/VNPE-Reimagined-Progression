@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="Building_NutrientPasteFeedingTube.cs" />
     <Compile Include="PlaceWorker_NutrientPasteFeedingTube.cs" />
     <Compile Include="VNPERPDefModExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
