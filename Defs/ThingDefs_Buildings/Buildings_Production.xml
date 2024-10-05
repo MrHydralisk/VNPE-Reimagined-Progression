@@ -164,14 +164,15 @@
 				<volume>(0.55, 0.30, 0.40)</volume>
 			</shadowData>
 			<damageData>
-				<rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
-				<rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
-				<rectE>(0.125,0.46875,0.625,0.296875)</rectE>
-				<rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+				<rectN>(0.2812,0.0312,0.4375,0.3203)</rectN>
+				<rectS>(0.2812,0.8125,0.4375,0.3359)</rectS>
+				<rectE>(-0.0625,0.3594,0.3516,0.414)</rectE>
+				<rectW>(0.7109,0.3594,0.3516,0.414)</rectW>
 				<cornerTR>Damage/Corner</cornerTR>
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTube</uiIconPath>
+		<uiIconScale>0.6</uiIconScale>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
