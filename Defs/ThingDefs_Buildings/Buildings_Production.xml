@@ -142,5 +142,78 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+	
+	
+  
+	<DesignatorDropdownGroupDef>
+		<defName>VNPE_NutrientPasteFeedingTube_SET</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteDripper">
+		<defName>VNPE_NutrientPasteFeedingTube0T</defName>
+		<label>nutrient paste feeding tube</label>
+		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
+		<graphicData>
+			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTube</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(232,255,191)</color>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+				<rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+				<rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+				<rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTube</uiIconPath>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>Standable</passability>
+		<fillPercent>0.1</fillPercent>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>7500</WorkToBuild>
+			<Mass>8</Mass>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<costList>
+			<Steel>35</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<forceShowRoomStats>true</forceShowRoomStats>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+		<designatorDropdown>VNPE_NutrientPasteFeedingTube_SET</designatorDropdown>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<placeWorkers Inherit="False">
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>VNPEReimaginedProgression.PlaceWorker_NutrientPasteFeedingTube</li>
+		</placeWorkers>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
 
 </Defs>

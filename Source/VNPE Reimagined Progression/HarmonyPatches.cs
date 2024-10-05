@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,27 @@ namespace VNPEReimaginedProgression
         {
             patchType = typeof(HarmonyPatches);
             Harmony val = new Harmony("rimworld.mrhydralisk.VNPEReimaginedProgressionPatch");
+
+            List<ThingDef> allDefsListForReading = DefDatabase<ThingDef>.AllDefsListForReading;
+            List<ThingDef> VNPE_NPDs = allDefsListForReading.Where((ThingDef td) => td.defName.StartsWith("VNPE_NutrientPasteFeedingTube")).ToList();
+            foreach (ThingDef item in allDefsListForReading)
+            {
+                if (item.building != null && item.building.buildingTags.Contains("Bed") && !item.defName.Contains("Spot"))
+                {
+                    CompProperties_AffectedByFacilities compProperties = item.GetCompProperties<CompProperties_AffectedByFacilities>();
+                    foreach (ThingDef VNPE_NPD in VNPE_NPDs)
+                    {
+                        if (compProperties != null && !compProperties.linkableFacilities.Contains(VNPE_NPD))
+                        {
+                            compProperties.linkableFacilities.Add(VNPE_NPD);
+                        }
+                    }
+                }
+            }
+            foreach (ThingDef VNPE_NPD in VNPE_NPDs)
+            {
+                VNPE_NPD.GetCompProperties<CompProperties_Facility>().ResolveReferences(VNPE_NPD);
+            }
 
             val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler", (Type[])null));
         }
@@ -38,13 +60,12 @@ namespace VNPEReimaginedProgression
 
         public static void BNG_Tick_AdditionalPaste(Building_NutrientGrinder __instance)
         {
-            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
-            Log.Message($"VNPERP {VNPERP == null} {VNPERP?.AdditionalGrind}");
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>(); 
             if (VNPERP != null && VNPERP.AdditionalGrind > 0)
             {
                 for (int i = 0; i < VNPERP.AdditionalGrind; i++)
                 {
-                    Log.Message((bool)AccessTools.Method(typeof(Building_NutrientGrinder), "TryProducePaste").Invoke(__instance, Array.Empty<object>()));
+                    AccessTools.Method(typeof(Building_NutrientGrinder), "TryProducePaste").Invoke(__instance, Array.Empty<object>());
                 }
             }
         }

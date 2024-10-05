@@ -14,6 +14,11 @@
 					<designatorDropdown>VNPE_NutrientPasteGrinder_SET</designatorDropdown>
 				</value>
 			</li>
+			<li Class="PatchOperationAttributeAdd">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteDripper"]</xpath>
+				<attribute>Name</attribute>
+				<value>VNPE_NutrientPasteDripper</value>
+			</li>
 		</operations>
 	</Operation>
 
