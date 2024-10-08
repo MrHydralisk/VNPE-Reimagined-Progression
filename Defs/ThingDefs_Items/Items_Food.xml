@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MealNutrientPaste">
+		<defName>MealNutrientPasteDT</defName>
+		<label>diluted nutrient paste meal</label>
+		<description>A very diluted synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Barely enough to sustain anybody and absolutely disgusting.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteTD</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<ingestible>
+			<preferability>MealAwful</preferability>
+			<tasteThought>AteNutrientPasteDT</tasteThought>
+			<ateEvent />
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MealNutrientPaste">
+		<defName>MealNutrientPaste1T</defName>
+		<label>simple nutrient paste meal</label>
+		<description>A synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs, but no longer absolutely disgusting, due to new filtration method.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteT1</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>12</MarketValue>
+		</statBases>
+		<ingestible>
+			<preferability>MealSimple</preferability>
+			<tasteThought>AteNutrientPaste1T</tasteThought>
+			<ateEvent />
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MealNutrientPaste">
+		<defName>MealNutrientPaste2T</defName>
+		<label>fine nutrient paste meal</label>
+		<description>A synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs. Have additional portion of different flavour.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteT2</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>17</MarketValue>
+		</statBases>
+		<ingestible>
+			<preferability>MealFine</preferability>
+			<tasteThought>AteNutrientPaste2T</tasteThought>
+			<ateEvent />
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MealNutrientPaste">
+		<defName>MealNutrientPaste3T</defName>
+		<label>lavish nutrient paste meal</label>
+		<description>A synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs. Have variety of additional portions of different flavours and solidity to fit taste of anyone.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteT3</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>37</MarketValue>
+		</statBases>
+		<ingestible>
+			<preferability>MealLavish</preferability>
+			<tasteThought>AteNutrientPaste3T</tasteThought>
+			<ateEvent />
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>MealNutrientPasteCT</defName>
+		<label>nutrient paste cubes</label>
+		<description>A preserved highly condenced synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs in small solid form. It lasts a very long time without refrigeration. Great for traveling.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteTC</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>1.2</MarketValue>
+			<Mass>0.016</Mass>
+			<Flammability>0.6</Flammability>
+			<WorkToMake>700</WorkToMake>
+			<DeteriorationRate>1</DeteriorationRate>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<preferability>MealSimple</preferability>
+			<tasteThought>AteNutrientPasteCT</tasteThought>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>70</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+			<li Class="CompProperties_FoodPoisonable"/>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>MealNutrientPasteKT</defName>
+		<label>nutrient paste kibble</label>
+		<description>A synthetic animal feed mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs, and absolutely disgusting. Humans can eat it, but no one will eat it in their right mind.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteTK</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<Mass>0.013</Mass>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.1</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>Kibble</foodType>
+			<preferability>RawBad</preferability>
+			<tasteThought>AteNutrientPasteKT</tasteThought>
+			<optimalityOffsetHumanlikes>-31</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>16</optimalityOffsetFeedingAnimals>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Ingredients">
+				<performMergeCompatibilityChecks>false</performMergeCompatibilityChecks>
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

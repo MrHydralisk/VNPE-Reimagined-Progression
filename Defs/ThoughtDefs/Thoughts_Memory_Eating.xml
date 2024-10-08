@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>AteNutrientPasteDT</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate diluted nutrient paste meal</label>
+				<description>I ate a really disgusting nutrient paste meal. It was so diluted that it had barely anything in it.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>AteNutrientPasteMeal</li>
+			<li>AteFineMeal</li>
+			<li>AteLavishMeal</li>
+			<li>AteNutrientPaste1T</li>
+			<li>AteNutrientPaste2T</li>
+			<li>AteNutrientPaste3T</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteNutrientPaste1T</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate simple nutrient paste meal</label>
+				<description>I ate a nutrient paste meal. But it wasn't as bad.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>AteNutrientPasteMeal</li>
+			<li>AteFineMeal</li>
+			<li>AteLavishMeal</li>
+			<li>AteNutrientPasteDT</li>
+			<li>AteNutrientPaste2T</li>
+			<li>AteNutrientPaste3T</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteNutrientPaste2T</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate fine nutrient paste meal</label>
+				<description>I ate a really tasty nutrient paste meal.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>AteNutrientPasteMeal</li>
+			<li>AteFineMeal</li>
+			<li>AteLavishMeal</li>
+			<li>AteNutrientPasteDT</li>
+			<li>AteNutrientPaste1T</li>
+			<li>AteNutrientPaste3T</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteNutrientPaste3T</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate lavish nutrient paste meal</label>
+				<description>That lavish meal was amazing, especially considering it was a nutrient paste. It had everything that I wanted in it.</description>
+				<baseMoodEffect>9</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>AteNutrientPasteMeal</li>
+			<li>AteFineMeal</li>
+			<li>AteLavishMeal</li>
+			<li>AteNutrientPasteDT</li>
+			<li>AteNutrientPaste1T</li>
+			<li>AteNutrientPaste2T</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteNutrientPasteCT</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate nutrient paste cubes</label>
+				<description>Solidified nutrient paste actually doesn't taste bad.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>AteNutrientPasteKT</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate nutrient paste kibble</label>
+				<description>I had to eat animal kibble. It's like I don't get to be human any more. It tasted like mud.</description>
+				<baseMoodEffect>-14</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

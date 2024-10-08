@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeAdd">
+				<xpath>Defs/ThingDef[defName ="MealNutrientPaste"]</xpath>
+				<attribute>Name</attribute>
+				<value>MealNutrientPaste</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName ="AteFineMeal" or defName ="AteLavishMeal"]/replaceThoughts</xpath>
+				<order>Append</order>
+				<value>
+					<li>AteNutrientPasteDT</li>
+					<li>AteNutrientPaste1T</li>
+					<li>AteNutrientPaste2T</li>
+					<li>AteNutrientPaste3T</li>
+				</value>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName ="AteNutrientPasteMeal"]/replaceThoughts</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName ="AteNutrientPasteMeal"]</xpath>
+					<order>Append</order>
+					<value>
+						<replaceThoughts>
+							<li>AteNutrientPasteDT</li>
+							<li>AteNutrientPaste1T</li>
+							<li>AteNutrientPaste2T</li>
+							<li>AteNutrientPaste3T</li>
+						</replaceThoughts>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName ="AteNutrientPasteMeal"]/replaceThoughts</xpath>
+					<order>Append</order>
+					<value>
+						<li>AteNutrientPasteDT</li>
+						<li>AteNutrientPaste1T</li>
+						<li>AteNutrientPaste2T</li>
+						<li>AteNutrientPaste3T</li>
+					</value>
+				</match>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
