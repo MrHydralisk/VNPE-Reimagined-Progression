@@ -41,6 +41,7 @@ namespace VNPEReimaginedProgression
             }
 
             val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler", (Type[])null));
+            val.Patch(AccessTools.Method(typeof(Room), "Notify_RoomShapeChanged"), postfix: new HarmonyMethod(patchType, "Room_Notify_RoomShapeChanged_Postfix", (Type[])null));
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -66,6 +67,19 @@ namespace VNPEReimaginedProgression
                 for (int i = 0; i < VNPERP.AdditionalGrind; i++)
                 {
                     AccessTools.Method(typeof(Building_NutrientGrinder), "TryProducePaste").Invoke(__instance, Array.Empty<object>());
+                }
+            }
+        }
+
+        public static void Room_Notify_RoomShapeChanged_Postfix(Room __instance)
+        {
+            if (!__instance.Dereferenced)
+            {
+                Map map = __instance.Map;
+                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t.def.defName.StartsWith("VNPE_NutrientPasteFeedingTube")).ToList();
+                for (int k = 0; k < list1.Count; k++)
+                {
+                    list1[k].Notify_ColorChanged();
                 }
             }
         }

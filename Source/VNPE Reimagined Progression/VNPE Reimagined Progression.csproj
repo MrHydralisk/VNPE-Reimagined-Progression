@@ -69,6 +69,7 @@
     <Compile Include="PlaceWorker_NutrientPasteFeedingTube.cs" />
     <Compile Include="VNPERPDefModExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VNPERPUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">

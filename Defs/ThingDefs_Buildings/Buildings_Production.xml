@@ -7,7 +7,7 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
 		<defName>VNPE_NutrientPasteGrinder1T</defName>
-		<label>nutrient paste grinder T1</label>
+		<label>improved nutrient paste grinder</label>
 		<description>An improved machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 2 inputs of food at the same time.</description>
 		<graphicData>
 			<texPath>Things/Building/Grinder/NutrientPasteGrinderT1</texPath>
@@ -52,7 +52,7 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
 		<defName>VNPE_NutrientPasteGrinder2T</defName>
-		<label>nutrient paste grinder T2</label>
+		<label>advanced nutrient paste grinder</label>
 		<description>An advanced machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 4 inputs of food at the same time.</description>
 		<graphicData>
 			<texPath>Things/Building/Grinder/NutrientPasteGrinderT2</texPath>
@@ -98,7 +98,7 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
 		<defName>VNPE_NutrientPasteGrinder3T</defName>
-		<label>nutrient paste grinder T3</label>
+		<label>high tech nutrient paste grinder</label>
 		<description>A high tech machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 8 inputs of food at the same time.</description>
 		<graphicData>
 			<texPath>Things/Building/Grinder/NutrientPasteGrinderT3</texPath>
@@ -149,16 +149,16 @@
 		<defName>VNPE_NutrientPasteFeedingTube_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteDripper">
+	<ThingDef Name="VNPE_NutrientPasteFeedingTube" ParentName="VNPE_NutrientPasteDripper">
 		<defName>VNPE_NutrientPasteFeedingTube0T</defName>
 		<label>nutrient paste feeding tube</label>
-		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
+		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
 		<thingClass>VNPEReimaginedProgression.Building_NutrientPasteFeedingTube</thingClass>
 		<graphicData>
-			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTube</texPath>
+			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT0</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<color>(232,255,191)</color>
+			<color>(255,255,255)</color>
 			<drawSize>(2,2)</drawSize>
 			<shadowData>
 				<volume>(0.55, 0.30, 0.40)</volume>
@@ -171,7 +171,7 @@
 				<cornerTR>Damage/Corner</cornerTR>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTube</uiIconPath>
+		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT0</uiIconPath>
 		<uiIconScale>0.6</uiIconScale>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
@@ -216,6 +216,244 @@
 			<li>VNPEReimaginedProgression.PlaceWorker_NutrientPasteFeedingTube</li>
 		</placeWorkers>
 		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
+		<defName>VNPE_NutrientPasteFeedingTubeDT</defName>
+		<label>diluted nutrient paste feeding tube</label>
+		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
+		<graphicData>
+			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeTD</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.2812,0.0312,0.4375,0.3203)</rectN>
+				<rectS>(0.2812,0.8125,0.4375,0.3359)</rectS>
+				<rectE>(-0.0625,0.3594,0.3516,0.414)</rectE>
+				<rectW>(0.7109,0.3594,0.3516,0.414)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeTD</uiIconPath>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>5500</WorkToBuild>
+			<Mass>7</Mass>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>40</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPasteDT</customMeal>
+				<storageCost>0.5</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
+		<defName>VNPE_NutrientPasteFeedingTube1T</defName>
+		<label>simple nutrient paste feeding tube</label>
+		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
+		<graphicData>
+			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.2812,0.0312,0.4375,0.3203)</rectN>
+				<rectS>(0.2812,0.8125,0.4375,0.3359)</rectS>
+				<rectE>(-0.0625,0.3594,0.3516,0.414)</rectE>
+				<rectW>(0.7109,0.3594,0.3516,0.414)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT1</uiIconPath>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToBuild>8500</WorkToBuild>
+			<Mass>8</Mass>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>55</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste1T</customMeal>
+				<storageCost>2</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
+		<defName>VNPE_NutrientPasteFeedingTube2T</defName>
+		<label>fine nutrient paste feeding tube</label>
+		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
+		<graphicData>
+			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.2812,0.0312,0.4375,0.3203)</rectN>
+				<rectS>(0.2812,0.8125,0.4375,0.3359)</rectS>
+				<rectE>(-0.0625,0.3594,0.3516,0.414)</rectE>
+				<rectW>(0.7109,0.3594,0.3516,0.414)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT2</uiIconPath>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<WorkToBuild>9500</WorkToBuild>
+			<Mass>9</Mass>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<costList>
+			<Steel>85</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>60</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste2T</customMeal>
+				<storageCost>3</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
+		<defName>VNPE_NutrientPasteFeedingTube3T</defName>
+		<label>lavish nutrient paste feeding tube</label>
+		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
+		<graphicData>
+			<texPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT3</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(2,2)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.2812,0.0312,0.4375,0.3203)</rectN>
+				<rectS>(0.2812,0.8125,0.4375,0.3359)</rectS>
+				<rectE>(-0.0625,0.3594,0.3516,0.414)</rectE>
+				<rectW>(0.7109,0.3594,0.3516,0.414)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT3</uiIconPath>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>10500</WorkToBuild>
+			<Mass>9</Mass>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>25</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>70</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste3T</customMeal>
+				<storageCost>4</storageCost>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 </Defs>

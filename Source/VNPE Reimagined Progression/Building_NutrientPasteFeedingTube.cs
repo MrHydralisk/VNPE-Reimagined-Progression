@@ -29,7 +29,8 @@ namespace VNPEReimaginedProgression
         public override void TickRare()
         {
             PipeNet pipeNet = resourceComp.PipeNet;
-            if (!powerComp.PowerOn || pipeNet.Stored == 0f)
+            //if (!powerComp.PowerOn || pipeNet.Stored < VNPERPUtility.DrawAmongStorage(this))
+            if (!powerComp.PowerOn || pipeNet.Stored == 0)
             {
                 return;
             }
@@ -75,8 +76,8 @@ namespace VNPEReimaginedProgression
                     {
                         continue;
                     }
-                    pipeNet.DrawAmongStorage(1f, pipeNet.storages);
-                    Thing thing2 = ThingMaker.MakeThing(ThingDefOf.MealNutrientPaste);
+                    pipeNet.DrawAmongStorage(VNPERPUtility.DrawAmongStorage(this, 1f), pipeNet.storages);
+                    Thing thing2 = ThingMaker.MakeThing(VNPERPUtility.MealNutrientPasteDef(this, ThingDefOf.MealNutrientPaste));
                     CompIngredients compIngredients = thing2.TryGetComp<CompIngredients>();
                     if (compIngredients != null)
                     {
