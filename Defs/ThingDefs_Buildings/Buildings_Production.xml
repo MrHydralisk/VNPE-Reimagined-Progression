@@ -331,7 +331,7 @@
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste1T</customMeal>
-				<storageCost>2</storageCost>
+				<storageCost>1.66667</storageCost>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -390,7 +390,7 @@
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste2T</customMeal>
-				<storageCost>3</storageCost>
+				<storageCost>2.5</storageCost>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -451,7 +451,7 @@
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste3T</customMeal>
-				<storageCost>4</storageCost>
+				<storageCost>3.33333</storageCost>
 			</li>
 		</modExtensions>
 	</ThingDef>
