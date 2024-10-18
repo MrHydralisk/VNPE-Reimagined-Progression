@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<WorkGiverDef>
+		<defName>TakeOutNutrientPasteProcessor</defName>
+		<label>take processed items out of nutrient paste processors</label>
+		<giverClass>VNPEReimaginedProgression.WorkGiver_TakeOutNutrientPasteProcessor</giverClass>
+		<workType>Hauling</workType>
+		<verb>take processed items</verb>
+		<gerund>taking processed items from</gerund>
+		<priorityInType>20</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<canBeDoneByMutants>false</canBeDoneByMutants>
+	</WorkGiverDef>
+
+</Defs>

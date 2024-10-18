@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>Maximum will become {0}</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>
+    <VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>Maximum Stored</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>
+    <VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>Select the maximum amount of processed items, after reaching which it will require unloading</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>	
+	
+    <VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>Toggle auto unloading</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>
+    <VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>When active, colonists will automatically unload processed items from the processor as it is filling up.</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>
+	
+    <VNPEReimaginedProgression.Processor.Gizmo.Eject.Label>Eject content</VNPEReimaginedProgression.Processor.Gizmo.Eject.Label>
+    <VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc>Eject all contained processed items onto the ground.</VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc>
+    <VNPEReimaginedProgression.Processor.Gizmo.Eject.Empty>No processed items available.</VNPEReimaginedProgression.Processor.Gizmo.Eject.Empty>
+	
+	
+	
+	<VNPEReimaginedProgression.Processor.InspectString.Stored>Currently stored {0} x{1}/{2}.</VNPEReimaginedProgression.Processor.InspectString.Stored>
+	<VNPEReimaginedProgression.Processor.InspectString.Processing>Currently processing {0}.</VNPEReimaginedProgression.Processor.InspectString.Processing>
+	<VNPEReimaginedProgression.Processor.InspectString.Full>Currently full. Require unloading.</VNPEReimaginedProgression.Processor.InspectString.Full>
+	<VNPEReimaginedProgression.Processor.InspectString.Require>Require input of {0} Nutrient Paste.</VNPEReimaginedProgression.Processor.InspectString.Require>
+
+</LanguageData>

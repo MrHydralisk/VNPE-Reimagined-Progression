@@ -73,6 +73,29 @@
 		</ingestible>
 	</ThingDef>
 
+	<ThingDef ParentName="MealBase">
+		<defName>MealNutrientPasteST</defName>
+		<label>survival nutrient paste pack</label>
+		<description>A packaged synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs in small solid form. While it never rots, it can still deteriorate if left outside. Great for traveling.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/NutrientPasteTS</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.25</DeteriorationRate>
+			<MarketValue>21</MarketValue>
+			<Mass>0.26</Mass>
+			<Nutrition>0.9</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealSimple</preferability>
+			<optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+	</ThingDef>
+
 	<ThingDef ParentName="OrganicProductBase">
 		<defName>MealNutrientPasteCT</defName>
 		<label>nutrient paste cubes</label>
