@@ -575,15 +575,15 @@
 		<label>diluted nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-			<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-			<!-- <color>(192,136,220)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(4,2)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
+		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <color>(192,136,220)</color> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <drawSize>(4,2)</drawSize> -->
+		<!-- <damageData> -->
+		<!-- <cornerTL>Damage/Corner</cornerTL> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
@@ -621,15 +621,15 @@
 		<label>simple nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-			<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-			<!-- <color>(192,136,220)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(4,2)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
+		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <color>(192,136,220)</color> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <drawSize>(4,2)</drawSize> -->
+		<!-- <damageData> -->
+		<!-- <cornerTL>Damage/Corner</cornerTL> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
@@ -667,15 +667,15 @@
 		<label>fine nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-			<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-			<!-- <color>(192,136,220)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(4,2)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
+		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <color>(192,136,220)</color> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <drawSize>(4,2)</drawSize> -->
+		<!-- <damageData> -->
+		<!-- <cornerTL>Damage/Corner</cornerTL> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
@@ -713,15 +713,15 @@
 		<label>lavish nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-			<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-			<!-- <color>(192,136,220)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(4,2)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
+		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <color>(192,136,220)</color> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <drawSize>(4,2)</drawSize> -->
+		<!-- <damageData> -->
+		<!-- <cornerTL>Damage/Corner</cornerTL> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
@@ -746,6 +746,236 @@
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste3T</customMeal>
+				<storageCost>3.33333</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+	
+	<DesignatorDropdownGroupDef>
+		<defName>VNPE_NutrientPasteDripper_SET</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteDripper">
+		<defName>VNPE_NutrientPasteDripperDT</defName>
+		<label>diluted nutrient paste dripper</label>
+		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
+		<!-- <graphicData> -->
+		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <color>(232,255,191)</color> -->
+		<!-- <drawSize>(1,1)</drawSize> -->
+		<!-- <shadowData> -->
+		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
+		<!-- </shadowData> -->
+		<!-- <damageData> -->
+		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
+		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
+		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
+		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
+		<!-- </graphicData> -->
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>6000</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPasteDT</customMeal>
+				<storageCost>0.66667</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteDripper">
+		<defName>VNPE_NutrientPasteDripper1T</defName>
+		<label>simple nutrient paste dripper</label>
+		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
+		<!-- <graphicData> -->
+		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <color>(232,255,191)</color> -->
+		<!-- <drawSize>(1,1)</drawSize> -->
+		<!-- <shadowData> -->
+		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
+		<!-- </shadowData> -->
+		<!-- <damageData> -->
+		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
+		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
+		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
+		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
+		<!-- </graphicData> -->
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>6000</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste1T</customMeal>
+				<storageCost>1.66667</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteDripper">
+		<defName>VNPE_NutrientPasteDripper2T</defName>
+		<label>fine nutrient paste dripper</label>
+		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
+		<!-- <graphicData> -->
+		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <color>(232,255,191)</color> -->
+		<!-- <drawSize>(1,1)</drawSize> -->
+		<!-- <shadowData> -->
+		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
+		<!-- </shadowData> -->
+		<!-- <damageData> -->
+		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
+		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
+		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
+		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
+		<!-- </graphicData> -->
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>6000</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste2T</customMeal>
+				<storageCost>2.5</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteDripper">
+		<defName>VNPE_NutrientPasteDripper3T</defName>
+		<label>lavish nutrient paste dripper</label>
+		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
+		<!-- <graphicData> -->
+		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
+		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
+		<!-- <shaderType>CutoutComplex</shaderType> -->
+		<!-- <color>(232,255,191)</color> -->
+		<!-- <drawSize>(1,1)</drawSize> -->
+		<!-- <shadowData> -->
+		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
+		<!-- </shadowData> -->
+		<!-- <damageData> -->
+		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
+		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
+		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
+		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
+		<!-- <cornerTR>Damage/Corner</cornerTR> -->
+		<!-- </damageData> -->
+		<!-- </graphicData> -->
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>6000</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Facility">
+				<maxSimultaneous>2</maxSimultaneous>
+				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+				<mustBePlacedAdjacentCardinalToAndFacingBedHead>true</mustBePlacedAdjacentCardinalToAndFacingBedHead>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste3T</customMeal>

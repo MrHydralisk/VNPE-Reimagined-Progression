@@ -29,8 +29,7 @@ namespace VNPEReimaginedProgression
         public override void TickRare()
         {
             PipeNet pipeNet = resourceComp.PipeNet;
-            //if (!powerComp.PowerOn || pipeNet.Stored < VNPERPUtility.DrawAmongStorage(this))
-            if (!powerComp.PowerOn || pipeNet.Stored == 0)
+            if (!powerComp.PowerOn || pipeNet.Stored < VNPERPUtility.DrawAmongStorage(this))
             {
                 return;
             }

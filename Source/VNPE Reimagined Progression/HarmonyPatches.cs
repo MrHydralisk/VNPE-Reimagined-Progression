@@ -23,7 +23,7 @@ namespace VNPEReimaginedProgression
             Harmony val = new Harmony("rimworld.mrhydralisk.VNPEReimaginedProgressionPatch");
 
             List<ThingDef> allDefsListForReading = DefDatabase<ThingDef>.AllDefsListForReading;
-            List<ThingDef> VNPE_NPDs = allDefsListForReading.Where((ThingDef td) => td.defName.StartsWith("VNPE_NutrientPasteFeedingTube")).ToList();
+            List<ThingDef> VNPE_NPDs = allDefsListForReading.Where((ThingDef td) => td.defName.StartsWith("VNPE_NutrientPasteFeedingTube") || td.defName.StartsWith("VNPE_NutrientPasteDripper")).ToList();
             foreach (ThingDef item in allDefsListForReading)
             {
                 if (item.building != null && item.building.buildingTags.Contains("Bed") && !item.defName.Contains("Spot"))
@@ -44,7 +44,9 @@ namespace VNPEReimaginedProgression
             }
 
             val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler"));
+
             val.Patch(AccessTools.Method(typeof(Room), "Notify_RoomShapeChanged"), postfix: new HarmonyMethod(patchType, "Room_Notify_RoomShapeChanged_Postfix"));
+
             val.Patch(AccessTools.Method(typeof(ThingListGroupHelper), "Includes"), postfix: new HarmonyMethod(patchType, "TLGH_Includes_Postfix"));
             val.Patch(AccessTools.Property(typeof(Building_NutrientPasteTap), "CanDispenseNowOverride").GetGetMethod(), prefix: new HarmonyMethod(patchType, "BNPT_CanDispenseNowOverride_Prefix"));
             val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "HasEnoughFeedstockInHoppers"), prefix: new HarmonyMethod(patchType, "BNPT_HasEnoughFeedstockInHoppers_Prefix"));
@@ -52,6 +54,9 @@ namespace VNPEReimaginedProgression
             val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "TryDropFood"), prefix: new HarmonyMethod(patchType, "BNPT_TryDropFood_Prefix"));
             val.Patch(AccessTools.Method(typeof(FoodUtility).GetNestedTypes(AccessTools.all).First((Type t) => t.Name.Contains("c__DisplayClass14_0")), "<BestFoodSourceOnMap>b__0"), transpiler: new HarmonyMethod(patchType, "FU_BestFoodSourceOnMap_foodValidator_Transpiler"));
             val.Patch(AccessTools.Property(typeof(Building_NutrientPasteDispenser), "DispensableDef").GetGetMethod(), postfix: new HarmonyMethod(patchType, "BNPD_DispensableDef_Postfix"));
+
+            val.Patch(AccessTools.Method(typeof(Building_Dripper), "TickRare"), prefix: new HarmonyMethod(patchType, "BD_TickRare_Prefix", (Type[])null));
+
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -86,7 +91,7 @@ namespace VNPEReimaginedProgression
             if (!__instance.Dereferenced)
             {
                 Map map = __instance.Map;
-                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t.def.defName.StartsWith("VNPE_NutrientPasteFeedingTube")).ToList();
+                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t.def.defName.StartsWith("VNPE_NutrientPasteFeedingTube") || t.def.defName.StartsWith("VNPE_NutrientPasteTap") || t.def.defName.StartsWith("VNPE_NutrientPasteFeeder") || t.def.defName.StartsWith("VNPE_NutrientPasteDripper")).ToList();
                 for (int k = 0; k < list1.Count; k++)
                 {
                     list1[k].Notify_ColorChanged();
@@ -237,6 +242,69 @@ namespace VNPEReimaginedProgression
         public static void BNPD_DispensableDef_Postfix(Building_NutrientPasteDispenser __instance, ref ThingDef __result)
         {
             __result = VNPERPUtility.MealNutrientPasteDef(__instance, __result);
+        }
+
+        public static bool BD_TickRare_Prefix(Building_Dripper __instance)
+        {
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
+            if (VNPERP != null)
+            {
+                PipeNet pipeNet = __instance.resourceComp.PipeNet;
+                if (!__instance.powerComp.PowerOn || pipeNet.Stored < VNPERP.storageCost)
+                {
+                    return false;
+                }
+                IntVec3 position = __instance.Position;
+                List<Thing> linkedBuildings = __instance.facilityComp.LinkedBuildings;
+                for (int i = 0; i < linkedBuildings.Count; i++)
+                {
+                    Thing thing = linkedBuildings[i];
+                    if (!(thing is Building_Bed building_Bed))
+                    {
+                        continue;
+                    }
+                    List<Pawn> list = building_Bed.CurOccupants.ToList();
+                    for (int j = 0; j < list.Count; j++)
+                    {
+                        Pawn pawn = list[j];
+                        if (!pawn.Position.AdjacentToCardinal(position) || !((double)pawn.needs.food.CurLevelPercentage <= 0.4))
+                        {
+                            continue;
+                        }
+                        pipeNet.DrawAmongStorage(VNPERP.storageCost, pipeNet.storages);
+                        Thing thing2 = ThingMaker.MakeThing(VNPERP.customMeal);
+                        CompIngredients compIngredients = thing2.TryGetComp<CompIngredients>();
+                        if (compIngredients != null)
+                        {
+                            for (int k = 0; k < pipeNet.storages.Count; k++)
+                            {
+                                ThingWithComps parent = pipeNet.storages[k].parent;
+                                CompRegisterIngredients compRegisterIngredients = parent.TryGetComp<CompRegisterIngredients>();
+                                if (compRegisterIngredients != null)
+                                {
+                                    for (int l = 0; l < compRegisterIngredients.ingredients.Count; l++)
+                                    {
+                                        compIngredients.RegisterIngredient(compRegisterIngredients.ingredients[l]);
+                                    }
+                                }
+                            }
+                        }
+                        float num = thing2.Ingested(pawn, pawn.needs.food.NutritionWanted);
+                        pawn.needs.food.CurLevel += num;
+                        pawn.records.AddTo(RecordDefOf.NutritionEaten, num);
+                    }
+                }
+                if (__instance.AllComps != null)
+                {
+                    int i = 0;
+                    for (int count = __instance.AllComps.Count; i < count; i++)
+                    {
+                        __instance.AllComps[i].CompTickRare();
+                    }
+                }
+                return false;
+            }
+            return true;
         }
     }
 }
