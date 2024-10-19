@@ -3,12 +3,15 @@ using PipeSystem;
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using Verse;
 using Verse.Sound;
 using VNPE;
+using static HarmonyLib.Code;
 
 namespace VNPEReimaginedProgression
 {
@@ -16,6 +19,10 @@ namespace VNPEReimaginedProgression
     public class HarmonyPatches
     {
         private static readonly Type patchType;
+
+        private static AccessTools.FieldRef<object, Command_Action> augment1Ref;
+        private static AccessTools.FieldRef<object, Command_Action> augment10Ref;
+        private static AccessTools.FieldRef<object, int> maxHeldThingStackSizeRef;
 
         static HarmonyPatches()
         {
@@ -43,6 +50,10 @@ namespace VNPEReimaginedProgression
                 VNPE_NPD.GetCompProperties<CompProperties_Facility>().ResolveReferences(VNPE_NPD);
             }
 
+            augment1Ref = AccessTools.FieldRefAccess<Command_Action>(typeof(CompConvertToThing), "augment1");
+            augment10Ref = AccessTools.FieldRefAccess<Command_Action>(typeof(CompConvertToThing), "augment10");
+            maxHeldThingStackSizeRef = AccessTools.FieldRefAccess<int>(typeof(CompConvertToThing), "maxHeldThingStackSize");
+
             val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler"));
 
             val.Patch(AccessTools.Method(typeof(Room), "Notify_RoomShapeChanged"), postfix: new HarmonyMethod(patchType, "Room_Notify_RoomShapeChanged_Postfix"));
@@ -57,6 +68,8 @@ namespace VNPEReimaginedProgression
 
             val.Patch(AccessTools.Method(typeof(Building_Dripper), "TickRare"), prefix: new HarmonyMethod(patchType, "BD_TickRare_Prefix", (Type[])null));
 
+            val.Patch(AccessTools.Method(typeof(PipeNet), "DistributeAmongConverters", (Type[])null, (Type[])null), transpiler: new HarmonyMethod(patchType, "PN_DistributeAmongConverters_Transpiler"));
+            val.Patch(AccessTools.Method(typeof(CompConvertToThing), "PostSpawnSetup"), postfix: new HarmonyMethod(patchType, "CCTT_PostSpawnSetup_Postfix"));
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -305,6 +318,95 @@ namespace VNPEReimaginedProgression
                 return false;
             }
             return true;
+        }
+        public static IEnumerable<CodeInstruction> PN_DistributeAmongConverters_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
+        {
+            int startIndex = -1;
+            int endIndex = -1;
+            List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
+            for (int i = 0; i < codes.Count - 1; i++)
+            {
+                if (codes[i].IsStloc() && codes[i].ToString().Contains("10 (PipeSystem.CompConvertToThing)") && codes[i + 1].IsLdloc() && codes[i + 1].ToString().Contains("10 (PipeSystem.CompConvertToThing)"))
+                {
+                    startIndex = i;
+                    for (int j = startIndex + 1; j < codes.Count; j++)
+                    {
+                        if (codes[j].opcode == OpCodes.Nop && codes[j + 1].IsLdloc() && codes[j + 1].ToString().Contains("9 (System.Int32"))
+                        {
+                            endIndex = j;
+                            break;
+                        }
+                    }
+                    if (endIndex > -1)
+                    {
+                        break;
+                    }
+                }
+            }
+            if (startIndex > -1 && endIndex > -1)
+            {
+                Label labelSkip = il.DefineLabel();
+                codes[endIndex].labels.Add(labelSkip);
+                List<CodeInstruction> instructionsToInsert = new List<CodeInstruction>();
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 10));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarga_S, 1));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloca_S, 0));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "DistributeAmongConvertersFloat")));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Brtrue_S, labelSkip));
+                codes.InsertRange(startIndex + 1, instructionsToInsert);
+            }
+            return codes.AsEnumerable();
+        }
+
+        public static bool DistributeAmongConvertersFloat(CompConvertToThing compConvertToThing, ref float available, ref float num)
+        {
+            VNPERPDefModExtension VNPERP = compConvertToThing.parent.def.GetModExtension<VNPERPDefModExtension>();
+            if (VNPERP == null)
+            {
+                return false;
+            }
+            if (compConvertToThing.CanOutputNow)
+            {
+                int amount = (int)(available / VNPERP.storageCost);
+                int num3 = Mathf.Min(amount, compConvertToThing.MaxCanOutput);
+                if (num3 <= 0)
+                {
+                    return false;
+                }
+                compConvertToThing.OutputResource(num3);
+                float storageCost = (float)num3 * VNPERP.storageCost;
+                num += storageCost;
+                available -= storageCost;
+            }
+            return true;
+        }
+
+        public static void CCTT_PostSpawnSetup_Postfix(CompConvertToThing __instance)
+        {
+            ref Command_Action augment1 = ref augment1Ref.Invoke((object)__instance);
+            ref Command_Action augment10 = ref augment10Ref.Invoke((object)__instance);
+            augment1 = new Command_Action
+            {
+                action = delegate
+                {
+                    ref int maxHeldThingStackSize = ref maxHeldThingStackSizeRef.Invoke((object)__instance);
+                    maxHeldThingStackSize = Mathf.Min(maxHeldThingStackSize + 1, __instance.HeldThing?.def.stackLimit ?? int.MaxValue, __instance.Props.maxOutputStackSize);
+                },
+                defaultLabel = "PipeSystem_AugmentStack".Translate(),
+                defaultDesc = "PipeSystem_AugmentStackDesc".Translate(),
+                icon = ContentFinder<Texture2D>.Get("UI/PS_Plus")
+            };
+            augment10 = new Command_Action
+            {
+                action = delegate
+                {
+                    ref int maxHeldThingStackSize = ref maxHeldThingStackSizeRef.Invoke((object)__instance);
+                    maxHeldThingStackSize = Mathf.Min(maxHeldThingStackSize + 10, __instance.HeldThing?.def.stackLimit ?? int.MaxValue, __instance.Props.maxOutputStackSize);
+                },
+                defaultLabel = "PipeSystem_AugmentStackB".Translate(),
+                defaultDesc = "PipeSystem_AugmentStackDescB".Translate(),
+                icon = ContentFinder<Texture2D>.Get("UI/PS_Plus")
+            };
         }
     }
 }

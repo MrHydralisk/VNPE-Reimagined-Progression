@@ -36,6 +36,17 @@
 					<designatorDropdown>VNPE_NutrientPasteDripper_SET</designatorDropdown>
 				</value>
 			</li>
+			<li Class="PatchOperationAttributeAdd">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]</xpath>
+				<attribute>Name</attribute>
+				<value>VNPE_NutrientPasteFeeder</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]</xpath>
+				<value>
+					<designatorDropdown>VNPE_NutrientPasteFeeder_SET</designatorDropdown>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 
