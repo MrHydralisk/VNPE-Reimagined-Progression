@@ -75,7 +75,7 @@
 
 	<ThingDef ParentName="MealBase">
 		<defName>MealNutrientPasteST</defName>
-		<label>survival nutrient paste pack</label>
+		<label>packaged nutrient paste pack</label>
 		<description>A packaged synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs in small solid form. While it never rots, it can still deteriorate if left outside. Great for traveling.</description>
 		<graphicData>
 			<texPath>Things/Item/Meal/NutrientPasteTS</texPath>
@@ -154,6 +154,7 @@
 			<Nutrition>0.05</Nutrition>
 			<FoodPoisonChanceFixedHuman>0.1</FoodPoisonChanceFixedHuman>
 		</statBases>
+		<stackLimit>150</stackLimit>
 		<ingestible>
 			<foodType>Kibble</foodType>
 			<preferability>RawBad</preferability>

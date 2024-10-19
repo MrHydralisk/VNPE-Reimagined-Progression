@@ -1,10 +1,13 @@
 ﻿using HarmonyLib;
+using PipeSystem;
 using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using UnityEngine;
 using Verse;
+using Verse.Sound;
 using VNPE;
 
 namespace VNPEReimaginedProgression
@@ -40,8 +43,15 @@ namespace VNPEReimaginedProgression
                 VNPE_NPD.GetCompProperties<CompProperties_Facility>().ResolveReferences(VNPE_NPD);
             }
 
-            val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler", (Type[])null));
-            val.Patch(AccessTools.Method(typeof(Room), "Notify_RoomShapeChanged"), postfix: new HarmonyMethod(patchType, "Room_Notify_RoomShapeChanged_Postfix", (Type[])null));
+            val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler"));
+            val.Patch(AccessTools.Method(typeof(Room), "Notify_RoomShapeChanged"), postfix: new HarmonyMethod(patchType, "Room_Notify_RoomShapeChanged_Postfix"));
+            val.Patch(AccessTools.Method(typeof(ThingListGroupHelper), "Includes"), postfix: new HarmonyMethod(patchType, "TLGH_Includes_Postfix"));
+            val.Patch(AccessTools.Property(typeof(Building_NutrientPasteTap), "CanDispenseNowOverride").GetGetMethod(), prefix: new HarmonyMethod(patchType, "BNPT_CanDispenseNowOverride_Prefix"));
+            val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "HasEnoughFeedstockInHoppers"), prefix: new HarmonyMethod(patchType, "BNPT_HasEnoughFeedstockInHoppers_Prefix"));
+            val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "TryDispenseFoodOverride"), prefix: new HarmonyMethod(patchType, "BNPT_TryDispenseFoodOverride_Prefix"));
+            val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "TryDropFood"), prefix: new HarmonyMethod(patchType, "BNPT_TryDropFood_Prefix"));
+            val.Patch(AccessTools.Method(typeof(FoodUtility).GetNestedTypes(AccessTools.all).First((Type t) => t.Name.Contains("c__DisplayClass14_0")), "<BestFoodSourceOnMap>b__0"), transpiler: new HarmonyMethod(patchType, "FU_BestFoodSourceOnMap_foodValidator_Transpiler"));
+            val.Patch(AccessTools.Property(typeof(Building_NutrientPasteDispenser), "DispensableDef").GetGetMethod(), postfix: new HarmonyMethod(patchType, "BNPD_DispensableDef_Postfix"));
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -61,7 +71,7 @@ namespace VNPEReimaginedProgression
 
         public static void BNG_Tick_AdditionalPaste(Building_NutrientGrinder __instance)
         {
-            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>(); 
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
             if (VNPERP != null && VNPERP.AdditionalGrind > 0)
             {
                 for (int i = 0; i < VNPERP.AdditionalGrind; i++)
@@ -82,6 +92,151 @@ namespace VNPEReimaginedProgression
                     list1[k].Notify_ColorChanged();
                 }
             }
+        }
+
+        public static void TLGH_Includes_Postfix(ThingDef def, ThingRequestGroup group, ref bool __result)
+        {
+            if ((group == ThingRequestGroup.FoodSourceNotPlantOrTree || group == ThingRequestGroup.FoodSource) && def.defName.StartsWith("VNPE_NutrientPasteTap"))
+            {
+                __result = true;
+            }
+        }
+
+        public static bool BNPT_CanDispenseNowOverride_Prefix(ref bool __result, Building_NutrientPasteTap __instance)
+        {
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
+            if (VNPERP != null)
+            {
+                if (__instance.powerComp.PowerOn)
+                {
+                    __result = __instance.CanDispenseNowOverride;
+                    return false;
+                }
+                __result = false;
+                return false;
+            }
+            return true;
+        }
+
+        public static bool BNPT_HasEnoughFeedstockInHoppers_Prefix(ref bool __result, Building_NutrientPasteTap __instance)
+        {
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
+            if (VNPERP != null)
+            {
+                PipeNet pipeNet = __instance.resourceComp.PipeNet;
+                __result = pipeNet != null && pipeNet.Stored >= VNPERP.storageCost;
+                return false;
+            }
+            return true;
+        }
+
+        public static bool BNPT_TryDispenseFoodOverride_Prefix(Building_NutrientPasteTap __instance, ref Thing __result)
+        {
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
+            if (VNPERP != null)
+            {
+                PipeNet pipeNet = __instance.resourceComp.PipeNet;
+                __instance.def.building.soundDispense.PlayOneShot(new TargetInfo(__instance.Position, __instance.Map));
+                pipeNet.DrawAmongStorage(VNPERP.storageCost, pipeNet.storages);
+                Thing thing = ThingMaker.MakeThing(VNPERP.customMeal);
+                CompIngredients compIngredients = thing.TryGetComp<CompIngredients>();
+                if (compIngredients != null)
+                {
+                    for (int i = 0; i < pipeNet.storages.Count; i++)
+                    {
+                        ThingWithComps parent = pipeNet.storages[i].parent;
+                        CompRegisterIngredients compRegisterIngredients = parent.TryGetComp<CompRegisterIngredients>();
+                        if (compRegisterIngredients != null)
+                        {
+                            for (int j = 0; j < compRegisterIngredients.ingredients.Count; j++)
+                            {
+                                compIngredients.RegisterIngredient(compRegisterIngredients.ingredients[j]);
+                            }
+                        }
+                    }
+                }
+                __result = thing;
+                return false;
+            }
+            return true;
+        }
+
+        public static bool BNPT_TryDropFood_Prefix(int amount, Building_NutrientPasteTap __instance)
+        {
+            VNPERPDefModExtension VNPERP = __instance.def.GetModExtension<VNPERPDefModExtension>();
+            if (VNPERP != null)
+            {
+                if (!__instance.powerComp.PowerOn || amount <= 0 || Find.TickManager.Paused)
+                {
+                    return false;
+                }
+                PipeNet pipeNet = __instance.resourceComp.PipeNet;
+                float stored = pipeNet.Stored;
+                if (stored < VNPERP.storageCost)
+                {
+                    return false;
+                }
+                Map map = __instance.Map;
+                IntVec3 interactionCell = __instance.InteractionCell;
+                int available = (int)(stored / VNPERP.storageCost);
+                int num = Mathf.Clamp(amount, 0, available);
+                float storageCost = (float)num * VNPERP.storageCost;
+                if (storageCost > stored)
+                {
+                    storageCost = stored;
+                }
+                pipeNet.DrawAmongStorage(storageCost, pipeNet.storages);
+                __instance.def.building.soundDispense.PlayOneShot(new TargetInfo(interactionCell, map));
+                List<CompRegisterIngredients> list = new List<CompRegisterIngredients>();
+                for (int i = 0; i < pipeNet.storages.Count; i++)
+                {
+                    CompRegisterIngredients compRegisterIngredients = pipeNet.storages[i].parent.TryGetComp<CompRegisterIngredients>();
+                    if (compRegisterIngredients != null)
+                    {
+                        list.Add(compRegisterIngredients);
+                    }
+                }
+                while (num > 0)
+                {
+                    Thing thing = ThingMaker.MakeThing(VNPERP.customMeal);
+                    CompIngredients compIngredients = thing.TryGetComp<CompIngredients>();
+                    if (compIngredients != null)
+                    {
+                        for (int j = 0; j < list.Count; j++)
+                        {
+                            CompRegisterIngredients compRegisterIngredients2 = list[j];
+                            for (int k = 0; k < compRegisterIngredients2.ingredients.Count; k++)
+                            {
+                                compIngredients.RegisterIngredient(compRegisterIngredients2.ingredients[k]);
+                            }
+                        }
+                    }
+                    num -= (thing.stackCount = ((num > thing.def.stackLimit) ? thing.def.stackLimit : num));
+                    GenPlace.TryPlaceThing(thing, interactionCell, map, ThingPlaceMode.Near);
+                }
+                return false;
+            }
+            return true;
+        }
+
+        public static IEnumerable<CodeInstruction> FU_BestFoodSourceOnMap_foodValidator_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
+        {
+            List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
+            for (int i = 0; i < codes.Count(); i++)
+            {
+                if (codes[i].ToString().Contains("MealNutrientPaste"))
+                {
+                    codes.Insert(i + 1, new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(VNPERPUtility), "MealNutrientPasteDef")));
+                    codes.Insert(i, new CodeInstruction(OpCodes.Ldloc_1));
+                    i += 2;
+                }
+            }
+            return codes.AsEnumerable();
+        }
+
+        public static void BNPD_DispensableDef_Postfix(Building_NutrientPasteDispenser __instance, ref ThingDef __result)
+        {
+            __result = VNPERPUtility.MealNutrientPasteDef(__instance, __result);
         }
     }
 }
