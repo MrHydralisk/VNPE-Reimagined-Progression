@@ -565,6 +565,52 @@
 		</researchPrerequisites>
 	</ThingDef>
 	
+	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
+		<defName>VNPE_NutrientPasteProcessorRT</defName>
+		<label>nutrient paste refinery</label>
+		<description>Creates chemfuel from paste</description>
+		<graphicData>
+			<texPath>Things/Building/Processor/NutrientPasteProcessorTR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.85,1.85)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>2400</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>125</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteProcessor">
+				<ticksPerProduction>1100</ticksPerProduction>
+				<NutrientPasteCost>5</NutrientPasteCost>
+				<ItemProducedAmount>15</ItemProducedAmount>
+				<ItemProducedDef>Chemfuel</ItemProducedDef>
+				<MaxCapacity>300</MaxCapacity>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
 	
   
 	<DesignatorDropdownGroupDef>
