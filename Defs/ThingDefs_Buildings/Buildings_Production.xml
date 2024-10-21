@@ -21,13 +21,12 @@
 			<allowFlip>false</allowFlip>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>350</MaxHitPoints>
-			<WorkToBuild>2400</WorkToBuild>
-			<Flammability>0.5</Flammability>
+			<MaxHitPoints>385</MaxHitPoints>
+			<WorkToBuild>3000</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>200</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>150</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -66,14 +65,14 @@
 			<allowFlip>false</allowFlip>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>350</MaxHitPoints>
-			<WorkToBuild>2400</WorkToBuild>
-			<Flammability>0.5</Flammability>
+			<MaxHitPoints>455</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
 		</statBases>
 		<costList>
 			<Steel>300</Steel>
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<Plasteel>50</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -112,15 +111,14 @@
 			<allowFlip>false</allowFlip>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>350</MaxHitPoints>
-			<WorkToBuild>2400</WorkToBuild>
-			<Flammability>0.5</Flammability>
+			<MaxHitPoints>525</MaxHitPoints>
+			<WorkToBuild>4800</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>100</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>600</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
 			<Plasteel>150</Plasteel>
-			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -132,7 +130,7 @@
 				<basePowerConsumption>250</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -173,15 +171,12 @@
 		</graphicData>
 		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT0</uiIconPath>
 		<uiIconScale>0.6</uiIconScale>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<passability>Standable</passability>
 		<fillPercent>0.1</fillPercent>
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
-			<WorkToBuild>7500</WorkToBuild>
+			<WorkToBuild>8000</WorkToBuild>
 			<Mass>8</Mass>
 			<Flammability>0.6</Flammability>
 		</statBases>
@@ -208,7 +203,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>45</basePowerConsumption>
 			</li>
 		</comps>
 		<placeWorkers Inherit="False">
@@ -216,6 +211,9 @@
 			<li>VNPEReimaginedProgression.PlaceWorker_NutrientPasteFeedingTube</li>
 		</placeWorkers>
 		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
@@ -240,18 +238,14 @@
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeTD</uiIconPath>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
 			<MaxHitPoints>40</MaxHitPoints>
-			<WorkToBuild>5500</WorkToBuild>
+			<WorkToBuild>6000</WorkToBuild>
 			<Mass>7</Mass>
-			<Flammability>0.6</Flammability>
 		</statBases>
 		<costList>
 			<Steel>25</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
 			<li Class="CompProperties_Facility">
@@ -265,10 +259,13 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>40</basePowerConsumption>
+				<basePowerConsumption>35</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPasteDT</customMeal>
@@ -299,17 +296,13 @@
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT1</uiIconPath>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>60</MaxHitPoints>
-			<WorkToBuild>8500</WorkToBuild>
+			<MaxHitPoints>55</MaxHitPoints>
+			<WorkToBuild>10000</WorkToBuild>
 			<Mass>8</Mass>
-			<Flammability>0.6</Flammability>
 		</statBases>
 		<costList>
-			<Steel>65</Steel>
+			<Steel>55</Steel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
@@ -324,10 +317,13 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>55</basePowerConsumption>
+				<basePowerConsumption>50</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste1T</customMeal>
@@ -358,18 +354,15 @@
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT2</uiIconPath>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>70</MaxHitPoints>
-			<WorkToBuild>9500</WorkToBuild>
+			<MaxHitPoints>65</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
 			<Mass>9</Mass>
-			<Flammability>0.6</Flammability>
 		</statBases>
 		<costList>
-			<Steel>85</Steel>
+			<Steel>70</Steel>
 			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>20</Plasteel>
 		</costList>
 		<comps Inherit="False">
 			<li Class="CompProperties_Facility">
@@ -383,10 +376,13 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>60</basePowerConsumption>
+				<basePowerConsumption>55</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste2T</customMeal>
@@ -417,19 +413,15 @@
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/FeedingTube/NutrientPasteFeedingTubeT3</uiIconPath>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>80</MaxHitPoints>
-			<WorkToBuild>10500</WorkToBuild>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
 			<Mass>9</Mass>
-			<Flammability>0.6</Flammability>
 		</statBases>
 		<costList>
-			<Steel>75</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-			<Plasteel>25</Plasteel>
+			<Steel>70</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>60</Plasteel>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
@@ -448,6 +440,9 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste3T</customMeal>
@@ -466,8 +461,8 @@
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
-			<WorkToBuild>600</WorkToBuild>
-			<MaxHitPoints>100</MaxHitPoints>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>1200</WorkToBuild>
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<building>
@@ -498,12 +493,9 @@
 			</damageData>
 		</graphicData>
 		<costList>
-			<Steel>50</Steel>
-			<WoodLog>20</WoodLog>
+			<Steel>80</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<comps>
 			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteProcessor">
 				<ticksPerProduction>800</ticksPerProduction>
@@ -521,6 +513,10 @@
 				<basePowerConsumption>75</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
@@ -538,13 +534,14 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+		</statBases>
 		<costList>
-			<Steel>50</Steel>
-			<WoodLog>20</WoodLog>
+			<Steel>100</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<comps>
 			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteProcessor">
 				<ticksPerProduction>500</ticksPerProduction>
@@ -562,6 +559,10 @@
 				<basePowerConsumption>100</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 	</ThingDef>
 	
 	
@@ -587,12 +588,12 @@
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3240</WorkToBuild>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>1350</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>20</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -601,10 +602,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>80</basePowerConsumption>
+				<basePowerConsumption>60</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -633,8 +634,8 @@
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3240</WorkToBuild>
+			<MaxHitPoints>275</MaxHitPoints>
+			<WorkToBuild>2250</WorkToBuild>
 		</statBases>
 		<costList>
 			<Steel>60</Steel>
@@ -647,7 +648,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>100</basePowerConsumption>
+				<basePowerConsumption>120</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -679,12 +680,13 @@
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3240</WorkToBuild>
+			<MaxHitPoints>325</MaxHitPoints>
+			<WorkToBuild>2700</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>90</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>25</Plasteel>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -693,10 +695,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>100</basePowerConsumption>
+				<basePowerConsumption>140</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -725,12 +727,14 @@
 		<!-- </graphicData> -->
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>3240</WorkToBuild>
+			<MaxHitPoints>375</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>120</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Plasteel>75</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -739,10 +743,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>100</basePowerConsumption>
+				<basePowerConsumption>175</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -781,15 +785,13 @@
 		<!-- <cornerTR>Damage/Corner</cornerTR> -->
 		<!-- </damageData> -->
 		<!-- </graphicData> -->
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToBuild>6000</WorkToBuild>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>4500</WorkToBuild>
+			<Mass>18</Mass>
 		</statBases>
 		<costList>
-			<Steel>50</Steel>
+			<Steel>35</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
@@ -807,7 +809,10 @@
 				<basePowerConsumption>50</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPasteDT</customMeal>
@@ -837,16 +842,14 @@
 		<!-- <cornerTR>Damage/Corner</cornerTR> -->
 		<!-- </damageData> -->
 		<!-- </graphicData> -->
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToBuild>6000</WorkToBuild>
+			<MaxHitPoints>110</MaxHitPoints>
+			<WorkToBuild>7500</WorkToBuild>
+			<Mass>20</Mass>
 		</statBases>
 		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<Steel>75</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
 			<li Class="CompProperties_Facility">
@@ -860,10 +863,13 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>55</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste1T</customMeal>
@@ -893,16 +899,15 @@
 		<!-- <cornerTR>Damage/Corner</cornerTR> -->
 		<!-- </damageData> -->
 		<!-- </graphicData> -->
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToBuild>6000</WorkToBuild>
+			<MaxHitPoints>130</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>21</Mass>
 		</statBases>
 		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<Steel>100</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Plasteel>25</Plasteel>
 		</costList>
 		<comps Inherit="False">
 			<li Class="CompProperties_Facility">
@@ -916,10 +921,13 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>60</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste2T</customMeal>
@@ -949,16 +957,16 @@
 		<!-- <cornerTR>Damage/Corner</cornerTR> -->
 		<!-- </damageData> -->
 		<!-- </graphicData> -->
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<WorkToBuild>6000</WorkToBuild>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>22</Mass>
 		</statBases>
 		<costList>
-			<Steel>50</Steel>
-			<ComponentIndustrial>1</ComponentIndustrial>
+			<Steel>100</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Plasteel>75</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
 			<li Class="CompProperties_Facility">
@@ -972,10 +980,13 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>75</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPaste3T</customMeal>
@@ -1008,11 +1019,12 @@
 			<!-- <allowFlip>false</allowFlip> -->
 		<!-- </graphicData> -->
 		<statBases>
-			<MaxHitPoints>120</MaxHitPoints>
-			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>96</MaxHitPoints>
+			<WorkToBuild>600</WorkToBuild>
+			<Mass>7</Mass>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
+			<Steel>12</Steel>
 		</costList>
 		<building>
 			<buildingTags>
@@ -1045,7 +1057,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>30</basePowerConsumption>
 			</li>
 		</comps>
 		<researchPrerequisites>
@@ -1077,11 +1089,13 @@
 			<!-- <allowFlip>false</allowFlip> -->
 		<!-- </graphicData> -->
 		<statBases>
-			<MaxHitPoints>120</MaxHitPoints>
-			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>132</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Mass>8</Mass>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
+			<Steel>30</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<building>
 			<buildingTags>
@@ -1114,9 +1128,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>55</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -1146,11 +1161,14 @@
 			<!-- <allowFlip>false</allowFlip> -->
 		<!-- </graphicData> -->
 		<statBases>
-			<MaxHitPoints>120</MaxHitPoints>
-			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>156</MaxHitPoints>
+			<WorkToBuild>1200</WorkToBuild>
+			<Mass>9</Mass>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
+			<Steel>55</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
 		</costList>
 		<building>
 			<buildingTags>
@@ -1183,9 +1201,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>65</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -1215,11 +1234,15 @@
 			<!-- <allowFlip>false</allowFlip> -->
 		<!-- </graphicData> -->
 		<statBases>
-			<MaxHitPoints>120</MaxHitPoints>
-			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToBuild>1600</WorkToBuild>
+			<Mass>9</Mass>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
+			<Steel>75</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Plasteel>25</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<building>
 			<buildingTags>
@@ -1252,9 +1275,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>80</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
@@ -1284,11 +1308,13 @@
 			<!-- <allowFlip>false</allowFlip> -->
 		<!-- </graphicData> -->
 		<statBases>
-			<MaxHitPoints>120</MaxHitPoints>
-			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>110</MaxHitPoints>
+			<WorkToBuild>700</WorkToBuild>
+			<Mass>7</Mass>
 		</statBases>
 		<costList>
 			<Steel>20</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<building>
 			<buildingTags>
@@ -1321,9 +1347,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>40</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>NutrientPaste</li>
 		</researchPrerequisites>
