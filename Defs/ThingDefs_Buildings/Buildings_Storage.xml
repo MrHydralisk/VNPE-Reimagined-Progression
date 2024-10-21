@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>VNPE_NutrientPasteVat_SET</defName>
+	</DesignatorDropdownGroupDef>
+  
+	<ThingDef ParentName="VNPE_NutrientPasteVat">
+		<defName>VNPE_NutrientPasteVat_Small</defName>
+		<label>S nutrient paste vat</label>
+		<description>An S size tank that can store up to 60 nutrient paste meals in it. Makes a big mess when destroyed.</description>
+		<graphicData>
+			<texPath>Things/Building/NutrientPasteVat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>400</WorkToBuild>
+			<Mass>10</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<costList>
+			<Steel>80</Steel>
+		</costList>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<storageCapacity>45</storageCapacity>
+				<barSize>(0.36, 0.10)</barSize>
+				<margin>0.03</margin>
+				<centerOffset>(0, 0, -0.18)</centerOffset>
+				<destroyOption>
+					<filth>VNPE_Filth_Paste</filth>
+					<ratio>1</ratio>
+					<maxRadius>3</maxRadius>
+				</destroyOption>
+				<contentRequirePower>true</contentRequirePower>
+			</li>
+			<li Class="VNPE.CompProperties_RegisterIngredients"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="VNPE_NutrientPasteVat">
+		<defName>VNPE_NutrientPasteVat_Giant</defName>
+		<label>L nutrient paste vat</label>
+		<description>An L size tank that can store up to 1215 nutrient paste meals in it. Makes a big mess when destroyed.</description>
+		<graphicData>
+			<texPath>Things/Building/NutrientPasteVat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4.5,4.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
+			<Mass>40</Mass>
+		</statBases>
+		<size>(3,3)</size>
+		<costList>
+			<Steel>720</Steel>
+		</costList>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<storageCapacity>1215</storageCapacity>
+				<barSize>(1.12, 0.30)</barSize>
+				<margin>0.07</margin>
+				<centerOffset>(0, 0, -0.52)</centerOffset>
+				<destroyOption>
+					<filth>VNPE_Filth_Paste</filth>
+					<ratio>1</ratio>
+					<maxRadius>12</maxRadius>
+				</destroyOption>
+				<contentRequirePower>true</contentRequirePower>
+			</li>
+			<li Class="VNPE.CompProperties_RegisterIngredients"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="VNPE_NutrientPasteVat">
+		<defName>VNPE_NutrientPasteVat_XL</defName>
+		<label>XL nutrient paste vat</label>
+		<description>An XL size tank that can store up to 2400 nutrient paste meals in it. Makes a big mess when destroyed.</description>
+		<graphicData>
+			<texPath>Things/Building/NutrientPasteVat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,6)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>6400</WorkToBuild>
+			<Mass>80</Mass>
+		</statBases>
+		<size>(4,4)</size>
+		<costList>
+			<Steel>1280</Steel>
+		</costList>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<storageCapacity>2400</storageCapacity>
+				<barSize>(1.28, 0.50)</barSize>
+				<margin>0.15</margin>
+				<centerOffset>(0, 0, -0.75)</centerOffset>
+				<destroyOption>
+					<filth>VNPE_Filth_Paste</filth>
+					<ratio>1</ratio>
+					<maxRadius>16</maxRadius>
+				</destroyOption>
+				<contentRequirePower>true</contentRequirePower>
+			</li>
+			<li Class="VNPE.CompProperties_RegisterIngredients"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>600</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+	<ThingDef ParentName="VNPE_NutrientPasteVat">
+		<defName>VNPE_NutrientPasteVat_XXL</defName>
+		<label>XXL nutrient paste vat</label>
+		<description>An XXL size tank that can store up to 3750 nutrient paste meals in it. Makes a big mess when destroyed.</description>
+		<graphicData>
+			<texPath>Things/Building/NutrientPasteVat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7.5,7.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1200</MaxHitPoints>
+			<WorkToBuild>10000</WorkToBuild>
+			<Mass>160</Mass>
+		</statBases>
+		<size>(5,5)</size>
+		<costList>
+			<Steel>2000</Steel>
+		</costList>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<storageCapacity>3750</storageCapacity>
+				<barSize>(1.60, 0.64)</barSize>
+				<margin>0.28</margin>
+				<centerOffset>(0, 0, -0.93)</centerOffset>
+				<destroyOption>
+					<filth>VNPE_Filth_Paste</filth>
+					<ratio>1</ratio>
+					<maxRadius>20</maxRadius>
+				</destroyOption>
+				<contentRequirePower>true</contentRequirePower>
+			</li>
+			<li Class="VNPE.CompProperties_RegisterIngredients"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1200</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+</Defs>
