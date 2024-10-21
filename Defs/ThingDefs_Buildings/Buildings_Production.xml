@@ -575,17 +575,17 @@
 		<defName>VNPE_NutrientPasteTapDT</defName>
 		<label>diluted nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <color>(192,136,220)</color> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <drawSize>(4,2)</drawSize> -->
-		<!-- <damageData> -->
-		<!-- <cornerTL>Damage/Corner</cornerTL> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Tap/NutrientPasteTapTD</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
@@ -621,17 +621,17 @@
 		<defName>VNPE_NutrientPasteTap1T</defName>
 		<label>simple nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <color>(192,136,220)</color> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <drawSize>(4,2)</drawSize> -->
-		<!-- <damageData> -->
-		<!-- <cornerTL>Damage/Corner</cornerTL> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Tap/NutrientPasteTapT1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>275</MaxHitPoints>
@@ -667,17 +667,17 @@
 		<defName>VNPE_NutrientPasteTap2T</defName>
 		<label>fine nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <color>(192,136,220)</color> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <drawSize>(4,2)</drawSize> -->
-		<!-- <damageData> -->
-		<!-- <cornerTL>Damage/Corner</cornerTL> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Tap/NutrientPasteTapT2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>325</MaxHitPoints>
@@ -714,17 +714,17 @@
 		<defName>VNPE_NutrientPasteTap3T</defName>
 		<label>lavish nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/Improved/NutrientPasteTap/NutrientPasteTap</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <color>(192,136,220)</color> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <drawSize>(4,2)</drawSize> -->
-		<!-- <damageData> -->
-		<!-- <cornerTL>Damage/Corner</cornerTL> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Tap/NutrientPasteTapT3</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>375</MaxHitPoints>
@@ -768,23 +768,23 @@
 		<defName>VNPE_NutrientPasteDripperDT</defName>
 		<label>diluted nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <color>(232,255,191)</color> -->
-		<!-- <drawSize>(1,1)</drawSize> -->
-		<!-- <shadowData> -->
-		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
-		<!-- </shadowData> -->
-		<!-- <damageData> -->
-		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
-		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
-		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
-		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Dripper/NutrientPasteDripperTD</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+				<rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+				<rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+				<rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>80</MaxHitPoints>
 			<WorkToBuild>4500</WorkToBuild>
@@ -825,23 +825,23 @@
 		<defName>VNPE_NutrientPasteDripper1T</defName>
 		<label>simple nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <color>(232,255,191)</color> -->
-		<!-- <drawSize>(1,1)</drawSize> -->
-		<!-- <shadowData> -->
-		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
-		<!-- </shadowData> -->
-		<!-- <damageData> -->
-		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
-		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
-		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
-		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Dripper/NutrientPasteDripperT1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+				<rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+				<rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+				<rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>110</MaxHitPoints>
 			<WorkToBuild>7500</WorkToBuild>
@@ -882,23 +882,23 @@
 		<defName>VNPE_NutrientPasteDripper2T</defName>
 		<label>fine nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <color>(232,255,191)</color> -->
-		<!-- <drawSize>(1,1)</drawSize> -->
-		<!-- <shadowData> -->
-		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
-		<!-- </shadowData> -->
-		<!-- <damageData> -->
-		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
-		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
-		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
-		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Dripper/NutrientPasteDripperT2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+				<rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+				<rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+				<rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>130</MaxHitPoints>
 			<WorkToBuild>9000</WorkToBuild>
@@ -940,23 +940,23 @@
 		<defName>VNPE_NutrientPasteDripper3T</defName>
 		<label>lavish nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
-		<!-- <graphicData> -->
-		<!-- <texPath>Things/Building/NutrientPasteDripper/NutrientPasteDripper</texPath> -->
-		<!-- <graphicClass>Graphic_Multi</graphicClass> -->
-		<!-- <shaderType>CutoutComplex</shaderType> -->
-		<!-- <color>(232,255,191)</color> -->
-		<!-- <drawSize>(1,1)</drawSize> -->
-		<!-- <shadowData> -->
-		<!-- <volume>(0.55, 0.30, 0.40)</volume> -->
-		<!-- </shadowData> -->
-		<!-- <damageData> -->
-		<!-- <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN> -->
-		<!-- <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS> -->
-		<!-- <rectE>(0.125,0.46875,0.625,0.296875)</rectE> -->
-		<!-- <rectW>(0.25,0.46875,0.625,0.296875)</rectW> -->
-		<!-- <cornerTR>Damage/Corner</cornerTR> -->
-		<!-- </damageData> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Dripper/NutrientPasteDripperT3</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(255,255,255)</color>
+			<drawSize>(1,1)</drawSize>
+			<shadowData>
+				<volume>(0.55, 0.30, 0.40)</volume>
+			</shadowData>
+			<damageData>
+				<rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+				<rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+				<rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+				<rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<WorkToBuild>12000</WorkToBuild>
@@ -1005,19 +1005,19 @@
 		<defName>VNPE_NutrientPasteFeederDT</defName>
 		<label>diluted nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
-		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath> -->
-			<!-- <graphicClass>Graphic_Single</graphicClass> -->
-			<!-- <color>(232,255,191)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(1,1)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
-			<!-- <drawRotated>false</drawRotated> -->
-			<!-- <allowFlip>false</allowFlip> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Feeder/NutrientPasteFeederTD</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>96</MaxHitPoints>
 			<WorkToBuild>600</WorkToBuild>
@@ -1075,19 +1075,19 @@
 		<defName>VNPE_NutrientPasteFeeder1T</defName>
 		<label>simple nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
-		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath> -->
-			<!-- <graphicClass>Graphic_Single</graphicClass> -->
-			<!-- <color>(232,255,191)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(1,1)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
-			<!-- <drawRotated>false</drawRotated> -->
-			<!-- <allowFlip>false</allowFlip> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Feeder/NutrientPasteFeederT1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>132</MaxHitPoints>
 			<WorkToBuild>1000</WorkToBuild>
@@ -1147,19 +1147,19 @@
 		<defName>VNPE_NutrientPasteFeeder2T</defName>
 		<label>fine nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
-		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath> -->
-			<!-- <graphicClass>Graphic_Single</graphicClass> -->
-			<!-- <color>(232,255,191)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(1,1)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
-			<!-- <drawRotated>false</drawRotated> -->
-			<!-- <allowFlip>false</allowFlip> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Feeder/NutrientPasteFeederT2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>156</MaxHitPoints>
 			<WorkToBuild>1200</WorkToBuild>
@@ -1220,19 +1220,19 @@
 		<defName>VNPE_NutrientPasteFeeder3T</defName>
 		<label>lavish nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
-		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath> -->
-			<!-- <graphicClass>Graphic_Single</graphicClass> -->
-			<!-- <color>(232,255,191)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(1,1)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
-			<!-- <drawRotated>false</drawRotated> -->
-			<!-- <allowFlip>false</allowFlip> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Feeder/NutrientPasteFeederT3</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>180</MaxHitPoints>
 			<WorkToBuild>1600</WorkToBuild>
@@ -1294,19 +1294,19 @@
 		<defName>VNPE_NutrientPasteFeederKT</defName>
 		<label>nutrient paste kibble feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
-		<!-- <graphicData> -->
-			<!-- <texPath>Things/Building/NutrientPasteFeeder/NutrientPasteFeeder</texPath> -->
-			<!-- <graphicClass>Graphic_Single</graphicClass> -->
-			<!-- <color>(232,255,191)</color> -->
-			<!-- <shaderType>CutoutComplex</shaderType> -->
-			<!-- <drawSize>(1,1)</drawSize> -->
-			<!-- <damageData> -->
-				<!-- <cornerTL>Damage/Corner</cornerTL> -->
-				<!-- <cornerTR>Damage/Corner</cornerTR> -->
-			<!-- </damageData> -->
-			<!-- <drawRotated>false</drawRotated> -->
-			<!-- <allowFlip>false</allowFlip> -->
-		<!-- </graphicData> -->
+		<graphicData>
+			<texPath>Things/Building/Feeder/NutrientPasteFeederTK</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+		</graphicData>
 		<statBases>
 			<MaxHitPoints>110</MaxHitPoints>
 			<WorkToBuild>700</WorkToBuild>
