@@ -10,12 +10,15 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>5</MarketValue>
+			<MarketValue>6.5</MarketValue>
+			<Mass>0.32</Mass>
 		</statBases>
 		<ingestible>
 			<preferability>MealAwful</preferability>
 			<tasteThought>AteNutrientPasteDT</tasteThought>
 			<ateEvent />
+			<optimalityOffsetHumanlikes>-7</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>1</optimalityOffsetFeedingAnimals>
 		</ingestible>
 	</ThingDef>
 
@@ -28,12 +31,13 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>12</MarketValue>
+			<MarketValue>13.5</MarketValue>
 		</statBases>
 		<ingestible>
 			<preferability>MealSimple</preferability>
 			<tasteThought>AteNutrientPaste1T</tasteThought>
 			<ateEvent />
+			<optimalityOffsetHumanlikes>18</optimalityOffsetHumanlikes>
 		</ingestible>
 	</ThingDef>
 
@@ -46,12 +50,13 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>17</MarketValue>
+			<MarketValue>18.5</MarketValue>
 		</statBases>
 		<ingestible>
 			<preferability>MealFine</preferability>
 			<tasteThought>AteNutrientPaste2T</tasteThought>
 			<ateEvent />
+			<optimalityOffsetHumanlikes>20</optimalityOffsetHumanlikes>
 		</ingestible>
 	</ThingDef>
 
@@ -64,12 +69,13 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>37</MarketValue>
+			<MarketValue>35</MarketValue>
 		</statBases>
 		<ingestible>
 			<preferability>MealLavish</preferability>
 			<tasteThought>AteNutrientPaste3T</tasteThought>
 			<ateEvent />
+			<optimalityOffsetHumanlikes>22</optimalityOffsetHumanlikes>
 		</ingestible>
 	</ThingDef>
 
@@ -89,10 +95,10 @@
 		</statBases>
 		<ingestible>
 			<preferability>MealSimple</preferability>
-			<optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes>
-			<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
 		</ingestible>
 	</ThingDef>
 
@@ -159,10 +165,10 @@
 			<foodType>Kibble</foodType>
 			<preferability>RawBad</preferability>
 			<tasteThought>AteNutrientPasteKT</tasteThought>
-			<optimalityOffsetHumanlikes>-31</optimalityOffsetHumanlikes>
-			<optimalityOffsetFeedingAnimals>16</optimalityOffsetFeedingAnimals>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>RawVegetable_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>-31</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>20</optimalityOffsetFeedingAnimals>
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Ingredients">

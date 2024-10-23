@@ -480,7 +480,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
 		<defName>VNPE_NutrientPasteProcessorCT</defName>
 		<label>nutrient paste compactor</label>
-		<description>Creates cubes from paste</description>
+		<description>A device that compresses and dehydrates nutrient paste into ready-to-eat cubes.</description>
 		<graphicData>
 			<texPath>Things/Building/Processor/NutrientPasteProcessorTC</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -522,7 +522,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
 		<defName>VNPE_NutrientPasteProcessorST</defName>
 		<label>nutrient paste packager</label>
-		<description>Creates survival packs from paste</description>
+		<description>A device that preserves nutrient paste into ready-to-eat survival packs. Much of the ingredients are wasted in the preservation process.</description>
 		<graphicData>
 			<texPath>Things/Building/Processor/NutrientPasteProcessorTS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -568,7 +568,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
 		<defName>VNPE_NutrientPasteProcessorRT</defName>
 		<label>nutrient paste refinery</label>
-		<description>Creates chemfuel from paste</description>
+		<description>A device that extracting biofuel from nutrient paste. Make a batch of chemfuel as a result.</description>
 		<graphicData>
 			<texPath>Things/Building/Processor/NutrientPasteProcessorTR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

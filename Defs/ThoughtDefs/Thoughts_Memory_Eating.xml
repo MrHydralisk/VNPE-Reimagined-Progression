@@ -101,7 +101,7 @@
 		<stages>
 			<li>
 				<label>ate nutrient paste kibble</label>
-				<description>I had to eat animal kibble. It's like I don't get to be human any more. It tasted like mud.</description>
+				<description>I had to eat animal kibble. It's like I don't get to be a human anymore. It tasted like mud.</description>
 				<baseMoodEffect>-14</baseMoodEffect>
 			</li>
 		</stages>
