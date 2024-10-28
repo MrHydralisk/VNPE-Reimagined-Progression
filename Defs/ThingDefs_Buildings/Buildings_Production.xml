@@ -455,9 +455,9 @@
 	
 	<ThingDef Name="VNPE_NutrientPasteProcessor" ParentName="BuildingBase" Abstract="True">
 		<altitudeLayer>Building</altitudeLayer>
-		<rotatable>true</rotatable>
+		<rotatable>false</rotatable>
 		<neverMultiSelect>true</neverMultiSelect>
-		<uiIconScale>0.8</uiIconScale>
+		<uiIconScale>0.6</uiIconScale>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
@@ -472,6 +472,7 @@
 		<tickerType>Normal</tickerType>
 		<size>(1,1)</size>
 		<designationCategory>Production</designationCategory>
+		<uiOrder>2131</uiOrder>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<surfaceType>Item</surfaceType>
@@ -492,6 +493,7 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<uiIconScale>0.51</uiIconScale>
 		<costList>
 			<Steel>80</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
@@ -572,7 +574,7 @@
 		<graphicData>
 			<texPath>Things/Building/Processor/NutrientPasteProcessorTR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(1.85,1.85)</drawSize>
+			<drawSize>(3.7,3.7)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -580,6 +582,8 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<uiIconScale>0.6</uiIconScale>
+		<size>(2,2)</size>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<WorkToBuild>2400</WorkToBuild>

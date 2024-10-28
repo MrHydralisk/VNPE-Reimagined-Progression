@@ -3,15 +3,12 @@ using PipeSystem;
 using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using Verse;
 using Verse.Sound;
 using VNPE;
-using static HarmonyLib.Code;
 
 namespace VNPEReimaginedProgression
 {
@@ -385,6 +382,7 @@ namespace VNPEReimaginedProgression
         {
             ref Command_Action augment1 = ref augment1Ref.Invoke((object)__instance);
             ref Command_Action augment10 = ref augment10Ref.Invoke((object)__instance);
+            Texture2D plusTexture = AccessTools.Field(typeof(CompConvertToThing), "plus").GetValue(null) as Texture2D;
             augment1 = new Command_Action
             {
                 action = delegate
@@ -394,7 +392,7 @@ namespace VNPEReimaginedProgression
                 },
                 defaultLabel = "PipeSystem_AugmentStack".Translate(),
                 defaultDesc = "PipeSystem_AugmentStackDesc".Translate(),
-                icon = ContentFinder<Texture2D>.Get("UI/PS_Plus")
+                icon = plusTexture
             };
             augment10 = new Command_Action
             {
@@ -405,7 +403,7 @@ namespace VNPEReimaginedProgression
                 },
                 defaultLabel = "PipeSystem_AugmentStackB".Translate(),
                 defaultDesc = "PipeSystem_AugmentStackDescB".Translate(),
-                icon = ContentFinder<Texture2D>.Get("UI/PS_Plus")
+                icon = plusTexture
             };
         }
     }
