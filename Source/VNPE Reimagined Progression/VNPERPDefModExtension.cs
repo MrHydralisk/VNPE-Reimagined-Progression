@@ -1,12 +1,12 @@
-﻿using RimWorld;
-using Verse;
+﻿using Verse;
 
 namespace VNPEReimaginedProgression
 {
     public class VNPERPDefModExtension : DefModExtension
     {
-        public ThingDef customMeal = ThingDefOf.MealNutrientPaste;
+        public ThingDef customMeal;
         public float storageCost = 1f;
         public int AdditionalGrind = 0;
+        public int maxTargets = 2;
     }
 }

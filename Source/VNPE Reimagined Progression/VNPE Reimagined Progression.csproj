@@ -64,10 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_NutrientPasteHungerSuppressor.cs" />
+    <Compile Include="HediffCompProperties_VNPEHungerSuppressionSeverityPerDay.cs" />
+    <Compile Include="HediffComp_VNPEHungerSuppressionSeverityPerDay.cs" />
     <Compile Include="CompNutrientPasteProcessor.cs" />
     <Compile Include="CompProperties_NutrientPasteProcessor.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Building_NutrientPasteFeedingTube.cs" />
+    <Compile Include="HediffDefOfLocal.cs" />
     <Compile Include="JobDefOfLocal.cs" />
     <Compile Include="JobDriver_TakeOutNutrientPasteProcessor.cs" />
     <Compile Include="PlaceWorker_NutrientPasteFeedingTube.cs" />

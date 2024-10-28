@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>VNPE_NutrientPasteHungerSuppressor_SET</defName>
+	</DesignatorDropdownGroupDef>
+
+	<ThingDef Name="VNPE_NutrientPasteHungerSuppressor" ParentName="BuildingBase" Abstract="True">
+		<thingClass>VNPEReimaginedProgression.Building_NutrientPasteHungerSuppressor</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/HungerSuppressor/NutrientPasteHungerSuppressor</texPath>
+		</graphicData>
+		<statBases>
+			<Flammability>0.5</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		<designationCategory>Production</designationCategory>
+		<uiOrder>2132</uiOrder>
+		<fillPercent>0.40</fillPercent>
+		<building>
+			<claimable>false</claimable>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<designatorDropdown>VNPE_NutrientPasteHungerSuppressor_SET</designatorDropdown>
+		<passability>PassThroughOnly</passability>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<placeWorkers>
+			<li>PlaceWorker_NoiseSource</li>
+		</placeWorkers>
+		<comps>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_CableConnection">
+				<color>(0.486, 0.549, 0.305, 1)</color>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="VNPE_NutrientPasteHungerSuppressor">
+		<defName>VNPE_NutrientPasteHungerSuppressor</defName>
+		<label>hunger suppressor</label>
+		<description>A device with multiple feeding tubes. It contain small scanner that check for surrounding organisms in need of nutrition. It shooting small dart with needle into target that connecting it to the main device via feeding tube and pumping nutrient fluid into target. It can prevent malnutrition, but not the feeling of hunger. It can work with 6 targets at a time.</description>
+		<graphicData>
+			<drawSize>(1.25,1.25)</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>175</MaxHitPoints>
+			<WorkToBuild>7500</WorkToBuild>
+			<Mass>27</Mass>
+		</statBases>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<comps>
+			<li Class="CompProperties_NoiseSource">
+				<radius>8.9</radius>
+			</li>
+			<li Class="CompProperties_AttachPoints">
+				<points>
+					<li>
+						<offset>(0, 0, 0.383)</offset>
+						<type>CableConnection0</type>
+					</li>
+				</points>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<storageCost>0.1</storageCost>
+				<maxTargets>6</maxTargets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="VNPE_NutrientPasteHungerSuppressor">
+		<defName>VNPE_NutrientPasteHungerSuppressorPT</defName>
+		<label>portable hunger suppressor</label>
+		<description>A portable device with multiple feeding tubes. It contain small scanner that check for surrounding organisms in need of nutrition. It shooting small dart with needle into target that connecting it to the main device via feeding tube and pumping nutrient fluid into target. It can prevent malnutrition, but not the feeling of hunger. It has an internal power source and is lightweight, but can only work with 2 targets at a time.</description>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Uranium>50</Uranium>
+		</costList>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToBuild>4200</WorkToBuild>
+			<Mass>16</Mass>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_NoiseSource">
+				<radius>5.9</radius>
+			</li>
+			<li Class="CompProperties_AttachPoints">
+				<points>
+					<li>
+						<offset>(0, 0, 0.305)</offset>
+						<type>CableConnection0</type>
+					</li>
+				</points>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>NutrientPaste</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<storageCost>0.1</storageCost>
+				<maxTargets>2</maxTargets>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

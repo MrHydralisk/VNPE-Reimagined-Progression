@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>Hediff_VNPEHungerSuppression</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>hunger suppression</label>
+		<description>The body getting pumped with nutrients. Feeling a slight pain from the needle.</description>
+		<descriptionHyperlinks>
+			<ThingDef>VNPE_NutrientPasteHungerSuppressor</ThingDef>
+		</descriptionHyperlinks>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VNPEReimaginedProgression.HediffCompProperties_VNPEHungerSuppressionSeverityPerDay">
+				<severityPerDay>-24</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+				<tickPerFeed>125</tickPerFeed>
+				<Nutrition>0.005</Nutrition>
+				<amountOfFeed>20</amountOfFeed>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painOffset>0.05</painOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
