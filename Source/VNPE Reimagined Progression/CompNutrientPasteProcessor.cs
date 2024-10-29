@@ -6,6 +6,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 using VNPE;
+using static PipeSystem.ProcessDef;
 
 namespace VNPEReimaginedProgression
 {
@@ -13,10 +14,13 @@ namespace VNPEReimaginedProgression
     {
         public CompProperties_NutrientPasteProcessor Props => (CompProperties_NutrientPasteProcessor)props;
 
-        public CompPowerTrader powerComp;
-        public CompResource resourceComp;
+        public CompPowerTrader PowerTraderComp => powerTraderComp ?? (powerTraderComp = parent.GetComp<CompPowerTrader>());
+        private CompPowerTrader powerTraderComp;
 
-        private List<CompRegisterIngredients> IngredientsList = new List<CompRegisterIngredients>();
+        public CompResource ResourceComp => resourceComp ?? (resourceComp = parent.GetComp<CompResource>());
+        private CompResource resourceComp;
+
+        private List<ThingDef> IngredientsList = new List<ThingDef>();
         protected List<Thing> ProducedThings = new List<Thing>();
 
         public int tickNextProduction;
@@ -42,10 +46,7 @@ namespace VNPEReimaginedProgression
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            resourceComp = parent.GetComp<CompResource>();
-            powerComp = parent.GetComp<CompPowerTrader>();
             MaxCapacity = Props.MaxCapacity;
-            TryStartProduction();
         }
 
         public override void CompTick()
@@ -68,7 +69,7 @@ namespace VNPEReimaginedProgression
         public void TryStartProduction()
         {
             PipeNet pipeNet;
-            if (!powerComp.PowerOn || (pipeNet = resourceComp.PipeNet).Stored < Props.NutrientPasteCost)
+            if (!PowerTraderComp.PowerOn || ResourceComp == null || (pipeNet = ResourceComp.PipeNet) == null || pipeNet.Stored < Props.NutrientPasteCost)
             {
                 return;
             }
@@ -80,13 +81,13 @@ namespace VNPEReimaginedProgression
             }
             pipeNet.DrawAmongStorage(Props.NutrientPasteCost, pipeNet.storages);
             tickNextProduction = Find.TickManager.TicksGame + Props.ticksPerProduction;
-            IngredientsList = new List<CompRegisterIngredients>();
+            IngredientsList = new List<ThingDef>();
             for (int i = 0; i < pipeNet.storages.Count; i++)
             {
                 CompRegisterIngredients compRegisterIngredients = pipeNet.storages[i].parent.TryGetComp<CompRegisterIngredients>();
                 if (compRegisterIngredients != null)
                 {
-                    IngredientsList.Add(compRegisterIngredients);
+                    IngredientsList.AddRange(compRegisterIngredients.ingredients.Where((ThingDef td1) => !IngredientsList.Any((ThingDef td2) => td2 == td1)));
                 }
             }
             isProcessing = true;
@@ -103,11 +104,7 @@ namespace VNPEReimaginedProgression
                 {
                     for (int j = 0; j < IngredientsList.Count; j++)
                     {
-                        CompRegisterIngredients compRegisterIngredients2 = IngredientsList[j];
-                        for (int k = 0; k < compRegisterIngredients2.ingredients.Count; k++)
-                        {
-                            compIngredients.RegisterIngredient(compRegisterIngredients2.ingredients[k]);
-                        }
+                        compIngredients.RegisterIngredient(IngredientsList[j]);
                     }
                 }
                 ProducedThings.Add(thingProduced);
@@ -215,7 +212,11 @@ namespace VNPEReimaginedProgression
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Collections.Look(ref IngredientsList, "IngredientsList", LookMode.Reference);
+            Scribe_Collections.Look(ref IngredientsList, "IngredientsList", LookMode.Def);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && IngredientsList == null)
+            {
+                IngredientsList = new List<ThingDef>();
+            }
             Scribe_Collections.Look(ref ProducedThings, "ProducedThings", LookMode.Deep);
             Scribe_Values.Look(ref maxCapacity, "maxCapacity", Props.MaxCapacity);
             Scribe_Values.Look(ref tickNextProduction, "tickNextProduction");
