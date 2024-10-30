@@ -17,7 +17,6 @@ namespace VNPEReimaginedProgression
             base.CompPostTick(ref severityAdjustment);
             if (Find.TickManager.TicksGame >= TicksNextFeed)
             {
-                Log.Message($"{Find.TickManager.TicksGame} >= {TicksNextFeed} : {Pawn.needs.food.CurLevel} {Pawn.LabelCap}");
                 Pawn.needs.food.CurLevel += Props.Nutrition;
                 Pawn.records.AddTo(RecordDefOf.NutritionEaten, Props.Nutrition);
                 AmountOfFeed++;
