@@ -6,7 +6,6 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 using VNPE;
-using static PipeSystem.ProcessDef;
 
 namespace VNPEReimaginedProgression
 {
@@ -222,6 +221,7 @@ namespace VNPEReimaginedProgression
             Scribe_Values.Look(ref tickNextProduction, "tickNextProduction");
             Scribe_Values.Look(ref isProcessing, "isProcessing");
             Scribe_Values.Look(ref isRequireUnloading, "isRequireUnloading");
+            Scribe_Values.Look(ref isEnabledUnloading, "isEnabledUnloading");
         }
     }
 }
