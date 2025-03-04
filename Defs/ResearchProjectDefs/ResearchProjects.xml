@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>VNPEReimaginedProgression</defName>
+		<label>Nutrient Paste</label>
+		<generalTitle>Vanilla Nutrient Paste Expanded: Reimagined Progression research projects</generalTitle>
+		<generalDescription>Nutrient paste technology development.</generalDescription>
+	</ResearchTabDef>
+
+	<ResearchProjectDef Name="VNPEReimaginedProgressionResearchBase" Abstract="True">
+		<tab>VNPEReimaginedProgression</tab>
+		<techLevel>Industrial</techLevel>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteSystem</defName>
+		<label>nutrient paste system</label>
+		<description>Integrating a nutient paste fluid pipeline delivery system, automated storage solutions, and development of miniaturized dispenser design.</description>
+		<baseCost>400</baseCost>
+		<prerequisites>
+			<li>NutrientPaste</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteT1</defName>
+		<label>simple nutrient paste</label>
+		<description>Analyze and optimize filtration parameters to reduce undesirable flavor compounds in nutrient paste.\n\nThis will require a 66% increase in nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
+		<baseCost>800</baseCost>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+			<li>VNPERPNutrientPasteSystem</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteTC</defName>
+		<label>nutrient paste cubes</label>
+		<description>Develop preservation techniques for nutrient paste through condensation and dehydration. Great for traveling.\n\nThis will require a 50% increase in nutrient paste fluid per portion of 15 cubes in comparison to nutrient paste meal.</description>
+		<baseCost>600</baseCost>
+		<prerequisites>
+			<li>Pemmican</li>
+			<li>VNPERPNutrientPasteSystem</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteTD</defName>
+		<label>diluted nutrient paste</label>
+		<description>Explore dilution methods for nutrient paste to increase quantity without substantial nutritional loss. The diluted paste will provide basic sustenance for the body, but the flavor worsens significantly.\n\nThis will require a 33% decrease in nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
+		<baseCost>400</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteSystem</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteT2</defName>
+		<label>fine nutrient paste</label>
+		<description>Introduce a secondary flavor portion to improve the overall taste experience.\n\nThis will require a 50% increase in nutrient paste fluid per portion in comparison of simple nutrient paste meal.</description>
+		<baseCost>1500</baseCost>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li>VNPERPNutrientPasteT1</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteTS</defName>
+		<label>packaged nutrient paste</label>
+		<description>Utilize preservation and packaging techniques for nutrient paste to prevent it from spoiling. Great for traveling.\n\nThis will require same volume of nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
+		<baseCost>1200</baseCost>
+		<prerequisites>
+			<li>PackagedSurvivalMeal</li>
+			<li>VNPERPNutrientPasteTC</li>
+			<li>VNPERPNutrientPasteT1</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteT3</defName>
+		<label>lavish nutrient paste</label>
+		<description>Utilize an innovative process to segment nutrient paste fluid into multiple portions with distinct flavors and solidities, achieving universal appeal.\n\nThis will require a 33% increase in nutrient paste fluid per portion in comparison of fine nutrient paste meal.</description>
+		<techLevel>Spacer</techLevel>
+		<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+			<li>VNPERPNutrientPasteT2</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>
