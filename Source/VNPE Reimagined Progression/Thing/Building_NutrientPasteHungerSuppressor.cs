@@ -40,29 +40,32 @@ namespace VNPEReimaginedProgression
         public override void Tick()
         {
             base.Tick();
-            if (this.IsHashIntervalTick(UpdateHediffInterval) || (PowerTraderComp?.PowerOn ?? true))
+            if (Spawned)
             {
-                List<Pawn> allHumanlikeSpawned = base.Map.mapPawns.AllHumanlikeSpawned;
-                for (int i = 0; i < allHumanlikeSpawned.Count && cables.Count < ExtVNPERP.maxTargets; i++)
+                if (this.IsHashIntervalTick(UpdateHediffInterval) && (PowerTraderComp?.PowerOn ?? true))
                 {
-                    Pawn pawn = allHumanlikeSpawned[i];
-                    if (pawn.RaceProps.Humanlike && base.Position.InHorDistOf(pawn.PositionHeld, NoiseSourceComp.Props.radius) && (double)pawn.needs.food.CurLevelPercentage <= 0.15 && !pawn.health.hediffSet.TryGetHediff(HediffDefOfLocal.Hediff_VNPEHungerSuppression, out Hediff __) && TryAddCable(pawn))
+                    List<Pawn> allHumanlikeSpawned = base.Map.mapPawns.AllHumanlikeSpawned;
+                    for (int i = 0; i < allHumanlikeSpawned.Count && cables.Count < ExtVNPERP.maxTargets; i++)
                     {
-                        HediffComp_VNPEHungerSuppressionSeverityPerDay compHungerSuppression = pawn.health.GetOrAddHediff(HediffDefOfLocal.Hediff_VNPEHungerSuppression, pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso)).TryGetComp<HediffComp_VNPEHungerSuppressionSeverityPerDay>();
-                        compHungerSuppression.OnRemoved += RemoveCable;
+                        Pawn pawn = allHumanlikeSpawned[i];
+                        if (pawn.RaceProps.Humanlike && base.Position.InHorDistOf(pawn.PositionHeld, NoiseSourceComp.Props.radius) && (double)pawn.needs.food.CurLevelPercentage <= 0.15 && !pawn.health.hediffSet.TryGetHediff(HediffDefOfLocal.Hediff_VNPEHungerSuppression, out Hediff __) && TryAddCable(pawn))
+                        {
+                            HediffComp_VNPEHungerSuppressionSeverityPerDay compHungerSuppression = pawn.health.GetOrAddHediff(HediffDefOfLocal.Hediff_VNPEHungerSuppression, pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso)).TryGetComp<HediffComp_VNPEHungerSuppressionSeverityPerDay>();
+                            compHungerSuppression.OnRemoved += RemoveCable;
+                        }
                     }
                 }
-            }
-            for (int i = cables.Count - 1; i >= 0; i--)
-            {
-                Cable cable = cables[i];
-                if (base.Position.InHorDistOf(cable.to.PositionHeld, NoiseSourceComp.Props.radius))
+                for (int i = cables.Count - 1; i >= 0; i--)
                 {
-                    cable.Tick();
-                }
-                else
-                {
-                    cables.Remove(cable);
+                    Cable cable = cables[i];
+                    if (base.Position.InHorDistOf(cable.to.PositionHeld, NoiseSourceComp.Props.radius))
+                    {
+                        cable.Tick();
+                    }
+                    else
+                    {
+                        cables.Remove(cable);
+                    }
                 }
             }
         }
