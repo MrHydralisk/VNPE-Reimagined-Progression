@@ -48,9 +48,6 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 	</ThingDef>
   
 	<ThingDef ParentName="VNPE_NutrientPasteVat">
@@ -96,8 +93,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>9</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT1</li>
 		</researchPrerequisites>
 	</ThingDef>
   
@@ -144,8 +141,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT2</li>
 		</researchPrerequisites>
 	</ThingDef>
   
@@ -192,8 +189,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT3</li>
 		</researchPrerequisites>
 	</ThingDef>
   

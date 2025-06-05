@@ -101,6 +101,12 @@
 					<storageCapacity>360</storageCapacity>
 				</value>
 			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteVat"]/researchPrerequisites/li</xpath>
+				<value>
+					<li>VNPERPNutrientPasteSystem</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 
