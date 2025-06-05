@@ -211,8 +211,8 @@
 			<li>VNPEReimaginedProgression.PlaceWorker_NutrientPasteFeedingTube</li>
 		</placeWorkers>
 		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteFeedingTube</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
@@ -264,7 +264,7 @@
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>VNPERPNutrientPasteTD</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -322,7 +322,7 @@
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>VNPERPNutrientPasteT1</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -381,7 +381,7 @@
 		</comps>
 		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>VNPERPNutrientPasteT2</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -441,7 +441,7 @@
 		</comps>
 		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>VNPERPNutrientPasteT3</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -860,7 +860,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteTD</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -917,7 +917,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteT1</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -975,7 +975,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteT2</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -1034,7 +1034,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteT3</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -1054,7 +1054,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPE_NutrientPasteFeederDT</defName>
 		<label>diluted nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederTD</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1110,7 +1110,7 @@
 				<basePowerConsumption>30</basePowerConsumption>
 			</li>
 		</comps>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteTD</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -1124,7 +1124,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPE_NutrientPasteFeeder1T</defName>
 		<label>simple nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederT1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1182,7 +1182,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteT1</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -1196,7 +1196,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPE_NutrientPasteFeeder2T</defName>
 		<label>fine nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederT2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1255,7 +1255,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteT2</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -1269,7 +1269,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPE_NutrientPasteFeeder3T</defName>
 		<label>lavish nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederT3</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1329,7 +1329,7 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteT3</li>
 		</researchPrerequisites>
 		<modExtensions>
@@ -1343,7 +1343,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPE_NutrientPasteFeederKT</defName>
 		<label>nutrient paste kibble feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<description>A small pipe output that allows animals to pick up nutrient paste kibble.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederTK</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1401,8 +1401,9 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
-		<researchPrerequisites Inherit="False">
+		<researchPrerequisites>
 			<li>VNPERPNutrientPasteTK</li>
+			<li>VNPERPNutrientPasteFeeder</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">

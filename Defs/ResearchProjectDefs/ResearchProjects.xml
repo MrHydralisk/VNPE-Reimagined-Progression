@@ -22,8 +22,10 @@
 			<li>NutrientPaste</li>
 		</prerequisites>
 		<researchViewX>0</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>2.5</researchViewY>
 	</ResearchProjectDef>
+	
+	
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
 		<defName>VNPERPNutrientPasteT1</defName>
@@ -35,7 +37,19 @@
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>2.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteDripper</defName>
+		<label>dripper</label>
+		<description>Develop a bedside device that feeds a person lying in bed whenever they are hungry.</description>
+		<baseCost>200</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteSystem</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.7</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -48,7 +62,7 @@
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewY>3.3</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -60,19 +74,34 @@
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewY>4.2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
-		<defName>VNPERPNutrientPasteTK</defName>
-		<label>nutrient paste kibble</label>
-		<description>Explore possibility of producing animal feed from nutrient paste. The paste kibble will provide basic sustenance for the animal's body, but too dangerous for human consumption.\n\nThis will require a 66% increase in nutrient paste fluid per portion of 50 kibble in comparison to nutrient paste meal.</description>
+		<defName>VNPERPNutrientPasteFeeder</defName>
+		<label>feeder</label>
+		<description>Develop a compact pipeline output that allows colonists and citizens to pick up nutrient paste.</description>
 		<baseCost>200</baseCost>
 		<prerequisites>
-			<li>VNPERPNutrientPasteTD</li>
+			<li>VNPERPNutrientPasteSystem</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
+	
+	
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteFeedingTube</defName>
+		<label>feeding tube</label>
+		<description>Develop miniaturization techniques for the nutrient paste dripper, allowing it to be integrated onto the bed structure.</description>
+		<baseCost>600</baseCost>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+			<li>VNPERPNutrientPasteDripper</li>
 		</prerequisites>
 		<researchViewX>2</researchViewX>
-		<researchViewY>2</researchViewY>
+		<researchViewY>1.7</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -85,7 +114,20 @@
 			<li>VNPERPNutrientPasteT1</li>
 		</prerequisites>
 		<researchViewX>2</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>2.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteTK</defName>
+		<label>nutrient paste kibble</label>
+		<description>Explore possibility of producing animal feed from nutrient paste. The paste kibble will provide basic sustenance for the animal's body, but too dangerous for human consumption.\n\nThis will require a 66% increase in nutrient paste fluid per portion of 50 kibble in comparison to nutrient paste meal.</description>
+		<baseCost>200</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteTD</li>
+			<li>VNPERPNutrientPasteFeeder</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>4.2</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -99,7 +141,21 @@
 			<li>VNPERPNutrientPasteT1</li>
 		</prerequisites>
 		<researchViewX>2</researchViewX>
-		<researchViewY>1</researchViewY>
+		<researchViewY>3.3</researchViewY>
+	</ResearchProjectDef>
+	
+	
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteHungerSuppressor</defName>
+		<label>hunger suppressor</label>
+		<description>Develop a multi-tube device that scans for organisms needing nutrition, then uses a dart to connect tube and pump nutrient paste to the target.</description>
+		<baseCost>1200</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteT2</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>1.7</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -113,7 +169,7 @@
 			<li>VNPERPNutrientPasteT2</li>
 		</prerequisites>
 		<researchViewX>3</researchViewX>
-		<researchViewY>0</researchViewY>
+		<researchViewY>2.5</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

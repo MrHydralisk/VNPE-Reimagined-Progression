@@ -44,6 +44,9 @@
 				<color>(0.486, 0.549, 0.305, 1)</color>
 			</li>
 		</comps>
+		<researchPrerequisites>
+			<li>VNPERPNutrientPasteHungerSuppressor</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="VNPE_NutrientPasteHungerSuppressor">
@@ -78,9 +81,6 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<storageCost>0.1</storageCost>
@@ -120,9 +120,6 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
-		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<storageCost>0.1</storageCost>

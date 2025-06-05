@@ -57,7 +57,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteDripper"]/researchPrerequisites/li</xpath>
 				<value>
-					<li>VNPERPNutrientPasteSystem</li>
+					<li>VNPERPNutrientPasteDripper</li>
 				</value>
 			</li>
 			
@@ -77,7 +77,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]/researchPrerequisites/li</xpath>
 				<value>
-					<li>VNPERPNutrientPasteSystem</li>
+					<li>VNPERPNutrientPasteFeeder</li>
 				</value>
 			</li>
 			
