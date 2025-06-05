@@ -131,6 +131,13 @@
 					<li>VNPERPNutrientPasteSystem</li>
 				</value>
 			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPastePipe" or defName ="VNPE_UndergroundNutrientPastePipe" or defName ="VNPE_NutrientPasteValve"]/researchPrerequisites/li</xpath>
+				<value>
+					<li>VNPERPNutrientPasteSystem</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 
