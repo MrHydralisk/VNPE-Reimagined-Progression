@@ -74,6 +74,12 @@
 					<designatorDropdown>VNPE_NutrientPasteFeeder_SET</designatorDropdown>
 				</value>
 			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]/researchPrerequisites/li</xpath>
+				<value>
+					<li>VNPERPNutrientPasteSystem</li>
+				</value>
+			</li>
 			
 			
 			

@@ -64,6 +64,18 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteTK</defName>
+		<label>nutrient paste kibble</label>
+		<description>Explore possibility of producing animal feed from nutrient paste. The paste kibble will provide basic sustenance for the animal's body, but too dangerous for human consumption.\n\nThis will require a 66% increase in nutrient paste fluid per portion of 50 kibble in comparison to nutrient paste meal.</description>
+		<baseCost>200</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteTD</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
 		<defName>VNPERPNutrientPasteT2</defName>
 		<label>fine nutrient paste</label>
 		<description>Introduce a secondary flavor portion to improve the overall taste experience.\n\nThis will require a 50% increase in nutrient paste fluid per portion in comparison of simple nutrient paste meal.</description>
