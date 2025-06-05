@@ -656,8 +656,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteTD</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -702,8 +702,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT1</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -749,8 +749,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT2</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
@@ -797,8 +797,8 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>16</constructionSkillPrerequisite>
-		<researchPrerequisites>
-			<li>NutrientPaste</li>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT3</li>
 		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">

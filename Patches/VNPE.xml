@@ -48,6 +48,12 @@
 					<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 				</value>
 			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]/researchPrerequisites/li</xpath>
+				<value>
+					<li>VNPERPNutrientPasteSystem</li>
+				</value>
+			</li>
 			
 			
 			
