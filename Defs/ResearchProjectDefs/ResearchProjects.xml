@@ -28,6 +28,18 @@
 	
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteDripper</defName>
+		<label>dripper</label>
+		<description>Develop a bedside device that feeds a person lying in bed whenever they are hungry.</description>
+		<baseCost>200</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteSystem</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.7</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
 		<defName>VNPERPNutrientPasteT1</defName>
 		<label>simple nutrient paste</label>
 		<description>Analyze and optimize filtration parameters to reduce undesirable flavor compounds in nutrient paste.\n\nThis will require a 66% increase in nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
@@ -38,18 +50,6 @@
 		</prerequisites>
 		<researchViewX>1</researchViewX>
 		<researchViewY>2.5</researchViewY>
-	</ResearchProjectDef>
-
-	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
-		<defName>VNPERPNutrientPasteDripper</defName>
-		<label>dripper</label>
-		<description>Develop a bedside device that feeds a person lying in bed whenever they are hungry.</description>
-		<baseCost>200</baseCost>
-		<prerequisites>
-			<li>VNPERPNutrientPasteSystem</li>
-		</prerequisites>
-		<researchViewX>1</researchViewX>
-		<researchViewY>1.7</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">

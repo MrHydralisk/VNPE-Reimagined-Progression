@@ -517,7 +517,7 @@
 		</comps>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>VNPERPNutrientPasteTC</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
@@ -563,7 +563,7 @@
 		</comps>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>VNPERPNutrientPasteTS</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
@@ -611,7 +611,8 @@
 		</comps>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>NutrientPaste</li>
+			<li>BiofuelRefining</li>
+			<li>VNPERPNutrientPasteT1</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
