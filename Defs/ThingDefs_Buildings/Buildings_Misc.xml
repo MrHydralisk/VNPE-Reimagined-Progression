@@ -127,5 +127,73 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+	
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VNPE_NutrientPasteFilter</defName>
+		<label>nutrient paste filter</label>
+		<description>A device that extracting biofuel from nutrient paste. Make a batch of chemfuel as a result.</description>
+		<graphicData>
+			<texPath>Things/Building/Processor/NutrientPasteProcessorTR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3.7,3.7)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.6</uiIconScale>
+		<size>(2,2)</size>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>2400</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<building>
+			<heatPerTickWhileWorking>0.50</heatPerTickWhileWorking>
+		</building>
+		<tickerType>Normal</tickerType>
+		<designationCategory>Production</designationCategory>
+		<uiOrder>2131</uiOrder>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<surfaceType>Item</surfaceType>
+		<costList>
+			<Steel>125</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteFilter">
+				<ticksPerNutrient>2.5</ticksPerNutrient>
+				<minPercentFilter>0.1</minPercentFilter>
+				<destroyOption>
+					<filth>VNPE_Filth_Paste</filth>
+					<ratio>1</ratio>
+					<maxRadius>5</maxRadius>
+				</destroyOption>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>BiofuelRefining</li>
+			<li>VNPERPNutrientPasteT1</li>
+		</researchPrerequisites>
+	</ThingDef>
 
 </Defs>

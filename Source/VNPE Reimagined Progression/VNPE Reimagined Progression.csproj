@@ -64,6 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompProperties\CompProperties_NutrientPasteFilter.cs" />
+    <Compile Include="Comp\CompNutrientPasteFilter.cs" />
     <Compile Include="Thing\Building_NutrientPasteHungerSuppressor.cs" />
     <Compile Include="CompProperties\HediffCompProperties_VNPEHungerSuppressionSeverityPerDay.cs" />
     <Compile Include="Comp\HediffComp_VNPEHungerSuppressionSeverityPerDay.cs" />
