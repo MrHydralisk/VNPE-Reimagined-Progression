@@ -132,8 +132,8 @@ namespace VNPEReimaginedProgression
                     {
                         StopFilter();
                     },
-                    defaultLabel = "Cancel",
-                    defaultDesc = $"Will cancel filtering process and will add left over nutrient paste back to storage."
+                    defaultLabel = "VNPEReimaginedProgression.Filter.Gizmo.Stop.Label".Translate(),
+                    defaultDesc = "VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc".Translate(Mathf.Round((amountLeft * 100) / 100))
                 };
             }
             else
@@ -153,8 +153,8 @@ namespace VNPEReimaginedProgression
                         }
                         Find.WindowStack.Add(new FloatMenu(floatMenuOptions));
                     },
-                    defaultLabel = "Filter",
-                    defaultDesc = $"Initiate filter process to remove ingredient. Will consume {filterCost.ToStringPercent()} of stored nutrient paste."
+                    defaultLabel = "VNPEReimaginedProgression.Filter.Gizmo.Start.Label".Translate(),
+                    defaultDesc = "VNPEReimaginedProgression.Filter.Gizmo.Start.Desc".Translate(filterCost.ToStringPercent())
                 };
             }
         }
@@ -178,12 +178,13 @@ namespace VNPEReimaginedProgression
             List<string> inspectStrings = new List<string>();
             if (isFiltering)
             {
-                inspectStrings.Add($"Amount of {IngredientDef.label} filtered: {amountLeft}/{amountFiltered}");
-                inspectStrings.Add($"Finish in {ticksTillFiltered.ToStringTicksToPeriod()}");
+                inspectStrings.Add("VNPEReimaginedProgression.Filter.InspectString.Filtering".Translate(IngredientDef.label));
+                inspectStrings.Add("VNPEReimaginedProgression.Filter.InspectString.AmountFiltered".Translate(Mathf.Round((amountLeft * 100) / 100), Mathf.Round((amountFiltered * 100) / 100)));
+                inspectStrings.Add("VNPEReimaginedProgression.Filter.InspectString.TimeTillFiltered".Translate(ticksTillFiltered.ToStringTicksToPeriod()));
             }
             else
             {
-                inspectStrings.Add($"Filter will cost {filterCost.ToStringPercent()}");
+                inspectStrings.Add("VNPEReimaginedProgression.Filter.InspectString.FilteringCost".Translate(filterCost.ToStringPercent()));
             }
             return string.Join("\n", inspectStrings);
         }

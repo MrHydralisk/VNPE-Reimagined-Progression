@@ -36,7 +36,7 @@
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
 		<researchViewX>1</researchViewX>
-		<researchViewY>1.7</researchViewY>
+		<researchViewY>0.8</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -99,6 +99,19 @@
 		<prerequisites>
 			<li>MicroelectronicsBasics</li>
 			<li>VNPERPNutrientPasteDripper</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>0.8</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteFilter</defName>
+		<label>filter</label>
+		<description>Develop a device capable of precisely isolating and then incinerating specific ingredients from nutrient paste portions.</description>
+		<baseCost>600</baseCost>
+		<prerequisites>
+			<li>BiofuelRefining</li>
+			<li>VNPERPNutrientPasteT1</li>
 		</prerequisites>
 		<researchViewX>2</researchViewX>
 		<researchViewY>1.7</researchViewY>

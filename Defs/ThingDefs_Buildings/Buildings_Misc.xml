@@ -133,7 +133,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VNPE_NutrientPasteFilter</defName>
 		<label>nutrient paste filter</label>
-		<description>A device that extracting biofuel from nutrient paste. Make a batch of chemfuel as a result.</description>
+		<description>A device designed to isolate a particular ingredient from nutrient paste and subsequently destroy that isolated portion by burning.</description>
 		<graphicData>
 			<texPath>Things/Building/Processor/NutrientPasteProcessorTR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -154,7 +154,7 @@
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
-			<WorkToBuild>2400</WorkToBuild>
+			<WorkToBuild>2800</WorkToBuild>
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<building>
@@ -167,17 +167,17 @@
 		<pathCost>70</pathCost>
 		<surfaceType>Item</surfaceType>
 		<costList>
-			<Steel>125</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>100</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteFilter">
-				<ticksPerNutrient>2.5</ticksPerNutrient>
+				<ticksPerNutrient>10</ticksPerNutrient>
 				<minPercentFilter>0.1</minPercentFilter>
 				<destroyOption>
 					<filth>VNPE_Filth_Paste</filth>
 					<ratio>1</ratio>
-					<maxRadius>5</maxRadius>
+					<maxRadius>6</maxRadius>
 				</destroyOption>
 			</li>
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -186,13 +186,12 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>150</basePowerConsumption>
+				<basePowerConsumption>200</basePowerConsumption>
 			</li>
 		</comps>
-		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<researchPrerequisites>
-			<li>BiofuelRefining</li>
-			<li>VNPERPNutrientPasteT1</li>
+			<li>VNPERPNutrientPasteFilter</li>
 		</researchPrerequisites>
 	</ThingDef>
 

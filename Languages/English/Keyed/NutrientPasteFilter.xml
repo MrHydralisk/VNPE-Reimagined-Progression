@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<VNPEReimaginedProgression.Filter.Gizmo.Start.Label>Start filtering</VNPEReimaginedProgression.Filter.Gizmo.Start.Label>
+	<VNPEReimaginedProgression.Filter.Gizmo.Start.Desc>Initiate filtering process to remove ingredient. Will consume {0} of stored nutrient paste.</VNPEReimaginedProgression.Filter.Gizmo.Start.Desc>
+
+	<VNPEReimaginedProgression.Filter.Gizmo.Stop.Label>Stop filtering</VNPEReimaginedProgression.Filter.Gizmo.Stop.Label>
+	<VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc>Will cancel filtering process and will add left over {0} nutrient paste back to storage.</VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc>
+	
+	
+	
+	<VNPEReimaginedProgression.Filter.InspectString.Filtering>Filtering out {0}</VNPEReimaginedProgression.Filter.InspectString.Filtering>
+	<VNPEReimaginedProgression.Filter.InspectString.AmountFiltered>Left: {0}/{1} paste</VNPEReimaginedProgression.Filter.InspectString.AmountFiltered>
+	<VNPEReimaginedProgression.Filter.InspectString.TimeTillFiltered>Will be done in {0}</VNPEReimaginedProgression.Filter.InspectString.TimeTillFiltered>
+	<VNPEReimaginedProgression.Filter.InspectString.FilteringCost>Filtering will take {0} paste</VNPEReimaginedProgression.Filter.InspectString.FilteringCost>
+
+</LanguageData>
