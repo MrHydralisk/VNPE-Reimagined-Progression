@@ -59,7 +59,7 @@ namespace VNPEReimaginedProgression
         public override void CompTick()
         {
             base.CompTick();
-            if (isFiltering)
+            if (isFiltering && PowerTraderComp.PowerOn)
             {
                 ticksTillFiltered--;
                 if (ticksTillFiltered <= 0)
