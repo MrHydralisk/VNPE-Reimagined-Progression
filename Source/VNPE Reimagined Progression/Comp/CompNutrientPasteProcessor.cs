@@ -1,5 +1,6 @@
 ﻿using PipeSystem;
 using RimWorld;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -23,7 +24,7 @@ namespace VNPEReimaginedProgression
         protected List<Thing> ProducedThings = new List<Thing>();
 
         public int tickNextProduction;
-        public int containedItems => ProducedThings.Count();
+        public int containedItems => ProducedThings.Sum((Thing t) => t.stackCount);
         protected int maxCapacity;
         public int MaxCapacity
         {
@@ -95,30 +96,38 @@ namespace VNPEReimaginedProgression
         public void Produce()
         {
             parent.def.building.soundDispense.PlayOneShot(new TargetInfo(parent.Position, parent.Map));
-            for (int i = 0; i < Props.ItemProducedAmount; i++)
+            Thing thingProduced = ThingMaker.MakeThing(Props.ItemProducedDef);
+            thingProduced.stackCount = Props.ItemProducedAmount;
+            CompIngredients compIngredients = thingProduced.TryGetComp<CompIngredients>();
+            if (compIngredients != null)
             {
-                Thing thingProduced = ThingMaker.MakeThing(Props.ItemProducedDef);
-                CompIngredients compIngredients = thingProduced.TryGetComp<CompIngredients>();
-                if (compIngredients != null)
+                for (int j = 0; j < IngredientsList.Count; j++)
                 {
-                    for (int j = 0; j < IngredientsList.Count; j++)
-                    {
-                        compIngredients.RegisterIngredient(IngredientsList[j]);
-                    }
+                    compIngredients.RegisterIngredient(IngredientsList[j]);
                 }
+            }
+            bool isAbsorb = false;
+            for (int i = ProducedThings.Count - 1; i >= 0; i--)
+            {
+                if (ProducedThings[i].TryAbsorbStack(thingProduced, false))
+                {
+                    isAbsorb = true;
+                    break;
+                }
+            }
+            if (!isAbsorb)
+            {
                 ProducedThings.Add(thingProduced);
             }
             isProcessing = false;
         }
 
-        public void ExtractProducedItems(int amount)
+        public void ExtractProducedItems()
         {
-            int takeAmount = Mathf.Clamp(amount, 0, containedItems);
-            while (takeAmount > 0)
+            while (ProducedThings.Count > 0)
             {
                 Thing thing = ProducedThings.PopFront();
                 GenPlace.TryPlaceThing(thing, parent.Position, parent.Map, ThingPlaceMode.Near);
-                takeAmount--;
             }
         }
 
@@ -159,7 +168,7 @@ namespace VNPEReimaginedProgression
             {
                 action = delegate
                 {
-                    ExtractProducedItems(containedItems);
+                    ExtractProducedItems();
                 },
                 defaultLabel = "VNPEReimaginedProgression.Processor.Gizmo.Eject.Label".Translate(),
                 defaultDesc = "VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc".Translate(),
@@ -176,7 +185,7 @@ namespace VNPEReimaginedProgression
         {
             if (mode != DestroyMode.Vanish)
             {
-                ExtractProducedItems(containedItems);
+                ExtractProducedItems();
             }
             base.PostDestroy(mode, previousMap);
         }

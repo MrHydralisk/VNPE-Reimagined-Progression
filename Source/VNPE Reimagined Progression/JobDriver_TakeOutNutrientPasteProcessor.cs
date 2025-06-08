@@ -33,7 +33,7 @@ namespace VNPEReimaginedProgression
             Toil toil = ToilMaker.MakeToil("MakeNewToils");
             toil.initAction = delegate
             {
-                compNutrientPasteProcessor.ExtractProducedItems(compNutrientPasteProcessor.containedItems);
+                compNutrientPasteProcessor.ExtractProducedItems();
             };
             toil.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return toil;
