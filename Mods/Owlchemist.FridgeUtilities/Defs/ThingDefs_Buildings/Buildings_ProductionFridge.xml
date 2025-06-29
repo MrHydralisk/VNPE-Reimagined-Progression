@@ -24,6 +24,7 @@
 			<color>(232,255,191)</color>
 		</graphicData>
 		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
 			<WorkToBuild>1200</WorkToBuild>
 		</statBases>
 		<costList>
@@ -39,9 +40,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>70</basePowerConsumption>
+				<basePowerConsumption>60</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPasteDT</customMeal>
@@ -59,7 +61,7 @@
 			<color>(255,255,255)</color>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>96</MaxHitPoints>
+			<MaxHitPoints>110</MaxHitPoints>
 			<WorkToBuild>900</WorkToBuild>
 			<Mass>7</Mass>
 		</statBases>
@@ -98,9 +100,10 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>50</basePowerConsumption>
+				<basePowerConsumption>40</basePowerConsumption>
 			</li>
 		</comps>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<researchPrerequisites>
 			<li>VNPERPNutrientPasteTD</li>
 		</researchPrerequisites>
@@ -121,7 +124,7 @@
 			<color>(255,255,255)</color>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>132</MaxHitPoints>
+			<MaxHitPoints>152</MaxHitPoints>
 			<WorkToBuild>1500</WorkToBuild>
 			<Mass>8</Mass>
 		</statBases>
@@ -160,7 +163,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>75</basePowerConsumption>
+				<basePowerConsumption>65</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
@@ -184,7 +187,7 @@
 			<color>(255,255,255)</color>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>156</MaxHitPoints>
+			<MaxHitPoints>180</MaxHitPoints>
 			<WorkToBuild>1800</WorkToBuild>
 			<Mass>9</Mass>
 		</statBases>
@@ -224,7 +227,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>85</basePowerConsumption>
+				<basePowerConsumption>75</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
@@ -248,7 +251,7 @@
 			<color>(255,255,255)</color>
 		</graphicData>
 		<statBases>
-			<MaxHitPoints>180</MaxHitPoints>
+			<MaxHitPoints>200</MaxHitPoints>
 			<WorkToBuild>2400</WorkToBuild>
 			<Mass>9</Mass>
 		</statBases>
@@ -289,7 +292,7 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>100</basePowerConsumption>
+				<basePowerConsumption>90</basePowerConsumption>
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
@@ -301,6 +304,39 @@
 				<customMeal>MealNutrientPaste3T</customMeal>
 				<storageCost>3.33333</storageCost>
 			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+
+	<ThingDef ParentName="VNPE_HopperShelf">
+		<defName>VNPE_FridgeHopperShelf</defName>
+		<label>refridgerated hopper shelf</label>
+		<description>This triple-stack shelf is designed to hold resources for machines like nutrient paste dispensers and grinders, with three times the capacity of a standard hopper. Items stored inside will never deteriorate and don't affect the beauty of their surroundings. An installed refrigeration unit prevent stored items from spoiling.</description>
+		<graphicData>
+			<texPath>Things/Building/FridgeHopperShelf/FridgeHopperShelf</texPath>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>1200</WorkToBuild>
+			<MaxHitPoints>165</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Steel>55</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<researchPrerequisites>
+			<li>VNPERPNutrientPasteRefrigeration</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>80</basePowerConsumption>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="SimpleFridge.Fridge"/>
 		</modExtensions>
 	</ThingDef>
 

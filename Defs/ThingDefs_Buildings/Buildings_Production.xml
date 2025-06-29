@@ -1414,5 +1414,97 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+	
+	
+	
+	<DesignatorDropdownGroupDef>
+		<defName>VNPE_HopperShelf_SET</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<ThingDef Name="VNPE_HopperShelf" ParentName="BuildingBase">
+		<defName>VNPE_HopperShelf</defName>
+		<label>hopper shelf</label>
+		<description>This triple-stack shelf is designed to hold resources for machines like nutrient paste dispensers and grinders, with three times the capacity of a standard hopper. Items stored inside will never deteriorate and don't affect the beauty of their surroundings.</description>
+		<thingClass>Building_Storage</thingClass>
+		<graphicData>
+			<texPath>Things/Building/HopperShelf/HopperShelf</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rect>(0.11,0.11,0.78,0.84)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.5</fillPercent>
+		<pathCost>42</pathCost>
+		<canOverlapZones>false</canOverlapZones>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<maxItemsInCell>3</maxItemsInCell>
+			<isHopper>true</isHopper>
+			<storageGroupTag>Hopper</storageGroupTag>
+			<blueprintClass>Blueprint_Storage</blueprintClass>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>FoodRaw</li>
+					</categories>
+					<specialFiltersToDisallow>
+						<li>AllowPlantFood</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>FoodRaw</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>Meat_Human</li>
+						<li>Meat_Megaspider</li>
+						<li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+					</disallowedThingDefs>
+				</filter>
+			</defaultStorageSettings>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+		</costList>
+		<tickerType>Never</tickerType>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<designationCategory>Production</designationCategory>
+		<uiOrder>2140</uiOrder>
+		<surfaceType>Item</surfaceType>
+		<designatorDropdown>VNPE_HopperShelf_SET</designatorDropdown>
+		<placeWorkers>
+			<li>PlaceWorker_NextToHopperAccepter</li>
+		</placeWorkers>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>VNPERPHopperShelf</li>
+		</researchPrerequisites>
+        <comps>
+          <li Class="VNPE.CompProperties_RegisterToGrinder" />
+        </comps>
+	</ThingDef>
 
 </Defs>

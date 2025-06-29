@@ -161,7 +161,7 @@
 			<heatPerTickWhileWorking>0.50</heatPerTickWhileWorking>
 		</building>
 		<tickerType>Normal</tickerType>
-		<designationCategory>Production</designationCategory>
+		<designationCategory>VCHE_PipeNetworks</designationCategory>
 		<uiOrder>2131</uiOrder>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>

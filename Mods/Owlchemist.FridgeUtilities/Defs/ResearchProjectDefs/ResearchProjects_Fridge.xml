@@ -5,7 +5,7 @@
 		<defName>VNPERPNutrientPasteRefrigeration</defName>
 		<label>refrigeration</label>
 		<description>Learn how to use cooling technology to keep nutrient paste refridgerated.</description>
-		<baseCost>400</baseCost>
+		<baseCost>1200</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteT2</li>
 			<li>AirConditioning</li>

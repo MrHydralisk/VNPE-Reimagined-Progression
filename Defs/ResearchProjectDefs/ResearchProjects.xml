@@ -40,6 +40,19 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPHopperShelf</defName>
+		<label>hopper shelf</label>
+		<description>Learn how to improve capacity of hoppers for use by machines like nutrient paste dispensers and grinders.</description>
+		<baseCost>400</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteSystem</li>
+			<li>ComplexFurniture</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.7</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
 		<defName>VNPERPNutrientPasteT1</defName>
 		<label>simple nutrient paste</label>
 		<description>Analyze and optimize filtration parameters to reduce undesirable flavor compounds in nutrient paste.\n\nThis will require a 66% increase in nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
