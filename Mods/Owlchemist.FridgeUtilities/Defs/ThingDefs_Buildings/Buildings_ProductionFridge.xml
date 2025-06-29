@@ -7,7 +7,7 @@
 	
 	<ThingDef Name="VNPE_NutrientPasteFridgeFeeder" ParentName="VNPE_NutrientPasteFeeder" Abstract="true">
 		<researchPrerequisites>
-			<li>AirConditioning</li>
+			<li>VNPERPNutrientPasteRefrigeration</li>
 		</researchPrerequisites>
 		<designatorDropdown>VNPE_NutrientPasteFridgeFeeder_SET</designatorDropdown>
 		<modExtensions>
@@ -17,8 +17,8 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
 		<defName>VNPE_NutrientPasteFridgeFeeder0T</defName>
-		<label>nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<label>refridgerated nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
 			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT0</texPath>
 			<color>(232,255,191)</color>
@@ -52,8 +52,8 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
 		<defName>VNPE_NutrientPasteFridgeFeederDT</defName>
-		<label>diluted nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste.</description>
+		<label>refridgerated diluted nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
 			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederTD</texPath>
 			<color>(255,255,255)</color>
@@ -114,8 +114,8 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
 		<defName>VNPE_NutrientPasteFridgeFeeder1T</defName>
-		<label>simple nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste.</description>
+		<label>refridgerated simple nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
 			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT1</texPath>
 			<color>(255,255,255)</color>
@@ -177,8 +177,8 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
 		<defName>VNPE_NutrientPasteFridgeFeeder2T</defName>
-		<label>fine nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste.</description>
+		<label>refridgerated fine nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
 			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT2</texPath>
 			<color>(255,255,255)</color>
@@ -241,8 +241,8 @@
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
 		<defName>VNPE_NutrientPasteFridgeFeeder3T</defName>
-		<label>lavish nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste.</description>
+		<label>refridgerated lavish nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
 			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT3</texPath>
 			<color>(255,255,255)</color>

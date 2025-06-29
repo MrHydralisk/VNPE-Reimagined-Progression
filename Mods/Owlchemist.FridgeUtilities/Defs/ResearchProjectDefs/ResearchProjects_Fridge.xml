@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPNutrientPasteRefrigeration</defName>
+		<label>refrigeration</label>
+		<description>Learn how to use cooling technology to keep nutrient paste refridgerated.</description>
+		<baseCost>400</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteT2</li>
+			<li>AirConditioning</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>3.3</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>
