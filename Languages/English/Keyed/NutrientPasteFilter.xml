@@ -3,6 +3,8 @@
 
 	<VNPEReimaginedProgression.Filter.Gizmo.Start.Label>Start filtering</VNPEReimaginedProgression.Filter.Gizmo.Start.Label>
 	<VNPEReimaginedProgression.Filter.Gizmo.Start.Desc>Initiate filtering process to remove ingredient. Will consume {0} of stored nutrient paste.</VNPEReimaginedProgression.Filter.Gizmo.Start.Desc>
+	<VNPEReimaginedProgression.Filter.Gizmo.Start.Empty>Nothing stored.</VNPEReimaginedProgression.Filter.Gizmo.Start.Empty>
+	<VNPEReimaginedProgression.Filter.Gizmo.Start.NoIngredients>No ingredient to filter.</VNPEReimaginedProgression.Filter.Gizmo.Start.NoIngredients>
 
 	<VNPEReimaginedProgression.Filter.Gizmo.Stop.Label>Stop filtering</VNPEReimaginedProgression.Filter.Gizmo.Stop.Label>
 	<VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc>Will cancel filtering process and will add left over {0} nutrient paste back to storage.</VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc>

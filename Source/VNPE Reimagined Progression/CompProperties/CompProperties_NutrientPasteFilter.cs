@@ -11,6 +11,9 @@ namespace VNPEReimaginedProgression
 
         public DestroyOption destroyOption;
 
+        [NoTranslate]
+        public string startCommandTexPath;
+
         public CompProperties_NutrientPasteFilter()
         {
             compClass = typeof(CompNutrientPasteFilter);

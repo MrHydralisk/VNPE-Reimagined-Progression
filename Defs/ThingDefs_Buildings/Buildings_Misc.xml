@@ -172,13 +172,14 @@
 		</costList>
 		<comps>
 			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteFilter">
-				<ticksPerNutrient>60</ticksPerNutrient>
+				<ticksPerNutrient>150</ticksPerNutrient>
 				<minPercentFilter>0.1</minPercentFilter>
 				<destroyOption>
 					<filth>VNPE_Filth_Paste</filth>
 					<ratio>1</ratio>
 					<maxRadius>6</maxRadius>
 				</destroyOption>
+				<startCommandTexPath>Things/Item/Meal/NutrientPaste/NutrientPaste_a</startCommandTexPath>
 			</li>
 			<li Class="PipeSystem.CompProperties_Resource">
 				<pipeNet>VNPE_NutrientPasteNet</pipeNet>

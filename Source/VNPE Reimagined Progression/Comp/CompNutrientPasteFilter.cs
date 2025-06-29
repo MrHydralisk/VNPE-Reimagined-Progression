@@ -9,9 +9,12 @@ using VNPE;
 
 namespace VNPEReimaginedProgression
 {
+    [StaticConstructorOnStartup]
     public class CompNutrientPasteFilter : ThingComp
     {
         public CompProperties_NutrientPasteFilter Props => (CompProperties_NutrientPasteFilter)props;
+
+        public static readonly Texture2D CancelCommandTex = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
         public CompPowerTrader PowerTraderComp => powerTraderComp ?? (powerTraderComp = parent.GetComp<CompPowerTrader>());
         private CompPowerTrader powerTraderComp;
@@ -55,6 +58,19 @@ namespace VNPEReimaginedProgression
         }
         public List<ThingDef> IngredientsListCached;
         private int tickLastIngerdientCheck;
+
+        public Texture2D StartCommandTex
+        {
+            get
+            {
+                if (!(startCommandTex != null))
+                {
+                    return startCommandTex = ContentFinder<Texture2D>.Get(Props.startCommandTexPath);
+                }
+                return startCommandTex;
+            }
+        }
+        private Texture2D startCommandTex;
 
         public override void CompTick()
         {
@@ -133,7 +149,9 @@ namespace VNPEReimaginedProgression
                         StopFilter();
                     },
                     defaultLabel = "VNPEReimaginedProgression.Filter.Gizmo.Stop.Label".Translate(),
-                    defaultDesc = "VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc".Translate(Mathf.Round((amountLeft * 100) / 100))
+                    defaultDesc = "VNPEReimaginedProgression.Filter.Gizmo.Stop.Desc".Translate(Mathf.Round((amountLeft * 100) / 100)),
+                    icon = CancelCommandTex,
+                    hotKey = KeyBindingDefOf.Designator_Cancel
                 };
             }
             else
@@ -143,18 +161,20 @@ namespace VNPEReimaginedProgression
                     action = delegate
                     {
                         List<FloatMenuOption> floatMenuOptions = new List<FloatMenuOption>();
-                        Log.Message($"IngredientsList {IngredientsList.Count()}");
                         foreach (ThingDef ingredientDef in IngredientsList)
                         {
                             floatMenuOptions.Add(new FloatMenuOption(ingredientDef.LabelCap, delegate
                             {
                                 StartFilter(ingredientDef);
-                            }));
+                            }, shownItemForIcon: ingredientDef));
                         }
                         Find.WindowStack.Add(new FloatMenu(floatMenuOptions));
                     },
                     defaultLabel = "VNPEReimaginedProgression.Filter.Gizmo.Start.Label".Translate(),
-                    defaultDesc = "VNPEReimaginedProgression.Filter.Gizmo.Start.Desc".Translate(filterCost.ToStringPercent())
+                    defaultDesc = "VNPEReimaginedProgression.Filter.Gizmo.Start.Desc".Translate(filterCost.ToStringPercent()),
+                    Disabled = (ResourceComp?.PipeNet?.Stored ?? 0) < 1 || IngredientsList.Count() < 2,
+                    disabledReason = (ResourceComp?.PipeNet?.Stored ?? 0) < 1 ? "VNPEReimaginedProgression.Filter.Gizmo.Start.Empty".Translate() : "VNPEReimaginedProgression.Filter.Gizmo.Start.NoIngredients".Translate(),
+                    icon = StartCommandTex
                 };
             }
         }
