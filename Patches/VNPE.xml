@@ -40,6 +40,15 @@
 					<li>VNPERPNutrientPasteSystem</li>
 				</value>
 			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>75</Steel>
+						<ComponentIndustrial>2</ComponentIndustrial>
+					</costList>
+				</value>
+			</li>
 			
 			
 			

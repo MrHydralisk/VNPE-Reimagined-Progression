@@ -643,7 +643,7 @@
 			<WorkToBuild>1350</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
+			<Steel>30</Steel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
@@ -689,8 +689,8 @@
 			<WorkToBuild>2250</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>60</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>120</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -735,9 +735,10 @@
 			<WorkToBuild>2700</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>90</Steel>
-			<ComponentIndustrial>4</ComponentIndustrial>
+			<Steel>150</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
 			<Plasteel>25</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">
@@ -782,10 +783,10 @@
 			<WorkToBuild>3600</WorkToBuild>
 		</statBases>
 		<costList>
-			<Steel>120</Steel>
+			<Steel>175</Steel>
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<Plasteel>75</Plasteel>
-			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_Resource">

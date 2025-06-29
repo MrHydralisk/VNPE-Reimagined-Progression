@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>VNPE_NutrientPasteFridgeFeeder_SET</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<ThingDef Name="VNPE_NutrientPasteFridgeFeeder" ParentName="VNPE_NutrientPasteFeeder" Abstract="true">
+		<researchPrerequisites>
+			<li>AirConditioning</li>
+		</researchPrerequisites>
+		<designatorDropdown>VNPE_NutrientPasteFridgeFeeder_SET</designatorDropdown>
+		<modExtensions>
+			<li Class="SimpleFridge.Fridge"/>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
+		<defName>VNPE_NutrientPasteFridgeFeeder0T</defName>
+		<label>nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste.</description>
+		<graphicData>
+			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT0</texPath>
+			<color>(232,255,191)</color>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>1200</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ConvertResourceToThing">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<maxOutputStackSize>5</maxOutputStackSize>
+				<thing>MealNutrientPaste</thing>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>70</basePowerConsumption>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPasteDT</customMeal>
+				<storageCost>0.66667</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
+		<defName>VNPE_NutrientPasteFridgeFeederDT</defName>
+		<label>diluted nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste.</description>
+		<graphicData>
+			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederTD</texPath>
+			<color>(255,255,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>96</MaxHitPoints>
+			<WorkToBuild>900</WorkToBuild>
+			<Mass>7</Mass>
+		</statBases>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<building>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPasteDT</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPasteDT</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ConvertResourceToThing">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<maxOutputStackSize>5</maxOutputStackSize>
+				<thing>MealNutrientPasteDT</thing>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>VNPERPNutrientPasteTD</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPasteDT</customMeal>
+				<storageCost>0.66667</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
+		<defName>VNPE_NutrientPasteFridgeFeeder1T</defName>
+		<label>simple nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste.</description>
+		<graphicData>
+			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT1</texPath>
+			<color>(255,255,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>132</MaxHitPoints>
+			<WorkToBuild>1500</WorkToBuild>
+			<Mass>8</Mass>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<building>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPaste1T</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPaste1T</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ConvertResourceToThing">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<maxOutputStackSize>5</maxOutputStackSize>
+				<thing>MealNutrientPaste1T</thing>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>VNPERPNutrientPasteT1</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste1T</customMeal>
+				<storageCost>1.66667</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
+		<defName>VNPE_NutrientPasteFridgeFeeder2T</defName>
+		<label>fine nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste.</description>
+		<graphicData>
+			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT2</texPath>
+			<color>(255,255,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>156</MaxHitPoints>
+			<WorkToBuild>1800</WorkToBuild>
+			<Mass>9</Mass>
+		</statBases>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<building>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPaste2T</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPaste2T</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ConvertResourceToThing">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<maxOutputStackSize>5</maxOutputStackSize>
+				<thing>MealNutrientPaste2T</thing>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>85</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>VNPERPNutrientPasteT2</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste2T</customMeal>
+				<storageCost>2.5</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
+		<defName>VNPE_NutrientPasteFridgeFeeder3T</defName>
+		<label>lavish nutrient paste feeder</label>
+		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste.</description>
+		<graphicData>
+			<texPath>Things/Building/FridgeFeeder/NutrientPasteFridgeFeederT3</texPath>
+			<color>(255,255,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<WorkToBuild>2400</WorkToBuild>
+			<Mass>9</Mass>
+		</statBases>
+		<costList>
+			<Steel>95</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>25</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<building>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPaste3T</li>
+					</thingDefs>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<thingDefs>
+						<li>MealNutrientPaste3T</li>
+					</thingDefs>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ConvertResourceToThing">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<maxOutputStackSize>5</maxOutputStackSize>
+				<thing>MealNutrientPaste3T</thing>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>100</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>VNPERPNutrientPasteT3</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<customMeal>MealNutrientPaste3T</customMeal>
+				<storageCost>3.33333</storageCost>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>
