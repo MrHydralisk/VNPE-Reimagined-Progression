@@ -49,6 +49,18 @@
 					</costList>
 				</value>
 			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]/designationCategory</xpath>
+				<value>
+					<designationCategory>Production</designationCategory>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]</xpath>
+				<value>
+					<uiOrder>2130</uiOrder>
+				</value>
+			</li>
 			
 			
 			

@@ -1083,7 +1083,7 @@
 				<li>Production</li>
 			</buildingTags>
 			<fixedStorageSettings>
-				<filter>
+				<filter  Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPasteDT</li>
@@ -1092,7 +1092,7 @@
 			</fixedStorageSettings>
 			<defaultStorageSettings>
 				<priority>Important</priority>
-				<filter>
+				<filter  Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPasteDT</li>
@@ -1154,7 +1154,7 @@
 				<li>Production</li>
 			</buildingTags>
 			<fixedStorageSettings>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPaste1T</li>
@@ -1163,7 +1163,7 @@
 			</fixedStorageSettings>
 			<defaultStorageSettings>
 				<priority>Important</priority>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPaste1T</li>
@@ -1227,7 +1227,7 @@
 				<li>Production</li>
 			</buildingTags>
 			<fixedStorageSettings>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPaste2T</li>
@@ -1236,7 +1236,7 @@
 			</fixedStorageSettings>
 			<defaultStorageSettings>
 				<priority>Important</priority>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPaste2T</li>
@@ -1301,7 +1301,7 @@
 				<li>Production</li>
 			</buildingTags>
 			<fixedStorageSettings>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPaste3T</li>
@@ -1310,7 +1310,7 @@
 			</fixedStorageSettings>
 			<defaultStorageSettings>
 				<priority>Important</priority>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPaste3T</li>
@@ -1373,7 +1373,7 @@
 				<li>Production</li>
 			</buildingTags>
 			<fixedStorageSettings>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPasteKT</li>
@@ -1382,7 +1382,7 @@
 			</fixedStorageSettings>
 			<defaultStorageSettings>
 				<priority>Important</priority>
-				<filter>
+				<filter Inherit="False">
 					<disallowNotEverStorable>true</disallowNotEverStorable>
 					<thingDefs>
 						<li>MealNutrientPasteKT</li>
