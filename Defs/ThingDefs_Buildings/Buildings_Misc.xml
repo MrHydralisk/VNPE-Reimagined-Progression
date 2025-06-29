@@ -135,9 +135,9 @@
 		<label>nutrient paste filter</label>
 		<description>A device designed to isolate a particular ingredient from nutrient paste and subsequently destroy that isolated portion by burning.</description>
 		<graphicData>
-			<texPath>Things/Building/Processor/NutrientPasteProcessorTR</texPath>
+			<texPath>Things/Building/NutrientPasteFilter</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(3.7,3.7)</drawSize>
+			<drawSize>(3,3)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
