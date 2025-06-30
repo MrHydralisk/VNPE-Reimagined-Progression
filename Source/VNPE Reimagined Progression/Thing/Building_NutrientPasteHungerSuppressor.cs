@@ -37,7 +37,7 @@ namespace VNPEReimaginedProgression
         private VNPERPDefModExtension ExtVNPERP => extVNPERP ?? (extVNPERP = def.GetModExtension<VNPERPDefModExtension>());
         private VNPERPDefModExtension extVNPERP;
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (Spawned)
