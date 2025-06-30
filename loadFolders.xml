@@ -2,7 +2,7 @@
 <loadFolders>
 	<v1.5>
 		<li>/</li>
-		<li IfModActive="Owlchemist.FridgeUtilities">Mods/Owlchemist.FridgeUtilities</li>
 		<li>1.5</li>
+		<li IfModActive="Owlchemist.FridgeUtilities">Mods/Owlchemist.FridgeUtilities</li>
 	</v1.5>
 </loadFolders>

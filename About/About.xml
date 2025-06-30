@@ -7,7 +7,7 @@
 		<li>1.5</li>
 	</supportedVersions>
 	<modIconPath IgnoreIfNoMatchingField="True">Things/Building/Grinder/NutrientPasteGrinderT3</modIconPath>
-	<description>Revisit of Vanilla Nutrient Paste Expanded to add new functionality and improve it progression</description>
+	<description>Revisit of Vanilla Nutrient Paste Expanded to add new functionality, content and improve it progression.</description>
 	<modDependencies>
 		<li>
 			<packageId>VanillaExpanded.VNutrientE</packageId>

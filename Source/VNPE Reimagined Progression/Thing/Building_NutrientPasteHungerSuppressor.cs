@@ -48,9 +48,9 @@ namespace VNPEReimaginedProgression
                     for (int i = 0; i < allHumanlikeSpawned.Count && cables.Count < ExtVNPERP.maxTargets; i++)
                     {
                         Pawn pawn = allHumanlikeSpawned[i];
-                        if (pawn.RaceProps.Humanlike && base.Position.InHorDistOf(pawn.PositionHeld, NoiseSourceComp.Props.radius) && (double)pawn.needs.food.CurLevelPercentage <= 0.15 && !pawn.health.hediffSet.TryGetHediff(HediffDefOfLocal.Hediff_VNPEHungerSuppression, out Hediff __) && TryAddCable(pawn))
+                        if (pawn.RaceProps.Humanlike && base.Position.InHorDistOf(pawn.PositionHeld, NoiseSourceComp.Props.radius) && (double)pawn.needs.food.CurLevelPercentage <= 0.15 && !pawn.health.hediffSet.TryGetHediff(HediffDefOfLocal.Hediff_VNPERP_HungerSuppression, out Hediff __) && TryAddCable(pawn))
                         {
-                            HediffComp_VNPEHungerSuppressionSeverityPerDay compHungerSuppression = pawn.health.GetOrAddHediff(HediffDefOfLocal.Hediff_VNPEHungerSuppression, pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso)).TryGetComp<HediffComp_VNPEHungerSuppressionSeverityPerDay>();
+                            HediffComp_HungerSuppressionSeverityPerDay compHungerSuppression = pawn.health.GetOrAddHediff(HediffDefOfLocal.Hediff_VNPERP_HungerSuppression, pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso)).TryGetComp<HediffComp_HungerSuppressionSeverityPerDay>();
                             compHungerSuppression.OnRemoved += RemoveCable;
                         }
                     }

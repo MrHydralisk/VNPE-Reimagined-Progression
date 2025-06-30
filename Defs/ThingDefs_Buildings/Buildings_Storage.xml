@@ -2,11 +2,11 @@
 <Defs>
 
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteVat_SET</defName>
+		<defName>VNPERP_NutrientPasteVat_SET</defName>
 	</DesignatorDropdownGroupDef>
   
 	<ThingDef ParentName="VNPE_NutrientPasteVat">
-		<defName>VNPE_NutrientPasteVat_Small</defName>
+		<defName>VNPERP_NutrientPasteVat_Small</defName>
 		<label>S nutrient paste vat</label>
 		<description>An S size tank that can store up to 60 nutrient paste meals in it. Makes a big mess when destroyed.</description>
 		<graphicData>
@@ -51,7 +51,7 @@
 	</ThingDef>
   
 	<ThingDef ParentName="VNPE_NutrientPasteVat">
-		<defName>VNPE_NutrientPasteVat_Giant</defName>
+		<defName>VNPERP_NutrientPasteVat_Giant</defName>
 		<label>L nutrient paste vat</label>
 		<description>An L size tank that can store up to 1215 nutrient paste meals in it. Makes a big mess when destroyed.</description>
 		<graphicData>
@@ -99,7 +99,7 @@
 	</ThingDef>
   
 	<ThingDef ParentName="VNPE_NutrientPasteVat">
-		<defName>VNPE_NutrientPasteVat_XL</defName>
+		<defName>VNPERP_NutrientPasteVat_XL</defName>
 		<label>XL nutrient paste vat</label>
 		<description>An XL size tank that can store up to 2400 nutrient paste meals in it. Makes a big mess when destroyed.</description>
 		<graphicData>
@@ -147,7 +147,7 @@
 	</ThingDef>
   
 	<ThingDef ParentName="VNPE_NutrientPasteVat">
-		<defName>VNPE_NutrientPasteVat_XXL</defName>
+		<defName>VNPERP_NutrientPasteVat_XXL</defName>
 		<label>XXL nutrient paste vat</label>
 		<description>An XXL size tank that can store up to 3750 nutrient paste meals in it. Makes a big mess when destroyed.</description>
 		<graphicData>

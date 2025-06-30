@@ -7,6 +7,7 @@
 	</dependencies>
 	<suggests>
 		<li>VanillaExpanded.VNutrientE</li>
+		<li>Owlchemist.FridgeUtilities</li>
 		<li>MrHydralisk.VNPEDeepVat</li>
 		<li>MrHydralisk.VNPENPDTiers</li>
 		<li>MrHydralisk.VOEAdditionalOutposts</li>

@@ -4,13 +4,13 @@ using Verse;
 
 namespace VNPEReimaginedProgression
 {
-    public class HediffComp_VNPEHungerSuppressionSeverityPerDay : HediffComp_SeverityPerDay
+    public class HediffComp_HungerSuppressionSeverityPerDay : HediffComp_SeverityPerDay
     {
         public event Action<Pawn> OnRemoved;
         public int TicksNextFeed;
         public int AmountOfFeed = 0;
 
-        public HediffCompProperties_VNPEHungerSuppressionSeverityPerDay Props => (HediffCompProperties_VNPEHungerSuppressionSeverityPerDay)props;
+        public HediffCompProperties_HungerSuppressionSeverityPerDay Props => (HediffCompProperties_HungerSuppressionSeverityPerDay)props;
 
         public override void CompPostTick(ref float severityAdjustment)
         {

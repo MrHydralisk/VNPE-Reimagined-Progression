@@ -11,7 +11,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]</xpath>
 				<value>
-					<designatorDropdown>VNPE_NutrientPasteGrinder_SET</designatorDropdown>
+					<designatorDropdown>VNPERP_NutrientPasteGrinder_SET</designatorDropdown>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -31,7 +31,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]</xpath>
 				<value>
-					<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
+					<designatorDropdown>VNPERP_NutrientPasteTap_SET</designatorDropdown>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -72,7 +72,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteDripper"]</xpath>
 				<value>
-					<designatorDropdown>VNPE_NutrientPasteDripper_SET</designatorDropdown>
+					<designatorDropdown>VNPERP_NutrientPasteDripper_SET</designatorDropdown>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -92,7 +92,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]</xpath>
 				<value>
-					<designatorDropdown>VNPE_NutrientPasteFeeder_SET</designatorDropdown>
+					<designatorDropdown>VNPERP_NutrientPasteFeeder_SET</designatorDropdown>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -112,7 +112,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteVat"]</xpath>
 				<value>
-					<designatorDropdown>VNPE_NutrientPasteVat_SET</designatorDropdown>
+					<designatorDropdown>VNPERP_NutrientPasteVat_SET</designatorDropdown>
 					<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 				</value>
 			</li>

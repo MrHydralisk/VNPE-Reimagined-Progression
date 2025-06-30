@@ -2,21 +2,21 @@
 <Defs>
 	
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteFridgeFeeder_SET</defName>
+		<defName>VNPERP_NutrientPasteFridgeFeeder_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
-	<ThingDef Name="VNPE_NutrientPasteFridgeFeeder" ParentName="VNPE_NutrientPasteFeeder" Abstract="true">
+	<ThingDef Name="VNPERP_NutrientPasteFridgeFeeder" ParentName="VNPE_NutrientPasteFeeder" Abstract="true">
 		<researchPrerequisites>
 			<li>VNPERPNutrientPasteRefrigeration</li>
 		</researchPrerequisites>
-		<designatorDropdown>VNPE_NutrientPasteFridgeFeeder_SET</designatorDropdown>
+		<designatorDropdown>VNPERP_NutrientPasteFridgeFeeder_SET</designatorDropdown>
 		<modExtensions>
 			<li Class="SimpleFridge.Fridge"/>
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
-		<defName>VNPE_NutrientPasteFridgeFeeder0T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFridgeFeeder">
+		<defName>VNPERP_NutrientPasteFridgeFeeder0T</defName>
 		<label>refridgerated nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
@@ -52,8 +52,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
-		<defName>VNPE_NutrientPasteFridgeFeederDT</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFridgeFeeder">
+		<defName>VNPERP_NutrientPasteFridgeFeederDT</defName>
 		<label>refridgerated diluted nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
@@ -115,8 +115,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
-		<defName>VNPE_NutrientPasteFridgeFeeder1T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFridgeFeeder">
+		<defName>VNPERP_NutrientPasteFridgeFeeder1T</defName>
 		<label>refridgerated simple nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
@@ -178,8 +178,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
-		<defName>VNPE_NutrientPasteFridgeFeeder2T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFridgeFeeder">
+		<defName>VNPERP_NutrientPasteFridgeFeeder2T</defName>
 		<label>refridgerated fine nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
@@ -242,8 +242,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFridgeFeeder">
-		<defName>VNPE_NutrientPasteFridgeFeeder3T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFridgeFeeder">
+		<defName>VNPERP_NutrientPasteFridgeFeeder3T</defName>
 		<label>refridgerated lavish nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste. An installed refrigeration unit prevent stored paste from spoiling.</description>
 		<graphicData>
@@ -309,8 +309,8 @@
 	
 	
 
-	<ThingDef ParentName="VNPE_HopperShelf">
-		<defName>VNPE_FridgeHopperShelf</defName>
+	<ThingDef ParentName="VNPERP_HopperShelf">
+		<defName>VNPERP_FridgeHopperShelf</defName>
 		<label>refridgerated hopper shelf</label>
 		<description>This triple-stack shelf is designed to hold resources for machines like nutrient paste dispensers and grinders, with three times the capacity of a standard hopper. Items stored inside will never deteriorate and don't affect the beauty of their surroundings. An installed refrigeration unit prevent stored items from spoiling.</description>
 		<graphicData>

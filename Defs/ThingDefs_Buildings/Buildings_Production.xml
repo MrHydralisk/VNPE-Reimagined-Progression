@@ -2,11 +2,11 @@
 <Defs>
   
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteGrinder_SET</defName>
+		<defName>VNPERP_NutrientPasteGrinder_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
-		<defName>VNPE_NutrientPasteGrinder1T</defName>
+		<defName>VNPERP_NutrientPasteGrinder1T</defName>
 		<label>improved nutrient paste grinder</label>
 		<description>An improved machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 2 inputs of food at the same time.</description>
 		<graphicData>
@@ -42,7 +42,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
-		<defName>VNPE_NutrientPasteGrinder2T</defName>
+		<defName>VNPERP_NutrientPasteGrinder2T</defName>
 		<label>advanced nutrient paste grinder</label>
 		<description>An advanced machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 4 inputs of food at the same time.</description>
 		<graphicData>
@@ -80,7 +80,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
-		<defName>VNPE_NutrientPasteGrinder3T</defName>
+		<defName>VNPERP_NutrientPasteGrinder3T</defName>
 		<label>high tech nutrient paste grinder</label>
 		<description>A high tech machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 8 inputs of food at the same time.</description>
 		<graphicData>
@@ -120,11 +120,11 @@
 	
   
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteFeedingTube_SET</defName>
+		<defName>VNPERP_NutrientPasteFeedingTube_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
-	<ThingDef Name="VNPE_NutrientPasteFeedingTube" ParentName="VNPE_NutrientPasteDripper">
-		<defName>VNPE_NutrientPasteFeedingTube0T</defName>
+	<ThingDef Name="VNPERP_NutrientPasteFeedingTube" ParentName="VNPE_NutrientPasteDripper">
+		<defName>VNPERP_NutrientPasteFeedingTube0T</defName>
 		<label>nutrient paste feeding tube</label>
 		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
 		<thingClass>VNPEReimaginedProgression.Building_NutrientPasteFeedingTube</thingClass>
@@ -166,7 +166,7 @@
 			<isEdifice>false</isEdifice>
 		</building>
 		<clearBuildingArea>false</clearBuildingArea>
-		<designatorDropdown>VNPE_NutrientPasteFeedingTube_SET</designatorDropdown>
+		<designatorDropdown>VNPERP_NutrientPasteFeedingTube_SET</designatorDropdown>
 		<comps Inherit="False">
 			<li Class="CompProperties_Facility">
 				<maxSimultaneous>2</maxSimultaneous>
@@ -192,8 +192,8 @@
 		</researchPrerequisites>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
-		<defName>VNPE_NutrientPasteFeedingTubeDT</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFeedingTube">
+		<defName>VNPERP_NutrientPasteFeedingTubeDT</defName>
 		<label>diluted nutrient paste feeding tube</label>
 		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
 		<graphicData>
@@ -236,8 +236,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
-		<defName>VNPE_NutrientPasteFeedingTube1T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFeedingTube">
+		<defName>VNPERP_NutrientPasteFeedingTube1T</defName>
 		<label>simple nutrient paste feeding tube</label>
 		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
 		<graphicData>
@@ -280,8 +280,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
-		<defName>VNPE_NutrientPasteFeedingTube2T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFeedingTube">
+		<defName>VNPERP_NutrientPasteFeedingTube2T</defName>
 		<label>fine nutrient paste feeding tube</label>
 		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
 		<graphicData>
@@ -325,8 +325,8 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteFeedingTube">
-		<defName>VNPE_NutrientPasteFeedingTube3T</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteFeedingTube">
+		<defName>VNPERP_NutrientPasteFeedingTube3T</defName>
 		<label>lavish nutrient paste feeding tube</label>
 		<description>An over bed device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste feeding tube is connected to a nutrient paste vat. It must be placed directly on a bed. Placing more than one nutrient paste feeding tube for each person has no effect.</description>
 		<graphicData>
@@ -373,7 +373,7 @@
 	
 	
 	
-	<ThingDef Name="VNPE_NutrientPasteProcessor" ParentName="BuildingBase" Abstract="True">
+	<ThingDef Name="VNPERP_NutrientPasteProcessor" ParentName="BuildingBase" Abstract="True">
 		<altitudeLayer>Building</altitudeLayer>
 		<rotatable>false</rotatable>
 		<neverMultiSelect>true</neverMultiSelect>
@@ -398,8 +398,8 @@
 		<surfaceType>Item</surfaceType>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
-		<defName>VNPE_NutrientPasteProcessorCT</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteProcessor">
+		<defName>VNPERP_NutrientPasteProcessorCT</defName>
 		<label>nutrient paste compactor</label>
 		<description>A device that compresses and dehydrates nutrient paste into ready-to-eat cubes.</description>
 		<graphicData>
@@ -441,8 +441,8 @@
 		</researchPrerequisites>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
-		<defName>VNPE_NutrientPasteProcessorST</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteProcessor">
+		<defName>VNPERP_NutrientPasteProcessorST</defName>
 		<label>nutrient paste packager</label>
 		<description>A device that preserves nutrient paste into ready-to-eat survival packs. Much of the ingredients are wasted in the preservation process.</description>
 		<graphicData>
@@ -487,8 +487,8 @@
 		</researchPrerequisites>
 	</ThingDef>
 	
-	<ThingDef ParentName="VNPE_NutrientPasteProcessor">
-		<defName>VNPE_NutrientPasteProcessorRT</defName>
+	<ThingDef ParentName="VNPERP_NutrientPasteProcessor">
+		<defName>VNPERP_NutrientPasteProcessorRT</defName>
 		<label>nutrient paste refinery</label>
 		<description>A device that extracting biofuel from nutrient paste. Make a batch of chemfuel as a result.</description>
 		<graphicData>
@@ -539,18 +539,17 @@
 	
   
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteTap_SET</defName>
+		<defName>VNPERP_NutrientPasteTap_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
-		<defName>VNPE_NutrientPasteTapDT</defName>
+		<defName>VNPERP_NutrientPasteTapDT</defName>
 		<label>diluted nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapTD</texPath>
 			<color>(255,255,255)</color>
 		</graphicData>
-		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
 			<WorkToBuild>1350</WorkToBuild>
@@ -582,14 +581,13 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
-		<defName>VNPE_NutrientPasteTap1T</defName>
+		<defName>VNPERP_NutrientPasteTap1T</defName>
 		<label>simple nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapT1</texPath>
 			<color>(255,255,255)</color>
 		</graphicData>
-		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>275</MaxHitPoints>
 			<WorkToBuild>2250</WorkToBuild>
@@ -621,14 +619,13 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
-		<defName>VNPE_NutrientPasteTap2T</defName>
+		<defName>VNPERP_NutrientPasteTap2T</defName>
 		<label>fine nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapT2</texPath>
 			<color>(255,255,255)</color>
 		</graphicData>
-		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>325</MaxHitPoints>
 			<WorkToBuild>2700</WorkToBuild>
@@ -662,14 +659,13 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
-		<defName>VNPE_NutrientPasteTap3T</defName>
+		<defName>VNPERP_NutrientPasteTap3T</defName>
 		<label>lavish nutrient paste tap</label>
 		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapT3</texPath>
 			<color>(255,255,255)</color>
 		</graphicData>
-		<designatorDropdown>VNPE_NutrientPasteTap_SET</designatorDropdown>
 		<statBases>
 			<MaxHitPoints>375</MaxHitPoints>
 			<WorkToBuild>3600</WorkToBuild>
@@ -705,11 +701,11 @@
 	
 	
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteDripper_SET</defName>
+		<defName>VNPERP_NutrientPasteDripper_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteDripper">
-		<defName>VNPE_NutrientPasteDripperDT</defName>
+		<defName>VNPERP_NutrientPasteDripperDT</defName>
 		<label>diluted nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
 		<graphicData>
@@ -753,7 +749,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteDripper">
-		<defName>VNPE_NutrientPasteDripper1T</defName>
+		<defName>VNPERP_NutrientPasteDripper1T</defName>
 		<label>simple nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
 		<graphicData>
@@ -797,7 +793,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteDripper">
-		<defName>VNPE_NutrientPasteDripper2T</defName>
+		<defName>VNPERP_NutrientPasteDripper2T</defName>
 		<label>fine nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
 		<graphicData>
@@ -842,7 +838,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteDripper">
-		<defName>VNPE_NutrientPasteDripper3T</defName>
+		<defName>VNPERP_NutrientPasteDripper3T</defName>
 		<label>lavish nutrient paste dripper</label>
 		<description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that nutrient paste dripper is connected to a nutrient paste vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one nutrient paste dripper near the same bed has no effect.</description>
 		<graphicData>
@@ -890,11 +886,11 @@
 	
 	
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_NutrientPasteFeeder_SET</defName>
+		<defName>VNPERP_NutrientPasteFeeder_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
-		<defName>VNPE_NutrientPasteFeederDT</defName>
+		<defName>VNPERP_NutrientPasteFeederDT</defName>
 		<label>diluted nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste.</description>
 		<graphicData>
@@ -955,7 +951,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
-		<defName>VNPE_NutrientPasteFeeder1T</defName>
+		<defName>VNPERP_NutrientPasteFeeder1T</defName>
 		<label>simple nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste.</description>
 		<graphicData>
@@ -1018,7 +1014,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
-		<defName>VNPE_NutrientPasteFeeder2T</defName>
+		<defName>VNPERP_NutrientPasteFeeder2T</defName>
 		<label>fine nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste.</description>
 		<graphicData>
@@ -1082,7 +1078,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
-		<defName>VNPE_NutrientPasteFeeder3T</defName>
+		<defName>VNPERP_NutrientPasteFeeder3T</defName>
 		<label>lavish nutrient paste feeder</label>
 		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste.</description>
 		<graphicData>
@@ -1147,7 +1143,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
-		<defName>VNPE_NutrientPasteFeederKT</defName>
+		<defName>VNPERP_NutrientPasteFeederKT</defName>
 		<label>nutrient paste kibble feeder</label>
 		<description>A small pipe output that allows animals to pick up nutrient paste kibble.</description>
 		<graphicData>
@@ -1213,11 +1209,11 @@
 	
 	
 	<DesignatorDropdownGroupDef>
-		<defName>VNPE_HopperShelf_SET</defName>
+		<defName>VNPERP_HopperShelf_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
-	<ThingDef Name="VNPE_HopperShelf" ParentName="BuildingBase">
-		<defName>VNPE_HopperShelf</defName>
+	<ThingDef Name="VNPERP_HopperShelf" ParentName="BuildingBase">
+		<defName>VNPERP_HopperShelf</defName>
 		<label>hopper shelf</label>
 		<description>This triple-stack shelf is designed to hold resources for machines like nutrient paste dispensers and grinders, with three times the capacity of a standard hopper. Items stored inside will never deteriorate and don't affect the beauty of their surroundings.</description>
 		<thingClass>Building_Storage</thingClass>
@@ -1289,7 +1285,7 @@
 		<designationCategory>Production</designationCategory>
 		<uiOrder>2140</uiOrder>
 		<surfaceType>Item</surfaceType>
-		<designatorDropdown>VNPE_HopperShelf_SET</designatorDropdown>
+		<designatorDropdown>VNPERP_HopperShelf_SET</designatorDropdown>
 		<placeWorkers>
 			<li>PlaceWorker_NextToHopperAccepter</li>
 		</placeWorkers>

@@ -2,17 +2,17 @@
 <Defs>
 
 	<HediffDef>
-		<defName>Hediff_VNPEHungerSuppression</defName>
+		<defName>Hediff_VNPERP_HungerSuppression</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>hunger suppression</label>
 		<description>The body getting pumped with nutrients. Feeling a slight pain from the needle.</description>
 		<descriptionHyperlinks>
-			<ThingDef>VNPE_NutrientPasteHungerSuppressor</ThingDef>
+			<ThingDef>VNPERP_NutrientPasteHungerSuppressor</ThingDef>
 		</descriptionHyperlinks>
 		<initialSeverity>1</initialSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="VNPEReimaginedProgression.HediffCompProperties_VNPEHungerSuppressionSeverityPerDay">
+			<li Class="VNPEReimaginedProgression.HediffCompProperties_HungerSuppressionSeverityPerDay">
 				<severityPerDay>-24</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
 				<tickPerFeed>125</tickPerFeed>
