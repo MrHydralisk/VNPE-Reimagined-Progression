@@ -27,7 +27,7 @@ namespace VNPEReimaginedProgression
             Harmony val = new Harmony("rimworld.mrhydralisk.VNPEReimaginedProgressionPatch");
 
             List<ThingDef> allDefsListForReading = DefDatabase<ThingDef>.AllDefsListForReading;
-            List<ThingDef> VNPE_NPDs = allDefsListForReading.Where((ThingDef td) => td.defName.StartsWith("VNPE_NutrientPasteFeedingTube") || td.defName.StartsWith("VNPE_NutrientPasteDripper")).ToList();
+            List<ThingDef> VNPE_NPDs = allDefsListForReading.Where((ThingDef td) => td.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || td.defName.StartsWith("VNPERP_NutrientPasteDripper")).ToList();
             foreach (ThingDef item in allDefsListForReading)
             {
                 if (item.building != null && item.building.buildingTags.Contains("Bed") && !item.defName.Contains("Spot"))
@@ -101,7 +101,7 @@ namespace VNPEReimaginedProgression
             if (!__instance.Dereferenced)
             {
                 Map map = __instance.Map;
-                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t.def.defName.StartsWith("VNPE_NutrientPasteFeedingTube") || t.def.defName.StartsWith("VNPE_NutrientPasteTap") || t.def.defName.StartsWith("VNPE_NutrientPasteFeeder") || t.def.defName.StartsWith("VNPE_NutrientPasteDripper")).ToList();
+                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t.def.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || t.def.defName.StartsWith("VNPERP_NutrientPasteTap") || t.def.defName.StartsWith("VNPERP_NutrientPasteFeeder") || t.def.defName.StartsWith("VNPERP_NutrientPasteDripper")).ToList();
                 for (int k = 0; k < list1.Count; k++)
                 {
                     list1[k].Notify_ColorChanged();
@@ -111,7 +111,7 @@ namespace VNPEReimaginedProgression
 
         public static void TLGH_Includes_Postfix(ThingDef def, ThingRequestGroup group, ref bool __result)
         {
-            if ((group == ThingRequestGroup.FoodSourceNotPlantOrTree || group == ThingRequestGroup.FoodSource) && def.defName.StartsWith("VNPE_NutrientPasteTap"))
+            if ((group == ThingRequestGroup.FoodSourceNotPlantOrTree || group == ThingRequestGroup.FoodSource) && def.defName.StartsWith("VNPERP_NutrientPasteTap"))
             {
                 __result = true;
             }
