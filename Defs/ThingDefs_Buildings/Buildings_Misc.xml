@@ -18,7 +18,6 @@
 			<Beauty>-8</Beauty>
 		</statBases>
 		<designationCategory>VCHE_PipeNetworks</designationCategory>
-		<uiOrder>2132</uiOrder>
 		<fillPercent>0.40</fillPercent>
 		<building>
 			<claimable>false</claimable>
@@ -162,7 +161,6 @@
 		</building>
 		<tickerType>Normal</tickerType>
 		<designationCategory>VCHE_PipeNetworks</designationCategory>
-		<uiOrder>2131</uiOrder>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<surfaceType>Item</surfaceType>
