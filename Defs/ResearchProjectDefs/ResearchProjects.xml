@@ -214,4 +214,20 @@
 		<researchViewY>2.5</researchViewY>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPPortable</defName>
+		<label>portable</label>
+		<description>Utilize an internal power source and lightweight frame to produce portable nutrient paste equipment.</description>
+		<baseCost>1500</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteT2</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>3</researchViewX>
+		<researchViewY>3.3</researchViewY>
+	</ResearchProjectDef>
+
 </Defs>

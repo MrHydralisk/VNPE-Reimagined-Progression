@@ -30,7 +30,7 @@
 		<comps Inherit="False">
 			<li Class="PipeSystem.CompProperties_ResourceStorage">
 				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
-				<storageCapacity>45</storageCapacity>
+				<storageCapacity>60</storageCapacity>
 				<barSize>(0.36, 0.10)</barSize>
 				<margin>0.03</margin>
 				<centerOffset>(0, 0, -0.18)</centerOffset>
@@ -191,6 +191,72 @@
 		<constructionSkillPrerequisite>15</constructionSkillPrerequisite>
 		<researchPrerequisites Inherit="False">
 			<li>VNPERPNutrientPasteT3</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	
+  
+	<ThingDef ParentName="VNPE_NutrientPasteVat">
+		<defName>VNPERP_NutrientPasteVat_Portable</defName>
+		<label>portable nutrient paste vat</label>
+		<description>A small size portable tank that can store up to 45 nutrient paste meals in it. Makes a big mess when destroyed. It has an internal power source and is lightweight.</description>
+		<graphicData>
+			<texPath>Things/Building/NutrientPasteVatPT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+			<shadowData>
+				<volume>(0.86, 0.41, 0.8)</volume>
+				<offset>(0, 0, 0.14)</offset>
+			</shadowData>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>false</castEdgeShadows>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToBuild>1200</WorkToBuild>
+			<Mass>22</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<building>
+			<claimable>false</claimable>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<costList>
+			<Steel>80</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Uranium>50</Uranium>
+		</costList>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_ResourceStorage">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+				<storageCapacity>45</storageCapacity>
+				<barSize>(0.36, 0.10)</barSize>
+				<margin>0.03</margin>
+				<centerOffset>(0, 0, -0.18)</centerOffset>
+				<destroyOption>
+					<filth>VNPE_Filth_Paste</filth>
+					<ratio>1</ratio>
+					<maxRadius>3</maxRadius>
+				</destroyOption>
+				<contentRequirePower>true</contentRequirePower>
+			</li>
+			<li Class="VNPE.CompProperties_RegisterIngredients"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>75</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>VNPERPPortable</li>
 		</researchPrerequisites>
 	</ThingDef>
   

@@ -119,6 +119,9 @@
 			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>VNPERPPortable</li>
+		</researchPrerequisites>
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<storageCost>0.1</storageCost>
