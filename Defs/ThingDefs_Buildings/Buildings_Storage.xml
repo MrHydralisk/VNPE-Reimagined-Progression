@@ -249,10 +249,6 @@
 				<contentRequirePower>true</contentRequirePower>
 			</li>
 			<li Class="VNPE.CompProperties_RegisterIngredients"/>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>75</basePowerConsumption>
-			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<researchPrerequisites>
