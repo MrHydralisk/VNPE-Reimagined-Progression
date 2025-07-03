@@ -1,12 +1,13 @@
 ﻿using RimWorld;
 using System;
+using System.Collections.Generic;
 using Verse;
 
 namespace VNPEReimaginedProgression
 {
     public class HediffComp_HungerSuppressionSeverityPerDay : HediffComp_SeverityPerDay
     {
-        public event Action<Pawn> OnRemoved;
+        public Building_NutrientPasteHungerSuppressor hungerSuppressor;
         public int TicksNextFeed;
         public int AmountOfFeed = 0;
 
@@ -30,7 +31,7 @@ namespace VNPEReimaginedProgression
 
         public override void CompPostPostRemoved()
         {
-            OnRemoved(Pawn);
+            hungerSuppressor?.RemoveCable(Pawn);
             base.CompPostPostRemoved();
         }
     }

@@ -51,7 +51,7 @@ namespace VNPEReimaginedProgression
                         if (pawn.RaceProps.Humanlike && base.Position.InHorDistOf(pawn.PositionHeld, NoiseSourceComp.Props.radius) && (double)pawn.needs.food.CurLevelPercentage <= 0.15 && !pawn.health.hediffSet.TryGetHediff(HediffDefOfLocal.Hediff_VNPERP_HungerSuppression, out Hediff __) && TryAddCable(pawn))
                         {
                             HediffComp_HungerSuppressionSeverityPerDay compHungerSuppression = pawn.health.GetOrAddHediff(HediffDefOfLocal.Hediff_VNPERP_HungerSuppression, pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso)).TryGetComp<HediffComp_HungerSuppressionSeverityPerDay>();
-                            compHungerSuppression.OnRemoved += RemoveCable;
+                            compHungerSuppression.hungerSuppressor = this;
                         }
                     }
                 }

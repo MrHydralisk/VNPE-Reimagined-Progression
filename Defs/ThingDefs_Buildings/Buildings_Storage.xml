@@ -246,7 +246,6 @@
 					<ratio>1</ratio>
 					<maxRadius>3</maxRadius>
 				</destroyOption>
-				<contentRequirePower>true</contentRequirePower>
 			</li>
 			<li Class="VNPE.CompProperties_RegisterIngredients"/>
 		</comps>
