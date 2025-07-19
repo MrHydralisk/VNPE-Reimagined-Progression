@@ -31,7 +31,7 @@
 		<defName>VNPERPNutrientPasteDripper</defName>
 		<label>dripper</label>
 		<description>Develop a bedside device that feeds a person lying in bed whenever they are hungry.</description>
-		<baseCost>200</baseCost>
+		<baseCost>300</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
@@ -83,7 +83,7 @@
 		<defName>VNPERPNutrientPasteTD</defName>
 		<label>diluted nutrient paste</label>
 		<description>Explore dilution methods for nutrient paste to increase quantity without substantial nutritional loss. The diluted paste will provide basic sustenance for the body, but the flavor worsens significantly.\n\nThis will require a 33% decrease in nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
-		<baseCost>400</baseCost>
+		<baseCost>300</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
@@ -94,8 +94,8 @@
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
 		<defName>VNPERPNutrientPasteFeeder</defName>
 		<label>feeder</label>
-		<description>Develop a compact pipeline output that allows colonists and citizens to pick up nutrient paste.</description>
-		<baseCost>200</baseCost>
+		<description>Develop a compact pipeline output that allows colonists to pick up nutrient paste.</description>
+		<baseCost>300</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteSystem</li>
 		</prerequisites>
@@ -137,7 +137,7 @@
 		<defName>VNPERPNutrientPasteT2</defName>
 		<label>fine nutrient paste</label>
 		<description>Introduce a secondary flavor portion to improve the overall taste experience.\n\nThis will require a 50% increase in nutrient paste fluid per portion in comparison of simple nutrient paste meal.</description>
-		<baseCost>1500</baseCost>
+		<baseCost>1600</baseCost>
 		<prerequisites>
 			<li>Fabrication</li>
 			<li>VNPERPNutrientPasteT1</li>
@@ -148,6 +148,23 @@
 		</requiredResearchFacilities>
 		<researchViewX>2</researchViewX>
 		<researchViewY>2.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
+		<defName>VNPERPCompact</defName>
+		<label>compact</label>
+		<description>Research ways to miniaturize nutrient paste equipment, making it more space-efficient.</description>
+		<baseCost>600</baseCost>
+		<prerequisites>
+			<li>VNPERPNutrientPasteT1</li>
+			<li>MultiAnalyzer</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>2</researchViewX>
+		<researchViewY>3.3</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
@@ -169,7 +186,7 @@
 		<defName>VNPERPNutrientPasteTK</defName>
 		<label>nutrient paste kibble</label>
 		<description>Explore possibility of producing animal feed from nutrient paste. The paste kibble will provide basic sustenance for the animal's body, but too dangerous for human consumption.\n\nThis will require a 66% increase in nutrient paste fluid per portion of 50 kibble in comparison to nutrient paste meal.</description>
-		<baseCost>200</baseCost>
+		<baseCost>400</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteTD</li>
 			<li>VNPERPNutrientPasteFeeder</li>
@@ -184,7 +201,7 @@
 		<defName>VNPERPNutrientPasteHungerSuppressor</defName>
 		<label>hunger suppressor</label>
 		<description>Develop a multi-tube device that scans for organisms needing nutrition, then uses a dart to connect tube and pump nutrient paste to the target.</description>
-		<baseCost>1200</baseCost>
+		<baseCost>1500</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteT2</li>
 		</prerequisites>
@@ -201,7 +218,7 @@
 		<label>lavish nutrient paste</label>
 		<description>Utilize an innovative process to segment nutrient paste fluid into multiple portions with distinct flavors and solidities, achieving universal appeal.\n\nThis will require a 33% increase in nutrient paste fluid per portion in comparison of fine nutrient paste meal.</description>
 		<techLevel>Spacer</techLevel>
-		<baseCost>2000</baseCost>
+		<baseCost>3200</baseCost>
 		<prerequisites>
 			<li>AdvancedFabrication</li>
 			<li>VNPERPNutrientPasteT2</li>
@@ -218,9 +235,10 @@
 		<defName>VNPERPPortable</defName>
 		<label>portable</label>
 		<description>Utilize an internal power source and lightweight frame to produce portable nutrient paste equipment.</description>
-		<baseCost>1500</baseCost>
+		<baseCost>1200</baseCost>
 		<prerequisites>
 			<li>VNPERPNutrientPasteT2</li>
+			<li>VNPERPCompact</li>
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>

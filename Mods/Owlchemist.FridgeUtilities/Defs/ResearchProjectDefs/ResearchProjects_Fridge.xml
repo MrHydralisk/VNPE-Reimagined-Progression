@@ -12,7 +12,7 @@
 		</prerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<researchViewX>2</researchViewX>
-		<researchViewY>3.3</researchViewY>
+		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>
