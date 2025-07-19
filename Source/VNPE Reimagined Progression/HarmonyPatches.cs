@@ -60,7 +60,7 @@ namespace VNPEReimaginedProgression
             val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "HasEnoughFeedstockInHoppers"), prefix: new HarmonyMethod(patchType, "BNPT_HasEnoughFeedstockInHoppers_Prefix"));
             val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "TryDispenseFoodOverride"), prefix: new HarmonyMethod(patchType, "BNPT_TryDispenseFoodOverride_Prefix"));
             val.Patch(AccessTools.Method(typeof(Building_NutrientPasteTap), "TryDropFood"), prefix: new HarmonyMethod(patchType, "BNPT_TryDropFood_Prefix"));
-            val.Patch(AccessTools.Method(typeof(FoodUtility).GetNestedTypes(AccessTools.all).First((Type t) => t.Name.Contains("c__DisplayClass14_0")), "<BestFoodSourceOnMap>b__0"), transpiler: new HarmonyMethod(patchType, "FU_BestFoodSourceOnMap_foodValidator_Transpiler"));
+            val.Patch(AccessTools.Method(typeof(FoodUtility).GetNestedTypes(AccessTools.all).First((Type t) => t.Name.Contains("c__DisplayClass16_0")), "<BestFoodSourceOnMap>b__0"), transpiler: new HarmonyMethod(patchType, "FU_BestFoodSourceOnMap_foodValidator_Transpiler"));
             val.Patch(AccessTools.Property(typeof(Building_NutrientPasteDispenser), "DispensableDef").GetGetMethod(), postfix: new HarmonyMethod(patchType, "BNPD_DispensableDef_Postfix"));
 
             val.Patch(AccessTools.Method(typeof(Building_Dripper), "TickRare"), prefix: new HarmonyMethod(patchType, "BD_TickRare_Prefix", (Type[])null));

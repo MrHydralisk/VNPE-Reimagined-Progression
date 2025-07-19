@@ -130,6 +130,7 @@
 		<graphicData>
 			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT1</texPath>
 		</graphicData>
+		<uiIconScale>0.66</uiIconScale>
 		<size>(2,2)</size>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
@@ -163,6 +164,7 @@
 		<graphicData>
 			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT2</texPath>
 		</graphicData>
+		<uiIconScale>0.66</uiIconScale>
 		<size>(2,2)</size>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
@@ -203,6 +205,7 @@
 		<graphicData>
 			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT3</texPath>
 		</graphicData>
+		<uiIconScale>0.66</uiIconScale>
 		<size>(2,2)</size>
 		<statBases>
 			<MaxHitPoints>350</MaxHitPoints>
