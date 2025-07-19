@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<VNPERP_NutrientPasteGrinder1T.label>Улучшенный измельчитель питательной пасты</VNPERP_NutrientPasteGrinder1T.label>
+	<VNPERP_NutrientPasteGrinder1T.description>Улучшенная машина, синтезирующая съедобную питательную пасту из органического сырья, помещенного в соседние загрузочные воронки. Она потребляет меньше ингредиентов и времени, чем любой другой метод производства еды — но никто не любит есть питательную пасту. Принимает сырую пищу, но не грубую растительную массу, такую как сено. Фактически не выдает питательную пасту, но позволяет перекачивать ее в резервуары и диспенсеры в сети. Может работать с 2 источниками пищи одновременно.</VNPERP_NutrientPasteGrinder1T.description>
+
+	<VNPERP_NutrientPasteGrinder2T.label>Продвинутый измельчитель питательной пасты</VNPERP_NutrientPasteGrinder2T.label>
+	<VNPERP_NutrientPasteGrinder2T.description>Продвинутая машина, синтезирующая съедобную питательную пасту из органического сырья, помещенного в соседние загрузочные воронки. Она потребляет меньше ингредиентов и времени, чем любой другой метод производства еды — но никто не любит есть питательную пасту. Принимает сырую пищу, но не грубую растительную массу, такую как сено. Фактически не выдает питательную пасту, но позволяет перекачивать ее в резервуары и диспенсеры в сети. Может работать с 4 источниками пищи одновременно.</VNPERP_NutrientPasteGrinder2T.description>
+
+	<VNPERP_NutrientPasteGrinder3T.label>Высокотехнологичный измельчитель питательной пасты</VNPERP_NutrientPasteGrinder3T.label>
+	<VNPERP_NutrientPasteGrinder3T.description>Высокотехнологичная машина, синтезирующая съедобную питательную пасту из органического сырья, помещенного в соседние загрузочные воронки. Она потребляет меньше ингредиентов и времени, чем любой другой метод производства еды — но никто не любит есть питательную пасту. Принимает сырую пищу, но не грубую растительную массу, такую как сено. Фактически не выдает питательную пасту, но позволяет перекачивать ее в резервуары и диспенсеры в сети. Может работать с 8 источниками пищи одновременно.</VNPERP_NutrientPasteGrinder3T.description>
+
+
+	<VNPERP_NutrientPasteGrinderCompact1T.label>Улучшенный компактный измельчитель питательной пасты</VNPERP_NutrientPasteGrinderCompact1T.label>
+	<VNPERP_NutrientPasteGrinderCompact1T.description>Компактная версия улучшенной машины, синтезирующей съедобную питательную пасту из органического сырья, помещенного в соседние загрузочные воронки. Она потребляет меньше ингредиентов и времени, чем любой другой метод производства еды — но никто не любит есть питательную пасту. Принимает сырую пищу, но не грубую растительную массу, такую как сено. Фактически не выдает питательную пасту, но позволяет перекачивать ее в резервуары и диспенсеры в сети. Может работать с 2 источниками пищи одновременно.</VNPERP_NutrientPasteGrinderCompact1T.description>
+
+	<VNPERP_NutrientPasteGrinderCompact2T.label>Продвинутый измельчитель питательной пасты</VNPERP_NutrientPasteGrinderCompact2T.label>
+	<VNPERP_NutrientPasteGrinderCompact2T.description>Компактная версия продвинутой машины, синтезирующей съедобную питательную пасту из органического сырья, помещенного в соседние загрузочные воронки. Она потребляет меньше ингредиентов и времени, чем любой другой метод производства еды — но никто не любит есть питательную пасту. Принимает сырую пищу, но не грубую растительную массу, такую как сено. Фактически не выдает питательную пасту, но позволяет перекачивать ее в резервуары и диспенсеры в сети. Может работать с 4 источниками пищи одновременно.</VNPERP_NutrientPasteGrinderCompact2T.description>
+
+	<VNPERP_NutrientPasteGrinderCompact3T.label>Высокотехнологичный измельчитель питательной пасты</VNPERP_NutrientPasteGrinderCompact3T.label>
+	<VNPERP_NutrientPasteGrinderCompact3T.description>Компактная версия высокотехнологичной машины, синтезирующей съедобную питательную пасту из органического сырья, помещенного в соседние загрузочные воронки. Она потребляет меньше ингредиентов и времени, чем любой другой метод производства еды — но никто не любит есть питательную пасту. Принимает сырую пищу, но не грубую растительную массу, такую как сено. Фактически не выдает питательную пасту, но позволяет перекачивать ее в резервуары и диспенсеры в сети. Может работать с 8 источниками пищи одновременно.</VNPERP_NutrientPasteGrinderCompact3T.description>
+
+
+	<VNPERP_NutrientPasteFeedingTube0T.label>Трубка для кормления для питательной пасты</VNPERP_NutrientPasteFeedingTube0T.label>
+	<VNPERP_NutrientPasteFeedingTube0T.description>Прикроватное устройство, которое кормит лежащего человека, когда он голоден, при условии, что оно подключено к резервуару с питательной пастой. Должно быть размещен непосредственно на кровати. Установка более одной трубки для кормления на человека не дает дополнительного эффекта.</VNPERP_NutrientPasteFeedingTube0T.description>
+
+	<VNPERP_NutrientPasteFeedingTubeDT.label>Трубка для кормления для разбавленной питательной пасты</VNPERP_NutrientPasteFeedingTubeDT.label>
+	<VNPERP_NutrientPasteFeedingTubeDT.description>Прикроватное устройство, которое кормит лежащего человека, когда он голоден, при условии, что оно подключено к резервуару с питательной пастой. Должно быть размещен непосредственно на кровати. Установка более одной трубки для кормления на человека не дает дополнительного эффекта.</VNPERP_NutrientPasteFeedingTubeDT.description>
+
+	<VNPERP_NutrientPasteFeedingTube1T.label>Трубка для кормления для простой питательной пасты</VNPERP_NutrientPasteFeedingTube1T.label>
+	<VNPERP_NutrientPasteFeedingTube1T.description>Прикроватное устройство, которое кормит лежащего человека, когда он голоден, при условии, что оно подключено к резервуару с питательной пастой. Должно быть размещен непосредственно на кровати. Установка более одной трубки для кормления на человека не дает дополнительного эффекта.</VNPERP_NutrientPasteFeedingTube1T.description>
+
+	<VNPERP_NutrientPasteFeedingTube2T.label>Трубка для кормления для вкусной питательной пасты</VNPERP_NutrientPasteFeedingTube2T.label>
+	<VNPERP_NutrientPasteFeedingTube2T.description>Прикроватное устройство, которое кормит лежащего человека, когда он голоден, при условии, что оно подключено к резервуару с питательной пастой. Должно быть размещен непосредственно на кровати. Установка более одной трубки для кормления на человека не дает дополнительного эффекта.</VNPERP_NutrientPasteFeedingTube2T.description>
+
+	<VNPERP_NutrientPasteFeedingTube3T.label>Трубка для кормления для шикарной питательной пасты</VNPERP_NutrientPasteFeedingTube3T.label>
+	<VNPERP_NutrientPasteFeedingTube3T.description>Прикроватное устройство, которое кормит лежащего человека, когда он голоден, при условии, что оно подключено к резервуару с питательной пастой. Должно быть размещен непосредственно на кровати. Установка более одной трубки для кормления на человека не дает дополнительного эффекта.</VNPERP_NutrientPasteFeedingTube3T.description>
+
+
+	<VNPERP_NutrientPasteProcessorCT.label>Компрессор питательной пасты</VNPERP_NutrientPasteProcessorCT.label>
+	<VNPERP_NutrientPasteProcessorCT.description>Устройство, которое прессует и обезвоживает питательную пасту в готовые к употреблению кубики.</VNPERP_NutrientPasteProcessorCT.description>
+
+	<VNPERP_NutrientPasteProcessorST.label>Упаковщик питательной пасты</VNPERP_NutrientPasteProcessorST.label>
+	<VNPERP_NutrientPasteProcessorST.description>Устройство, которое консервирует питательную пасту в готовые к употреблению сухпайки. Большая часть ингредиентов теряется в процессе консервации.</VNPERP_NutrientPasteProcessorST.description>
+
+	<VNPERP_NutrientPasteProcessorRT.label>Перегонный аппарат питательной пасты</VNPERP_NutrientPasteProcessorRT.label>
+	<VNPERP_NutrientPasteProcessorRT.description>Устройство, которое извлекает химтопливо из питательной пасты. В результате производит партию химтоплива.</VNPERP_NutrientPasteProcessorRT.description>
+
+
+	<VNPERP_NutrientPasteTapDT.label>Кран для разбавленной питательной пасты</VNPERP_NutrientPasteTapDT.label>
+	<VNPERP_NutrientPasteTapDT.description>Резервуар типа загрузочной воронки для хранения, предназначенный для выдачи разлитой питательной пасты из чанов. Может использоваться колонистами и заключенными. Разлитая и готовая к приёму питательная паста может испортиться.</VNPERP_NutrientPasteTapDT.description>
+
+	<VNPERP_NutrientPasteTap1T.label>Кран для простой питательной пасты</VNPERP_NutrientPasteTap1T.label>
+	<VNPERP_NutrientPasteTap1T.description>Резервуар типа загрузочной воронки для хранения, предназначенный для выдачи разлитой питательной пасты из чанов. Может использоваться колонистами и заключенными. Разлитая и готовая к приёму питательная паста может испортиться.</VNPERP_NutrientPasteTap1T.description>
+
+	<VNPERP_NutrientPasteTap2T.label>Кран для вкусной питательной пасты</VNPERP_NutrientPasteTap2T.label>
+	<VNPERP_NutrientPasteTap2T.description>Резервуар типа загрузочной воронки для хранения, предназначенный для выдачи разлитой питательной пасты из чанов. Может использоваться колонистами и заключенными. Разлитая и готовая к приёму питательная паста может испортиться.</VNPERP_NutrientPasteTap2T.description>
+
+	<VNPERP_NutrientPasteTap3T.label>Кран для шикарной питательной пасты</VNPERP_NutrientPasteTap3T.label>
+	<VNPERP_NutrientPasteTap3T.description>Резервуар типа загрузочной воронки для хранения, предназначенный для выдачи разлитой питательной пасты из чанов. Может использоваться колонистами и заключенными. Разлитая и готовая к приёму питательная паста может испортиться.</VNPERP_NutrientPasteTap3T.description>
+
+
+	<VNPERP_NutrientPasteDripperDT.label>Капельница для разбавленной питательной пасты</VNPERP_NutrientPasteDripperDT.label>
+	<VNPERP_NutrientPasteDripperDT.description>Прикроватное устройство, которое кормит лежащего в кровати человека, когда он голоден, при условии подключения к резервуару с питательной пастой. Должно быть расположено непосредственно рядом с изголовьем кровати и быть направлено к нему. Установка нескольких таких капельниц возле одной кровати не даёт дополнительного эффекта.</VNPERP_NutrientPasteDripperDT.description>
+
+	<VNPERP_NutrientPasteDripper1T.label>Капельница для простой питательной пасты</VNPERP_NutrientPasteDripper1T.label>
+	<VNPERP_NutrientPasteDripper1T.description>Прикроватное устройство, которое кормит лежащего в кровати человека, когда он голоден, при условии подключения к резервуару с питательной пастой. Должно быть расположено непосредственно рядом с изголовьем кровати и быть направлено к нему. Установка нескольких таких капельниц возле одной кровати не даёт дополнительного эффекта.</VNPERP_NutrientPasteDripper1T.description>
+
+	<VNPERP_NutrientPasteDripper2T.label>Капельница для вкусной питательной пасты</VNPERP_NutrientPasteDripper2T.label>
+	<VNPERP_NutrientPasteDripper2T.description>Прикроватное устройство, которое кормит лежащего в кровати человека, когда он голоден, при условии подключения к резервуару с питательной пастой. Должно быть расположено непосредственно рядом с изголовьем кровати и быть направлено к нему. Установка нескольких таких капельниц возле одной кровати не даёт дополнительного эффекта.</VNPERP_NutrientPasteDripper2T.description>
+
+	<VNPERP_NutrientPasteDripper3T.label>Капельница для шикарной питательной пасты</VNPERP_NutrientPasteDripper3T.label>
+	<VNPERP_NutrientPasteDripper3T.description>Прикроватное устройство, которое кормит лежащего в кровати человека, когда он голоден, при условии подключения к резервуару с питательной пастой. Должно быть расположено непосредственно рядом с изголовьем кровати и быть направлено к нему. Установка нескольких таких капельниц возле одной кровати не даёт дополнительного эффекта.</VNPERP_NutrientPasteDripper3T.description>
+
+
+	<VNPERP_NutrientPasteFeederDT.label>Устройство для подачи разбавленной питательной пасты</VNPERP_NutrientPasteFeederDT.label>
+	<VNPERP_NutrientPasteFeederDT.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать разбавленную питательную пасту.</VNPERP_NutrientPasteFeederDT.description>
+
+	<VNPERP_NutrientPasteFeeder1T.label>Устройство для подачи простой питательной пасты</VNPERP_NutrientPasteFeeder1T.label>
+	<VNPERP_NutrientPasteFeeder1T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать простую питательную пасту.</VNPERP_NutrientPasteFeeder1T.description>
+
+	<VNPERP_NutrientPasteFeeder2T.label>Устройство для подачи вкусной питательной пасты</VNPERP_NutrientPasteFeeder2T.label>
+	<VNPERP_NutrientPasteFeeder2T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать вкусную питательную пасту.</VNPERP_NutrientPasteFeeder2T.description>
+
+	<VNPERP_NutrientPasteFeeder3T.label>Устройство для подачи шикарной питательной пасты</VNPERP_NutrientPasteFeeder3T.label>
+	<VNPERP_NutrientPasteFeeder3T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать шикарную питательную пасту.</VNPERP_NutrientPasteFeeder3T.description>
+
+	<VNPERP_NutrientPasteFeederKT.label>Устройство для подачи корма из питательной пасты</VNPERP_NutrientPasteFeederKT.label>
+	<VNPERP_NutrientPasteFeederKT.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать корм из питательной пасты.</VNPERP_NutrientPasteFeederKT.description>
+
+
+	<VNPERP_HopperShelf.label>Загрузочная воронка-полка</VNPERP_HopperShelf.label>
+	<VNPERP_HopperShelf.description>Эта тройная полка предназначена для хранения ресурсов для таких машин, как диспенсеры питательной пасты и измельчители. Её ёмкость в три раза превышает стандартную загрузочную воронку. Хранимые внутри предметы никогда не портятся и не влияют на красоту окружения.</VNPERP_HopperShelf.description>
+
+</Defs>

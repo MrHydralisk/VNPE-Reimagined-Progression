@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>Максимум станет {0}</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>
+    <VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>Максимум хранения</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>
+    <VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>Выберите максимальное количество произведённых предметов, после достижения которого потребуется выгрузка.</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>	
+	
+    <VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>Переключить автовыгрузку</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>
+    <VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>Когда активно, колонисты будут автоматически выгружать произведённые предметы из переработчика по мере его заполнения.</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>
+	
+    <VNPEReimaginedProgression.Processor.Gizmo.Eject.Label>Извлечь содержимое</VNPEReimaginedProgression.Processor.Gizmo.Eject.Label>
+    <VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc>Извлечь весь содержащийся здесь роизведённых предметов.</VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc>
+    <VNPEReimaginedProgression.Processor.Gizmo.Eject.Empty>Нет произведённых предметов.</VNPEReimaginedProgression.Processor.Gizmo.Eject.Empty>
+	
+	
+	
+	<VNPEReimaginedProgression.Processor.InspectString.Stored>Хранится {0} x{1}/{2}.</VNPEReimaginedProgression.Processor.InspectString.Stored>
+	<VNPEReimaginedProgression.Processor.InspectString.Processing>Сейчас производится {0}.</VNPEReimaginedProgression.Processor.InspectString.Processing>
+	<VNPEReimaginedProgression.Processor.InspectString.Full>Полностью заполнено. Требуется выгрузка.</VNPEReimaginedProgression.Processor.InspectString.Full>
+	<VNPEReimaginedProgression.Processor.InspectString.Require>Требуется {0} питательной пасты.</VNPEReimaginedProgression.Processor.InspectString.Require>
+
+</LanguageData>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<VNPERPNutrientPasteRefrigeration.label>Охлаждение</VNPERPNutrientPasteRefrigeration.label>
+	<VNPERPNutrientPasteRefrigeration.description>Изучите, как применять технологии охлаждения для сохранения питательной пасты в охлажденном состоянии.</VNPERPNutrientPasteRefrigeration.description>
+
+	<VNPERPNutrientPasteSystem.label>Система питательной пасты</VNPERPNutrientPasteSystem.label>
+	<VNPERPNutrientPasteSystem.description>Интеграция системы подачи питательной пасты по трубопроводам, автоматизированных хранилищ и разработка уменьшенных диспенсеров.</VNPERPNutrientPasteSystem.description>
+
+	<VNPERPNutrientPasteDripper.label>Капельница для питательной пасты</VNPERPNutrientPasteDripper.label>
+	<VNPERPNutrientPasteDripper.description>Разработайте прикроватное устройство, которое будет кормить лежащего в кровати человека, когда он проголодается.</VNPERPNutrientPasteDripper.description>
+
+	<VNPERPHopperShelf.label>Загрузочная воронка-полка</VNPERPHopperShelf.label>
+	<VNPERPHopperShelf.description>Узнайте, как увеличить вместимость загрузочной воронки, используемых такими машинами, как диспенсеры питательной пасты и измельчители.</VNPERPHopperShelf.description>
+
+	<VNPERPNutrientPasteT1.label>Простая питательная паста</VNPERPNutrientPasteT1.label>
+	<VNPERPNutrientPasteT1.description>Анализ и оптимизация параметров фильтрации для уменьшения нежелательных вкусовых соединений в питательной пасте.\n\nЭто потребует увеличения количества жидкой питательной пасты на порцию на 66% по сравнению с обычным блюдом из пасты.</VNPERPNutrientPasteT1.description>
+
+	<VNPERPNutrientPasteTC.label>Кубики питательной пасты</VNPERPNutrientPasteTC.label>
+	<VNPERPNutrientPasteTC.description>Разработайте методы консервации питательной пасты путём конденсации и дегидратации. Отлично подходит для путешествий.\n\nЭто потребует увеличения количества жидкой питательной пасты на 50% на порцию из 15 кубиков по сравнению с обычной питательной пастой.</VNPERPNutrientPasteTC.description>
+
+	<VNPERPNutrientPasteTD.label>Разбавленная питательная паста</VNPERPNutrientPasteTD.label>
+	<VNPERPNutrientPasteTD.description>Исследуйте методы разбавления питательной пасты для увеличения количества без существенной потери питательности. Разбавленная паста обеспечит базовое пропитание для тела, но вкус значительно ухудшится.\n\nЭто потребует уменьшения количества жидкой питательной пасты на порцию на 33% по сравнению с обычным блюдом из пасты.</VNPERPNutrientPasteTD.description>
+
+	<VNPERPNutrientPasteFeeder.label>Устройство для подачи питательной пасты</VNPERPNutrientPasteFeeder.label>
+	<VNPERPNutrientPasteFeeder.description>Создайте компактное выходное устройство для трубопровода, откуда колонисты смогут забирать питательную пасту.</VNPERPNutrientPasteFeeder.description>
+
+	<VNPERPNutrientPasteFeedingTube.label>Трубка для кормления питательной пастой</VNPERPNutrientPasteFeedingTube.label>
+	<VNPERPNutrientPasteFeedingTube.description>Создайте технологии миниатюризации капельницы для питательной пасты, позволяющие установить её непосредственно на кровать.</VNPERPNutrientPasteFeedingTube.description>
+
+	<VNPERPNutrientPasteFilter.label>Фильтр</VNPERPNutrientPasteFilter.label>
+	<VNPERPNutrientPasteFilter.description>Разработайте устройство, способное точечно извлекать, а затем сжигать определённые ингредиенты из хранимой питательной пасты.</VNPERPNutrientPasteFilter.description>
+
+	<VNPERPNutrientPasteT2.label>Вкусная питательная паста</VNPERPNutrientPasteT2.label>
+	<VNPERPNutrientPasteT2.description>Внедрите вторичный вкусовой компонент для улучшения общего вкуса.\n\nЭто потребует увеличения количества жидкой питательной пасты на 50% на порцию по сравнению с простой питательной пастой.</VNPERPNutrientPasteT2.description>
+
+	<VNPERPCompact.label>Компактность</VNPERPCompact.label>
+	<VNPERPCompact.description>Разработайте методы уменьшения размеров оборудования для питательной пасты, делая его более эффективным по занимаемой площади.</VNPERPCompact.description>
+
+	<VNPERPNutrientPasteTS.label>Упакованная питательная паста</VNPERPNutrientPasteTS.label>
+	<VNPERPNutrientPasteTS.description>Используйте методы консервации и упаковки питательной пасты, чтобы предотвратить её порчу. Отлично подходит для путешествий.\n\nЭто потребует такого же объёма жидкой питательной пасты на порцию по сравнению с обычной питательной пастой.</VNPERPNutrientPasteTS.description>
+
+	<VNPERPNutrientPasteTK.label>Корм из питательной пасты</VNPERPNutrientPasteTK.label>
+	<VNPERPNutrientPasteTK.description>Изучите возможность производства корма для животных из питательной пасты. Корм из пасты обеспечит базовое пропитание для организма животных, но слишком опасен для употребления человеком.\n\nЭто потребует увеличения количества жидкой питательной пасты на 66% на порцию из 50 кусков киббла по сравнению с обычной питательной пастой.</VNPERPNutrientPasteTK.description>
+
+	<VNPERPNutrientPasteHungerSuppressor.label>Подавитель голода</VNPERPNutrientPasteHungerSuppressor.label>
+	<VNPERPNutrientPasteHungerSuppressor.description>Создайте многоканальное устройство, которое ищет организмы, нуждающиеся в пище, а затем с помощью дротика присоединяет трубку и подаёт питательную пасту в цель.</VNPERPNutrientPasteHungerSuppressor.description>
+
+	<VNPERPNutrientPasteT3.label>Шикарная питательная паста</VNPERPNutrientPasteT3.label>
+	<VNPERPNutrientPasteT3.description>Используйте инновационный процесс для разделения жидкой питательной пасты на несколько порций с различными вкусами и текстурами,  обеспечивая всеобщее признание.\n\nЭто потребует увеличения количества жидкой питательной пасты на 33% на порцию по сравнению с вкусной питательной пастой.</VNPERPNutrientPasteT3.description>
+
+	<VNPERPPortable.label>Портативность</VNPERPPortable.label>
+	<VNPERPPortable.description>Используйте внутренний источник питания и облегчённую конструкцию для производства портативного оборудования для питательной пасты.</VNPERPPortable.description>
+
+</Defs>

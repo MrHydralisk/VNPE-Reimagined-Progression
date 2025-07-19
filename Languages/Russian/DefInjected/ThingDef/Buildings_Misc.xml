@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<VNPERP_NutrientPasteHungerSuppressor.label>Подавитель голода</VNPERP_NutrientPasteHungerSuppressor.label>
+	<VNPERP_NutrientPasteHungerSuppressor.description>Многотрубное устройство. Включает маленький сканер, ищущий нуждающиеся в питании организмы. Выстреливает в цель дротик с иглой, соединяя её с основным устройством питательной трубкой и перекачивая питательную жидкость. Предотвращает истощение, но не голод. Обслуживает до 6 целей одновременно.</VNPERP_NutrientPasteHungerSuppressor.description>
+
+	<VNPERP_NutrientPasteHungerSuppressorPT.label>Портативный подавитель голода</VNPERP_NutrientPasteHungerSuppressorPT.label>
+	<VNPERP_NutrientPasteHungerSuppressorPT.description>Портативное многотрубное устройство. Включает маленький сканер, ищущий нуждающиеся в питании организмы. Выстреливает в цель дротик с иглой, соединяя её с основным устройством питательной трубкой и перекачивая питательную жидкость. Предотвращает истощение, но не голод. Имеет внутренний источник питания и лёгкий каркас, но может работать только с 2 целями одновременно.</VNPERP_NutrientPasteHungerSuppressorPT.description>
+
+	<VNPERP_NutrientPasteFilter.label>Фильтр питательной пасты</VNPERP_NutrientPasteFilter.label>
+	<VNPERP_NutrientPasteFilter.description>Прибор, разработанный для изоляции конкретного ингредиента из питательной пасты и последующего уничтожения этой изолированной порции путём сжигания..</VNPERP_NutrientPasteFilter.description>
+
+</Defs>

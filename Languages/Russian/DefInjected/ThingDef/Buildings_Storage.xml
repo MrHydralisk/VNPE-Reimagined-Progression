@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<VNPERP_NutrientPasteVat_Small.label>Ёмкость для питательной пасты S</VNPERP_NutrientPasteVat_Small.label>
+	<VNPERP_NutrientPasteVat_Small.description>Резервуар размера S, в котором может храниться до 60 порций питательной пасты. Создаёт большой беспорядок, когда ломается или разбирается.</VNPERP_NutrientPasteVat_Small.description>
+
+	<VNPE_NutrientPasteVat.label>Ёмкость для питательной пасты M</VNPE_NutrientPasteVat.label>
+	<VNPE_NutrientPasteVat.description>Резервуар размера M, в котором может храниться до 360 порций питательной пасты. Создаёт большой беспорядок, когда ломается или разбирается.</VNPE_NutrientPasteVat.description>
+
+	<VNPERP_NutrientPasteVat_Giant.label>Ёмкость для питательной пасты L</VNPERP_NutrientPasteVat_Giant.label>
+	<VNPERP_NutrientPasteVat_Giant.description>Резервуар размера L, в котором может храниться до 1215 порций питательной пасты. Создаёт большой беспорядок, когда ломается или разбирается.</VNPERP_NutrientPasteVat_Giant.description>
+
+	<VNPERP_NutrientPasteVat_XL.label>Ёмкость для питательной пасты XL</VNPERP_NutrientPasteVat_XL.label>
+	<VNPERP_NutrientPasteVat_XL.description>Резервуар размера XL, в котором может храниться до 2400 порций питательной пасты. Создаёт большой беспорядок, когда ломается или разбирается.</VNPERP_NutrientPasteVat_XL.description>
+
+	<VNPERP_NutrientPasteVat_XXL.label>Ёмкость для питательной пасты XXL</VNPERP_NutrientPasteVat_XXL.label>
+	<VNPERP_NutrientPasteVat_XXL.description>Резервуар размера XXL, в котором может храниться до 3750 порций питательной пасты. Создаёт большой беспорядок, когда ломается или разбирается.</VNPERP_NutrientPasteVat_XXL.description>
+
+	<VNPERP_NutrientPasteVat_Portable.label>Портативная ёмкость для питательной пасты</VNPERP_NutrientPasteVat_Portable.label>
+	<VNPERP_NutrientPasteVat_Portable.description>Портативный резервуар малого размера, в котором может храниться до 45 порций питательной пасты. Создаёт большой беспорядок, когда ломается или разбирается. Он имеет встроенный источник энергии и облегчённую конструкцию.</VNPERP_NutrientPasteVat_Portable.description>
+ 
+</Defs>

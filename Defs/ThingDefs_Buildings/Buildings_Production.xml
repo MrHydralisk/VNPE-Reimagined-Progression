@@ -1014,7 +1014,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPERP_NutrientPasteFeederDT</defName>
 		<label>diluted nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up diluted nutrient paste.</description>
+		<description>A small pipe output that allows colonists to pick up diluted nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederTD</texPath>
 			<color>(255,255,255)</color>
@@ -1075,7 +1075,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPERP_NutrientPasteFeeder1T</defName>
 		<label>simple nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up simple nutrient paste.</description>
+		<description>A small pipe output that allows colonists to pick up simple nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederT1</texPath>
 			<color>(255,255,255)</color>
@@ -1138,7 +1138,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPERP_NutrientPasteFeeder2T</defName>
 		<label>fine nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up fine nutrient paste.</description>
+		<description>A small pipe output that allows colonists to pick up fine nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederT2</texPath>
 			<color>(255,255,255)</color>
@@ -1202,7 +1202,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteFeeder">
 		<defName>VNPERP_NutrientPasteFeeder3T</defName>
 		<label>lavish nutrient paste feeder</label>
-		<description>A small pipe output that allows colonists and citizens to pick up lavish nutrient paste.</description>
+		<description>A small pipe output that allows colonists to pick up lavish nutrient paste.</description>
 		<graphicData>
 			<texPath>Things/Building/Feeder/NutrientPasteFeederT3</texPath>
 			<color>(255,255,255)</color>

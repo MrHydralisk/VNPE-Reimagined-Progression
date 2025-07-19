@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<VNPERP_NutrientPasteFridgeFeeder0T.label>Охлаждаемое устройство для подачи питательной пасты</VNPERP_NutrientPasteFridgeFeeder0T.label>
+	<VNPERP_NutrientPasteFridgeFeeder0T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать питательную пасту. Встроенное охлаждающее устройство предотвращает порчу хранимой пасты.</VNPERP_NutrientPasteFridgeFeeder0T.description>
+
+	<VNPERP_NutrientPasteFridgeFeederDT.label>Охлаждаемое устройство для подачи разбавленной питательной пасты</VNPERP_NutrientPasteFridgeFeederDT.label>
+	<VNPERP_NutrientPasteFridgeFeederDT.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать разбавленную питательную пасту. Встроенное охлаждающее устройство предотвращает порчу хранимой пасты.</VNPERP_NutrientPasteFridgeFeederDT.description>
+
+	<VNPERP_NutrientPasteFridgeFeeder1T.label>Охлаждаемое устройство для подачи простой питательной пасты</VNPERP_NutrientPasteFridgeFeeder1T.label>
+	<VNPERP_NutrientPasteFridgeFeeder1T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать простую питательную пасту. Встроенное охлаждающее устройство предотвращает порчу хранимой пасты.</VNPERP_NutrientPasteFridgeFeeder1T.description>
+
+	<VNPERP_NutrientPasteFridgeFeeder2T.label>Охлаждаемое устройство для подачи вкусной питательной пасты</VNPERP_NutrientPasteFridgeFeeder2T.label>
+	<VNPERP_NutrientPasteFridgeFeeder2T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать вкусную питательную пасту. Встроенное охлаждающее устройство предотвращает порчу хранимой пасты.</VNPERP_NutrientPasteFridgeFeeder2T.description>
+
+	<VNPERP_NutrientPasteFridgeFeeder3T.label>Охлаждаемое устройство для подачи шикарной питательной пасты</VNPERP_NutrientPasteFridgeFeeder3T.label>
+	<VNPERP_NutrientPasteFridgeFeeder3T.description>Компактное выходное устройство для трубопровода, откуда колонисты смогут забирать шикарную питательную пасту. Встроенное охлаждающее устройство предотвращает порчу хранимой пасты.</VNPERP_NutrientPasteFridgeFeeder3T.description>
+
+
+	<VNPERP_FridgeHopperShelf.label>Охлаждаемая загрузочная воронка-полка</VNPERP_FridgeHopperShelf.label>
+	<VNPERP_FridgeHopperShelf.description>Эта тройная полка предназначена для хранения ресурсов для таких машин, как диспенсеры питательной пасты и измельчители. Её ёмкость в три раза превышает стандартную загрузочную воронку. Хранимые внутри предметы никогда не портятся и не влияют на красоту окружения. Встроенное охлаждающее устройство предотвращает порчу хранимых предметов.</VNPERP_FridgeHopperShelf.description>
+
+</Defs>

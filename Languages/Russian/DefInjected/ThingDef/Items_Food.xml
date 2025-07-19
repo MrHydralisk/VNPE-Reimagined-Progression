@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MealNutrientPasteDT.label>Разбавленная питательная паста</MealNutrientPasteDT.label>
+	<MealNutrientPasteDT.description>Очень сильно разбавленная синтетическая смесь белков, углеводов, витаминов, аминокислот и минералов. Едва хватает для поддержания жизни и совершенно отвратительна.</MealNutrientPasteDT.description>
+
+	<MealNutrientPaste1T.label>Простая питательная паста</MealNutrientPaste1T.label>
+	<MealNutrientPaste1T.description>Cинтетическая смесь белков, углеводов, витаминов, аминокислот и минералов. Всё, что нужно организму, и больше не абсолютно отвратительна благодаря новому методу фильтрации.</MealNutrientPaste1T.description>
+
+	<MealNutrientPaste2T.label>Вкусная питательная паста</MealNutrientPaste2T.label>
+	<MealNutrientPaste2T.description>Синтетическая смесь белков, углеводов, витаминов, аминокислот и минералов. Всё, что нужно организму. Имеет дополнительную порцию с другим вкусом.</MealNutrientPaste2T.description>
+
+	<MealNutrientPaste3T.label>Шикарная питательная паста</MealNutrientPaste3T.label>
+	<MealNutrientPaste3T.description>Синтетическая смесь белков, углеводов, витаминов, аминокислот и минералов. Всё, что нужно организму. Имеет множество дополнительных порций с различными вкусами и текстурами, чтобы удовлетворить любого.</MealNutrientPaste3T.description>
+
+	<MealNutrientPasteST.label>Упакованная питательная паста</MealNutrientPasteST.label>
+	<MealNutrientPasteST.description>Упакованная синтетическая смесь белков, углеводов, витаминов, аминокислот и минералов. Всё, что нужно организму, в небольшой твёрдой форме. Хотя она никогда не гниёт, может портиться, если оставить на открытом воздухе. Отлично подходит для путешествий.</MealNutrientPasteST.description>
+
+	<MealNutrientPasteCT.label>Кубики питательной пасты</MealNutrientPasteCT.label>
+	<MealNutrientPasteCT.description>Консервированная, сильно концентрированная синтетическая смесь белков, углеводов, витаминов, аминокислот и минералов. Всё, что нужно организму, в небольшой твёрдой форме. Хранится очень долго без охлаждения. Отлично подходит для путешествий.</MealNutrientPasteCT.description>
+
+	<MealNutrientPasteKT.label>Корм из питательной пасты</MealNutrientPasteKT.label>
+	<MealNutrientPasteKT.description>Синтетическая смесь белков, углеводов, витаминов, аминокислот и минералов для животных. Всё, что нужно организму, и абсолютно отвратительно. Люди могут это есть, но никто в здравом уме не станет.</MealNutrientPasteKT.description>
+
+</Defs>
