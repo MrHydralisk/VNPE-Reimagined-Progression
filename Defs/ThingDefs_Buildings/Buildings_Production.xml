@@ -120,6 +120,125 @@
 	
   
 	<DesignatorDropdownGroupDef>
+		<defName>VNPERP_NutrientPasteGrinderCompact_SET</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
+		<defName>VNPERP_NutrientPasteGrinderCompact1T</defName>
+		<label>improved compact nutrient paste grinder</label>
+		<description>A compact version of improved machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 2 inputs of food at the same time.</description>
+		<graphicData>
+			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT1</texPath>
+		</graphicData>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>3600</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<designatorDropdown>VNPERP_NutrientPasteGrinderCompact_SET</designatorDropdown>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>90</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT1</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
+		<defName>VNPERP_NutrientPasteGrinderCompact2T</defName>
+		<label>advanced compact nutrient paste grinder</label>
+		<description>A compact version of advanced machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 2 inputs of food at the same time.</description>
+		<graphicData>
+			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT2</texPath>
+		</graphicData>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>4400</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>35</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<designatorDropdown>VNPERP_NutrientPasteGrinderCompact_SET</designatorDropdown>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>120</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT2</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<AdditionalGrind>1</AdditionalGrind>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
+		<defName>VNPERP_NutrientPasteGrinderCompact3T</defName>
+		<label>high tech compact nutrient paste grinder</label>
+		<description>A compact version of high tech machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 4 inputs of food at the same time.</description>
+		<graphicData>
+			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT3</texPath>
+		</graphicData>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>5800</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>400</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Plasteel>100</Plasteel>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<designatorDropdown>VNPERP_NutrientPasteGrinderCompact_SET</designatorDropdown>
+		<comps Inherit="False">
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>180</basePowerConsumption>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+		<researchPrerequisites Inherit="False">
+			<li>VNPERPNutrientPasteT3</li>
+		</researchPrerequisites>
+		<modExtensions>
+			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
+				<AdditionalGrind>3</AdditionalGrind>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+  
+	<DesignatorDropdownGroupDef>
 		<defName>VNPERP_NutrientPasteFeedingTube_SET</defName>
 	</DesignatorDropdownGroupDef>
 	
