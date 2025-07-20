@@ -24,7 +24,7 @@ For the reference things from Rimworld and VNPE shown below alongside content of
 
 ## Links
 
-[Steam Workshop Page]()
+[Steam Workshop Page](https://steamcommunity.com/sharedfiles/filedetails/?id=3530651481)
 
 [Discord](https://discord.gg/tKsBgzzTsG)
 
