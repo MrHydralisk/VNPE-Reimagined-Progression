@@ -12,6 +12,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]</xpath>
 				<value>
 					<designatorDropdown>VNPERP_NutrientPasteGrinder_SET</designatorDropdown>
+					<uiOrder>2132</uiOrder>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -19,6 +20,27 @@
 				<value>
 					<li>VNPERPNutrientPasteSystem</li>
 				</value>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]/building/relatedBuildCommands</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]/building</xpath>
+					<order>Append</order>
+					<value>
+						<relatedBuildCommands>
+							<li>VNPERP_HopperShelf</li>
+							<li>VNPERP_FridgeHopperShelf</li>
+						</relatedBuildCommands>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]/building/relatedBuildCommands</xpath>
+					<order>Append</order>
+					<value>
+						<li>VNPERP_HopperShelf</li>
+						<li>VNPERP_FridgeHopperShelf</li>
+					</value>
+				</match>
 			</li>
 			
 			
@@ -73,6 +95,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteDripper"]</xpath>
 				<value>
 					<designatorDropdown>VNPERP_NutrientPasteDripper_SET</designatorDropdown>
+					<uiOrder>2134</uiOrder>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -93,6 +116,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]</xpath>
 				<value>
 					<designatorDropdown>VNPERP_NutrientPasteFeeder_SET</designatorDropdown>
+					<uiOrder>2135</uiOrder>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -114,6 +138,7 @@
 				<value>
 					<designatorDropdown>VNPERP_NutrientPasteVat_SET</designatorDropdown>
 					<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+					<uiOrder>2133</uiOrder>
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -152,6 +177,8 @@
 					<li>VNPERPNutrientPasteSystem</li>
 				</value>
 			</li>
+			
+			
 			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPastePipe" or defName ="VNPE_UndergroundNutrientPastePipe" or defName ="VNPE_NutrientPasteValve"]/researchPrerequisites/li</xpath>

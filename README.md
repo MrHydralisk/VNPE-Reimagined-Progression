@@ -10,6 +10,7 @@ This mod combines few of my previous mods that was rebalancing and adding new co
 Nutrient paste buildings now require their own research projects in a separate Nutrient Paste research tab. This allowing player to improve nutrient paste system in their colony over time as they advance through Main research tab.
 Overall, this reworked nutrient paste system lets you automate food production in your colony and significantly improving food management for big populations. It also improves the space-efficiency of the entire nutrient paste system.
 To make things compact all different versions of taps, drippers, feeders and etc put are combined into one designator set and split between Pipe networks and Production category.
+Includes more space-efficient version, which is perfect for Gravships.
 For the reference things from Rimworld and VNPE shown below alongside content of this mod.
 
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc1.png)

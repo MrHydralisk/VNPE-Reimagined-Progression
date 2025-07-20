@@ -43,6 +43,29 @@
 					</value>
 				</match>
 			</li>
+			
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName ="NutrientPasteDispenser"]/building/relatedBuildCommands</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName ="NutrientPasteDispenser"]/building</xpath>
+					<order>Append</order>
+					<value>
+						<relatedBuildCommands>
+							<li>VNPERP_HopperShelf</li>
+							<li>VNPERP_FridgeHopperShelf</li>
+						</relatedBuildCommands>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName ="NutrientPasteDispenser"]/building/relatedBuildCommands</xpath>
+					<order>Append</order>
+					<value>
+						<li>VNPERP_HopperShelf</li>
+						<li>VNPERP_FridgeHopperShelf</li>
+					</value>
+				</match>
+			</li>
 		</operations>
 	</Operation>
 

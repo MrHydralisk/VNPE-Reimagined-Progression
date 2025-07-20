@@ -13,6 +13,7 @@
 			<drawSize>(1.5,1.5)</drawSize>
 		</graphicData>
 		<uiIconScale>0.85</uiIconScale>
+		<uiOrder>2136</uiOrder>
 		<statBases>
 			<Flammability>0.5</Flammability>
 			<Beauty>-8</Beauty>
@@ -154,6 +155,7 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
+		<uiOrder>2131</uiOrder>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<WorkToBuild>2800</WorkToBuild>
