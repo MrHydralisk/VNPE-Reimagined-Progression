@@ -126,7 +126,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteGrinder">
 		<defName>VNPERP_NutrientPasteGrinderCompact1T</defName>
 		<label>improved compact nutrient paste grinder</label>
-		<description>A compact version of improved machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with up to 2 inputs of food at the same time.</description>
+		<description>A compact version of improved machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the nutrient paste, but it allows it to be pumped into vats and dispensers in the network. It can work with 1 input of food at the same time.</description>
 		<graphicData>
 			<texPath>Things/Building/GrinderCompact/NutrientPasteGrinderCompactT1</texPath>
 		</graphicData>
@@ -667,7 +667,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
 		<defName>VNPERP_NutrientPasteTapDT</defName>
 		<label>diluted nutrient paste tap</label>
-		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
+		<description>A hopper-like storage basin meant to hold dispensed diluted nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapTD</texPath>
 			<color>(255,255,255)</color>
@@ -705,7 +705,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
 		<defName>VNPERP_NutrientPasteTap1T</defName>
 		<label>simple nutrient paste tap</label>
-		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
+		<description>A hopper-like storage basin meant to hold dispensed simple nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapT1</texPath>
 			<color>(255,255,255)</color>
@@ -743,7 +743,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
 		<defName>VNPERP_NutrientPasteTap2T</defName>
 		<label>fine nutrient paste tap</label>
-		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
+		<description>A hopper-like storage basin meant to hold dispensed fine nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapT2</texPath>
 			<color>(255,255,255)</color>
@@ -783,7 +783,7 @@
 	<ThingDef ParentName="VNPE_NutrientPasteTap">
 		<defName>VNPERP_NutrientPasteTap3T</defName>
 		<label>lavish nutrient paste tap</label>
-		<description>A hopper-like storage basin meant to hold dispensed nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
+		<description>A hopper-like storage basin meant to hold dispensed lavish nutrient paste meal from the vats. Can be used by colonists and prisoners. Nutrient paste meal dispensed and ready for pick-up can deteriorate.</description>
 		<graphicData>
 			<texPath>Things/Building/Tap/NutrientPasteTapT3</texPath>
 			<color>(255,255,255)</color>
