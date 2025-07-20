@@ -32,6 +32,8 @@ For the reference things from Rimworld and VNPE shown below alongside content of
 
 Should have no compatibility issues with other mods, unless Vanilla Nutrient Paste Expanded have.
 
+Add refridgerated versions of feeder and hopper, if Simple Utilites: Fridge mod installed.
+
 **This mod is an unofficial addition for Vanilla Nutrient Paste Expanded.**
 
 Supported languages:

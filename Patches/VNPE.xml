@@ -7,6 +7,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]</xpath>
 				<attribute>Name</attribute>
 				<value>VNPE_NutrientPasteGrinder</value>
+				<success>Always</success>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteGrinder"]</xpath>
@@ -29,7 +30,7 @@
 					<value>
 						<relatedBuildCommands>
 							<li>VNPERP_HopperShelf</li>
-							<li>VNPERP_FridgeHopperShelf</li>
+							<li MayRequire="Owlchemist.FridgeUtilities">VNPERP_FridgeHopperShelf</li>
 						</relatedBuildCommands>
 					</value>
 				</nomatch>
@@ -49,6 +50,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]</xpath>
 				<attribute>Name</attribute>
 				<value>VNPE_NutrientPasteTap</value>
+				<success>Always</success>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteTap"]</xpath>
@@ -90,6 +92,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteDripper"]</xpath>
 				<attribute>Name</attribute>
 				<value>VNPE_NutrientPasteDripper</value>
+				<success>Always</success>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteDripper"]</xpath>
@@ -111,6 +114,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]</xpath>
 				<attribute>Name</attribute>
 				<value>VNPE_NutrientPasteFeeder</value>
+				<success>Always</success>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteFeeder"]</xpath>
@@ -132,6 +136,7 @@
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteVat"]</xpath>
 				<attribute>Name</attribute>
 				<value>VNPE_NutrientPasteVat</value>
+				<success>Always</success>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName ="VNPE_NutrientPasteVat"]</xpath>

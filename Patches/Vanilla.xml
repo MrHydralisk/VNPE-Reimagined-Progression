@@ -53,7 +53,7 @@
 					<value>
 						<relatedBuildCommands>
 							<li>VNPERP_HopperShelf</li>
-							<li>VNPERP_FridgeHopperShelf</li>
+							<li MayRequire="Owlchemist.FridgeUtilities">VNPERP_FridgeHopperShelf</li>
 						</relatedBuildCommands>
 					</value>
 				</nomatch>
