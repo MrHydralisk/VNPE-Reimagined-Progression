@@ -589,7 +589,7 @@
 		<comps>
 			<li Class="VNPEReimaginedProgression.CompProperties_NutrientPasteProcessor">
 				<ticksPerProduction>500</ticksPerProduction>
-				<NutrientPasteCost>1</NutrientPasteCost>
+				<NutrientPasteCost>2</NutrientPasteCost>
 				<ItemProducedAmount>1</ItemProducedAmount>
 				<ItemProducedDef>MealNutrientPasteST</ItemProducedDef>
 				<MaxCapacity>30</MaxCapacity>

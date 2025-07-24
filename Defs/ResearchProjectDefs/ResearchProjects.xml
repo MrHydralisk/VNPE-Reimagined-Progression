@@ -170,7 +170,7 @@
 	<ResearchProjectDef ParentName="VNPEReimaginedProgressionResearchBase">
 		<defName>VNPERPNutrientPasteTS</defName>
 		<label>packaged nutrient paste</label>
-		<description>Utilize preservation and packaging techniques for nutrient paste to prevent it from spoiling. Great for traveling.\n\nThis will require same volume of nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
+		<description>Utilize preservation and packaging techniques for nutrient paste to prevent it from spoiling. Great for traveling.\n\nThis will require a 100% increase in nutrient paste fluid per portion in comparison to nutrient paste meal.</description>
 		<baseCost>1200</baseCost>
 		<prerequisites>
 			<li>PackagedSurvivalMeal</li>
