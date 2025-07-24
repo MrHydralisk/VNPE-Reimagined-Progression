@@ -100,7 +100,7 @@ namespace VNPEReimaginedProgression
             if (!__instance.Dereferenced)
             {
                 Map map = __instance.Map;
-                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t.def.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || t.def.defName.StartsWith("VNPERP_NutrientPasteTap") || t.def.defName.StartsWith("VNPERP_NutrientPasteFeeder") || t.def.defName.StartsWith("VNPERP_NutrientPasteDripper")).ToList();
+                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t != null && (t.def.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || t.def.defName.StartsWith("VNPERP_NutrientPasteTap") || t.def.defName.StartsWith("VNPERP_NutrientPasteFeeder") || t.def.defName.StartsWith("VNPERP_NutrientPasteDripper"))).ToList();
                 for (int k = 0; k < list1.Count; k++)
                 {
                     list1[k].Notify_ColorChanged();
