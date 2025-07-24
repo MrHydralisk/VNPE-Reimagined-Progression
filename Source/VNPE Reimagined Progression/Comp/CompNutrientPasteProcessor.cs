@@ -144,7 +144,7 @@ namespace VNPEReimaginedProgression
                     Find.WindowStack.Add(new Dialog_Slider("VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider".Translate(), 1, Props.MaxCapacity, delegate (int x)
                     {
                         MaxCapacity = x;
-                    }));
+                    }, MaxCapacity));
                 },
                 defaultLabel = "VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label".Translate(),
                 defaultDesc = "VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc".Translate(),
