@@ -641,9 +641,13 @@
 				<ItemProducedAmount>15</ItemProducedAmount>
 				<ItemProducedDef>Chemfuel</ItemProducedDef>
 				<MaxCapacity>300</MaxCapacity>
+				<pipeNetTarget MayRequire="VanillaExpanded.VChemfuelE">VCHE_ChemfuelNet</pipeNetTarget>
 			</li>
 			<li Class="PipeSystem.CompProperties_Resource">
 				<pipeNet>VNPE_NutrientPasteNet</pipeNet>
+			</li>
+			<li MayRequire="VanillaExpanded.VChemfuelE" Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>VCHE_ChemfuelNet</pipeNet>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Power">

@@ -1,6 +1,5 @@
 ﻿using PipeSystem;
 using RimWorld;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,6 +18,9 @@ namespace VNPEReimaginedProgression
 
         public CompResource ResourceComp => resourceComp ?? (resourceComp = parent.GetComp<CompResource>());
         private CompResource resourceComp;
+
+        public CompResource ResourceCompTarget => resourceCompTarget ?? (resourceCompTarget = parent.GetComps<CompResource>().FirstOrDefault((CompResource cr) => cr.Props.pipeNet == Props.pipeNetTarget));
+        private CompResource resourceCompTarget;
 
         private List<ThingDef> IngredientsList = new List<ThingDef>();
         protected List<Thing> ProducedThings = new List<Thing>();
@@ -96,28 +98,35 @@ namespace VNPEReimaginedProgression
         public void Produce()
         {
             parent.def.building.soundDispense.PlayOneShot(new TargetInfo(parent.Position, parent.Map));
-            Thing thingProduced = ThingMaker.MakeThing(Props.ItemProducedDef);
-            thingProduced.stackCount = Props.ItemProducedAmount;
-            CompIngredients compIngredients = thingProduced.TryGetComp<CompIngredients>();
-            if (compIngredients != null)
+            if (Props.pipeNetTarget != null && ResourceCompTarget?.PipeNet is PipeNet pipeNet && (pipeNet?.AvailableCapacity ?? -1f) >= (float)Props.ItemProducedAmount)
             {
-                for (int j = 0; j < IngredientsList.Count; j++)
-                {
-                    compIngredients.RegisterIngredient(IngredientsList[j]);
-                }
+                pipeNet.DistributeAmongStorage(Props.ItemProducedAmount, out var _);
             }
-            bool isAbsorb = false;
-            for (int i = ProducedThings.Count - 1; i >= 0; i--)
+            else
             {
-                if (ProducedThings[i].TryAbsorbStack(thingProduced, false))
+                Thing thingProduced = ThingMaker.MakeThing(Props.ItemProducedDef);
+                thingProduced.stackCount = Props.ItemProducedAmount;
+                CompIngredients compIngredients = thingProduced.TryGetComp<CompIngredients>();
+                if (compIngredients != null)
                 {
-                    isAbsorb = true;
-                    break;
+                    for (int j = 0; j < IngredientsList.Count; j++)
+                    {
+                        compIngredients.RegisterIngredient(IngredientsList[j]);
+                    }
                 }
-            }
-            if (!isAbsorb)
-            {
-                ProducedThings.Add(thingProduced);
+                bool isAbsorb = false;
+                for (int i = ProducedThings.Count - 1; i >= 0; i--)
+                {
+                    if (ProducedThings[i].TryAbsorbStack(thingProduced, false))
+                    {
+                        isAbsorb = true;
+                        break;
+                    }
+                }
+                if (!isAbsorb)
+                {
+                    ProducedThings.Add(thingProduced);
+                }
             }
             isProcessing = false;
         }

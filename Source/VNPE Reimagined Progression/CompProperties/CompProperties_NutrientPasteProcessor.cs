@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using PipeSystem;
+using Verse;
 
 namespace VNPEReimaginedProgression
 {
@@ -9,6 +10,8 @@ namespace VNPEReimaginedProgression
         public int ItemProducedAmount = 1;
         public ThingDef ItemProducedDef;
         public int MaxCapacity = 10;
+
+        public PipeNetDef pipeNetTarget;
 
         public CompProperties_NutrientPasteProcessor()
         {
