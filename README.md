@@ -13,14 +13,39 @@ To make things compact all different versions of taps, drippers, feeders and etc
 Includes more space-efficient version, which is perfect for Gravships.
 For the reference things from Rimworld and VNPE shown below alongside content of this mod.
 
+### Paste meals
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc1.png)
+
+### Grinders
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc2.png)
+Grinders types with improved speed of convertion raw food into paste. Smaller versions of Grinders for higher space-efficiency.
+
+### Taps
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc3.png)
+Taps for new paste meals.
+
+### Vats
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc4.png)
+Increasing capacity of base paste vat and adds vats of different size. Portable version that can be taken anywhere without need for power.
+
+### Feeders
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc5.png)
+Feeders for new paste meals. Refridgerated version, if related mod installed.
+
+### Drippers
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc6.png)
+Drippers for new paste meals.
+
+### Feeding tubes
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc7.png)
+Feeding tube is version of dripper placed on bed itself for higher space-efficiency.
+
+### New features
 ![Text](/Mod%20Page/Images/Content/VNPERPDesc8.png)
+Hopper that prevent deterioration of raw food and with increased stacks capacity to 3. Refridgerated version, if related mod installed.
+Device for suppression of pawn hunger. Intended for actively keeping defence lines from dying of hunger. Portable version that can be taken anywhere without need for power.
+Paste processors that automatically convert liquid paste into cubes, packaged packs and chemfuel.
+Paste filter for removing ingredients from paste net at the cost of stored paste portion.
 
 ## Links
 
@@ -38,7 +63,9 @@ Add refridgerated versions of feeder and hopper, if Simple Utilites: Fridge mod 
 
 Supported languages:
 * English,
-* Russian
+* Russian,
+* Japanese (available on JP mod database site),
+* Chinese (available on workshop by cat magic)
 
 ## Add/Remove
 
