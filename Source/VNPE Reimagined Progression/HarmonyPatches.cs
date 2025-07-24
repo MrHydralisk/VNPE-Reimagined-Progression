@@ -66,7 +66,6 @@ namespace VNPEReimaginedProgression
             val.Patch(AccessTools.Method(typeof(Building_Dripper), "TickRare"), prefix: new HarmonyMethod(patchType, "BD_TickRare_Prefix", (Type[])null));
 
             val.Patch(AccessTools.Method(typeof(PipeNet), "DistributeAmongConverters", (Type[])null, (Type[])null), transpiler: new HarmonyMethod(patchType, "PN_DistributeAmongConverters_Transpiler"));
-            val.Patch(AccessTools.Method(typeof(CompConvertToThing), "PostSpawnSetup"), postfix: new HarmonyMethod(patchType, "CCTT_PostSpawnSetup_Postfix"));
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -376,35 +375,6 @@ namespace VNPEReimaginedProgression
                 available -= storageCost;
             }
             return true;
-        }
-
-        public static void CCTT_PostSpawnSetup_Postfix(CompConvertToThing __instance)
-        {
-            ref Command_Action augment1 = ref augment1Ref.Invoke((object)__instance);
-            ref Command_Action augment10 = ref augment10Ref.Invoke((object)__instance);
-            Texture2D plusTexture = AccessTools.Field(typeof(CompConvertToThing), "plus").GetValue(null) as Texture2D;
-            augment1 = new Command_Action
-            {
-                action = delegate
-                {
-                    ref int maxHeldThingStackSize = ref maxHeldThingStackSizeRef.Invoke((object)__instance);
-                    maxHeldThingStackSize = Mathf.Min(maxHeldThingStackSize + 1, __instance.HeldThing?.def.stackLimit ?? int.MaxValue, __instance.Props.maxOutputStackSize);
-                },
-                defaultLabel = "PipeSystem_AugmentStack".Translate(),
-                defaultDesc = "PipeSystem_AugmentStackDesc".Translate(),
-                icon = plusTexture
-            };
-            augment10 = new Command_Action
-            {
-                action = delegate
-                {
-                    ref int maxHeldThingStackSize = ref maxHeldThingStackSizeRef.Invoke((object)__instance);
-                    maxHeldThingStackSize = Mathf.Min(maxHeldThingStackSize + 10, __instance.HeldThing?.def.stackLimit ?? int.MaxValue, __instance.Props.maxOutputStackSize);
-                },
-                defaultLabel = "PipeSystem_AugmentStackB".Translate(),
-                defaultDesc = "PipeSystem_AugmentStackDescB".Translate(),
-                icon = plusTexture
-            };
         }
     }
 }
