@@ -17,8 +17,6 @@ namespace VNPEReimaginedProgression
     {
         private static readonly Type patchType;
 
-        private static AccessTools.FieldRef<object, Command_Action> augment1Ref;
-        private static AccessTools.FieldRef<object, Command_Action> augment10Ref;
         private static AccessTools.FieldRef<object, int> maxHeldThingStackSizeRef;
 
         static HarmonyPatches()
@@ -47,8 +45,6 @@ namespace VNPEReimaginedProgression
                 VNPE_NPD.GetCompProperties<CompProperties_Facility>().ResolveReferences(VNPE_NPD);
             }
 
-            augment1Ref = AccessTools.FieldRefAccess<Command_Action>(typeof(CompConvertToThing), "augment1");
-            augment10Ref = AccessTools.FieldRefAccess<Command_Action>(typeof(CompConvertToThing), "augment10");
             maxHeldThingStackSizeRef = AccessTools.FieldRefAccess<int>(typeof(CompConvertToThing), "maxHeldThingStackSize");
 
             val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler"));
@@ -123,8 +119,12 @@ namespace VNPEReimaginedProgression
             {
                 if (__instance.powerComp.PowerOn)
                 {
-                    __result = __instance.CanDispenseNowOverride;
-                    return false;
+                    PipeNet pipeNet = __instance.resourceComp.PipeNet;
+                    if (pipeNet != null)
+                    {
+                        __result = (pipeNet.Stored >= VNPERP.storageCost);
+                        return false;
+                    }
                 }
                 __result = false;
                 return false;
