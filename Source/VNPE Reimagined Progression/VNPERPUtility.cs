@@ -1,9 +1,14 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
+using Verse;
 
 namespace VNPEReimaginedProgression
 {
     public static class VNPERPUtility
     {
+        public static List<ThingDef> Defs_Dripper_FeedingTube = new List<ThingDef>();
+        public static List<ThingDef> Defs_Feeder = new List<ThingDef>();
+        public static List<ThingDef> Defs_Tap = new List<ThingDef>();
+
         public static float DrawAmongStorage(Building building, float amount = 1f)
         {
             VNPERPDefModExtension ext = building.def.GetModExtension<VNPERPDefModExtension>();

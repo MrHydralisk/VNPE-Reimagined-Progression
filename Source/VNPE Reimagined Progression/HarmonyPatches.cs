@@ -17,21 +17,34 @@ namespace VNPEReimaginedProgression
     {
         private static readonly Type patchType;
 
-        private static AccessTools.FieldRef<object, int> maxHeldThingStackSizeRef;
-
         static HarmonyPatches()
         {
             patchType = typeof(HarmonyPatches);
             Harmony val = new Harmony("rimworld.mrhydralisk.VNPEReimaginedProgressionPatch");
 
             List<ThingDef> allDefsListForReading = DefDatabase<ThingDef>.AllDefsListForReading;
-            List<ThingDef> VNPE_NPDs = allDefsListForReading.Where((ThingDef td) => td.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || td.defName.StartsWith("VNPERP_NutrientPasteDripper")).ToList();
+            foreach (ThingDef item in allDefsListForReading)
+            {
+                if (item.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || item.defName.StartsWith("VNPERP_NutrientPasteDripper"))
+                {
+                    VNPERPUtility.Defs_Dripper_FeedingTube.Add(item);
+                }
+                else if (item.defName.StartsWith("VNPERP_NutrientPasteFeeder") || item.defName.StartsWith("VNPERP_NutrientPasteFridgeFeeder"))
+                {
+                    VNPERPUtility.Defs_Feeder.Add(item);
+                }
+                else if (item.defName.StartsWith("VNPERP_NutrientPasteTap"))
+                {
+                    VNPERPUtility.Defs_Tap.Add(item);
+                }
+            }
+
             foreach (ThingDef item in allDefsListForReading)
             {
                 if (item.building != null && item.building.buildingTags.Contains("Bed") && !item.defName.Contains("Spot"))
                 {
                     CompProperties_AffectedByFacilities compProperties = item.GetCompProperties<CompProperties_AffectedByFacilities>();
-                    foreach (ThingDef VNPE_NPD in VNPE_NPDs)
+                    foreach (ThingDef VNPE_NPD in VNPERPUtility.Defs_Dripper_FeedingTube)
                     {
                         if (compProperties != null && !compProperties.linkableFacilities.Contains(VNPE_NPD))
                         {
@@ -40,12 +53,10 @@ namespace VNPEReimaginedProgression
                     }
                 }
             }
-            foreach (ThingDef VNPE_NPD in VNPE_NPDs)
+            foreach (ThingDef VNPE_NPD in VNPERPUtility.Defs_Dripper_FeedingTube)
             {
                 VNPE_NPD.GetCompProperties<CompProperties_Facility>().ResolveReferences(VNPE_NPD);
             }
-
-            maxHeldThingStackSizeRef = AccessTools.FieldRefAccess<int>(typeof(CompConvertToThing), "maxHeldThingStackSize");
 
             val.Patch(AccessTools.Method(typeof(Building_NutrientGrinder), "Tick"), transpiler: new HarmonyMethod(patchType, "BNG_Tick_Transpiler"));
 
@@ -96,17 +107,23 @@ namespace VNPEReimaginedProgression
             if (!__instance.Dereferenced)
             {
                 Map map = __instance.Map;
-                List<Thing> list1 = map.listerThings.AllThings.Where((Thing t) => t != null && (t.def.defName.StartsWith("VNPERP_NutrientPasteFeedingTube") || t.def.defName.StartsWith("VNPERP_NutrientPasteTap") || t.def.defName.StartsWith("VNPERP_NutrientPasteFeeder") || t.def.defName.StartsWith("VNPERP_NutrientPasteDripper"))).ToList();
-                for (int k = 0; k < list1.Count; k++)
+                List<ThingDef> VNPERP_NutrientPasteDefs = VNPERPUtility.Defs_Dripper_FeedingTube.ToList();
+                VNPERP_NutrientPasteDefs.AddRange(VNPERPUtility.Defs_Feeder);
+                VNPERP_NutrientPasteDefs.AddRange(VNPERPUtility.Defs_Tap);
+                foreach (ThingDef VNPERP_NutrientPasteDef in VNPERP_NutrientPasteDefs)
                 {
-                    list1[k].Notify_ColorChanged();
+                    List<Thing> list = map.listerThings.ThingsOfDef(VNPERP_NutrientPasteDef);
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        list[i].Notify_ColorChanged();
+                    }
                 }
             }
         }
 
         public static void TLGH_Includes_Postfix(ThingDef def, ThingRequestGroup group, ref bool __result)
         {
-            if ((group == ThingRequestGroup.FoodSourceNotPlantOrTree || group == ThingRequestGroup.FoodSource) && def.defName.StartsWith("VNPERP_NutrientPasteTap"))
+            if ((group == ThingRequestGroup.FoodSourceNotPlantOrTree || group == ThingRequestGroup.FoodSource) && VNPERPUtility.Defs_Tap.Contains(def))
             {
                 __result = true;
             }
