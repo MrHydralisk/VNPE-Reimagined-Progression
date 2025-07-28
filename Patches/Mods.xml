@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Hospitality</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/Hospitality.HospitalityConfigDef[defName="MainConfig"]/vendingMachines</xpath>
+			<value>
+				<li>VNPERP_NutrientPasteTapDT</li>
+				<li>VNPERP_NutrientPasteTap1T</li>
+				<li>VNPERP_NutrientPasteTap2T</li>
+				<li>VNPERP_NutrientPasteTap3T</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
