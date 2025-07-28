@@ -44,6 +44,7 @@ namespace VNPEReimaginedProgression
         public bool IsRequireUnloading => isEnabledUnloading && isRequireUnloading;
         public bool isRequireUnloading;
         public bool isEnabledUnloading = true;
+        public bool isEnabledUnloadingPipe = true;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
@@ -98,7 +99,7 @@ namespace VNPEReimaginedProgression
         public void Produce()
         {
             parent.def.building.soundDispense.PlayOneShot(new TargetInfo(parent.Position, parent.Map));
-            if (Props.pipeNetTarget != null && ResourceCompTarget?.PipeNet is PipeNet pipeNet && (pipeNet?.AvailableCapacity ?? -1f) >= (float)Props.ItemProducedAmount)
+            if (Props.pipeNetTarget != null && isEnabledUnloadingPipe && ResourceCompTarget?.PipeNet is PipeNet pipeNet && (pipeNet?.AvailableCapacity ?? -1f) >= (float)Props.ItemProducedAmount)
             {
                 pipeNet.DistributeAmongStorage(Props.ItemProducedAmount, out var _);
             }
@@ -173,6 +174,22 @@ namespace VNPEReimaginedProgression
             command_Toggle.hotKey = KeyBindingDefOf.Misc6;
             command_Toggle.Order = 30;
             yield return command_Toggle;
+            if (Props.pipeNetTarget != null && ResourceCompTarget?.PipeNet != null)
+            {
+                Command_Toggle command_TogglePipe = new Command_Toggle();
+                command_TogglePipe.defaultLabel = "VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Label".Translate(Props.pipeNetTarget.resource.name);
+                command_TogglePipe.defaultDesc = "VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Desc".Translate(Props.pipeNetTarget.resource.name);
+                command_TogglePipe.isActive = () => isEnabledUnloadingPipe;
+                command_TogglePipe.toggleAction = delegate
+                {
+                    isEnabledUnloadingPipe = !isEnabledUnloadingPipe;
+                };
+                command_TogglePipe.activateSound = SoundDefOf.Tick_Tiny;
+                command_TogglePipe.icon = ContentFinder<Texture2D>.Get(Props.pipeNetTarget.resource.offTexPath);
+                command_TogglePipe.hotKey = KeyBindingDefOf.Misc6;
+                command_TogglePipe.Order = 30;
+                yield return command_TogglePipe;
+            }
             yield return new Command_Action
             {
                 action = delegate
