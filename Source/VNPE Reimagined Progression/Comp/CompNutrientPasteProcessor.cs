@@ -46,9 +46,9 @@ namespace VNPEReimaginedProgression
         public bool isEnabledUnloading = true;
         public bool isEnabledUnloadingPipe = true;
 
-        public override void PostSpawnSetup(bool respawningAfterLoad)
+        public override void PostPostMake()
         {
-            base.PostSpawnSetup(respawningAfterLoad);
+            base.PostPostMake();
             MaxCapacity = Props.MaxCapacity;
         }
 
@@ -257,6 +257,7 @@ namespace VNPEReimaginedProgression
             Scribe_Values.Look(ref isProcessing, "isProcessing");
             Scribe_Values.Look(ref isRequireUnloading, "isRequireUnloading");
             Scribe_Values.Look(ref isEnabledUnloading, "isEnabledUnloading");
+            Scribe_Values.Look(ref isEnabledUnloadingPipe, "isEnabledUnloadingPipe");
         }
     }
 }

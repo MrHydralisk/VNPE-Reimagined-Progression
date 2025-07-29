@@ -8,8 +8,8 @@
 	<VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>Переключить автовыгрузку</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>
 	<VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>Когда активно, колонисты будут автоматически выгружать произведённые предметы из переработчика по мере его заполнения.</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>
 	
-	<VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Label>Switches {0} flow on/off.</VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Label>
-	<VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Desc>Switches {0} flow on/off. Allow unloading through pipe system.</VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Desc>
+	<VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Label>Переключает поток {0} вкл/выкл.</VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Label>
+	<VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Desc>Переключает поток {0} вкл/выкл. Позволяя выгрузку напрямую в трубопровод.</VNPEReimaginedProgression.Processor.Gizmo.UnloadingPipe.Desc>
 	
 	<VNPEReimaginedProgression.Processor.Gizmo.Eject.Label>Извлечь содержимое</VNPEReimaginedProgression.Processor.Gizmo.Eject.Label>
 	<VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc>Извлечь весь содержащийся здесь роизведённых предметов.</VNPEReimaginedProgression.Processor.Gizmo.Eject.Desc>
