@@ -247,7 +247,9 @@
 					<maxRadius>3</maxRadius>
 				</destroyOption>
 			</li>
-			<li Class="VNPEReimaginedProgression.CompProperties_RegisterIngredients"/>
+			<li Class="VNPE.CompProperties_RegisterIngredients">
+				<compClass>VNPEReimaginedProgression.CompRegisterIngredients</compClass>
+			</li>
 		</comps>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<researchPrerequisites>
