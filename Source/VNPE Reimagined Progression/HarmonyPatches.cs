@@ -73,6 +73,8 @@ namespace VNPEReimaginedProgression
             val.Patch(AccessTools.Method(typeof(Building_Dripper), "TickRare"), prefix: new HarmonyMethod(patchType, "BD_TickRare_Prefix", (Type[])null));
 
             val.Patch(AccessTools.Method(typeof(PipeNet), "DistributeAmongConverters", (Type[])null, (Type[])null), transpiler: new HarmonyMethod(patchType, "PN_DistributeAmongConverters_Transpiler"));
+            
+            val.Patch(AccessTools.Method(typeof(CompRegisterIngredients), "CompTickRare"), transpiler: new HarmonyMethod(patchType, "CRI_CompTickRare_Transpiler"));
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -392,6 +394,35 @@ namespace VNPEReimaginedProgression
                 available -= storageCost;
             }
             return true;
+        }
+
+        public static IEnumerable<CodeInstruction> CRI_CompTickRare_Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            int startIndex = -1;
+            List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
+            for (int i = 0; i < codes.Count - 5; i++)
+            {
+                Log.Message($"[i] {codes[i]}");
+                if (codes[i].opcode == OpCodes.Callvirt && codes[i].ToString().Contains("get_AmountStored()"))
+                {
+                    startIndex = i;
+                    break;
+                }
+            }
+            if (startIndex > -1)
+            {
+                codes.RemoveRange(startIndex, 5);
+                List<CodeInstruction> instructionsToInsert = new List<CodeInstruction>();
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarg_0));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "CompRegisterIngredientsEmpty")));
+                codes.InsertRange(startIndex, instructionsToInsert);
+            }
+            return codes.AsEnumerable();
+        }
+
+        public static bool CompRegisterIngredientsEmpty(CompResourceStorage compResourceStorage, CompRegisterIngredients compRegisterIngredients)
+        {
+            return compRegisterIngredients.parent.Spawned && (compResourceStorage?.AmountStored ?? 1f) == 0f;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
+using VNPE;
 
 namespace VNPEReimaginedProgression
 {
