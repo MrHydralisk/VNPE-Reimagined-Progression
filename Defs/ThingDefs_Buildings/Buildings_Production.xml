@@ -1330,7 +1330,7 @@
 		<modExtensions>
 			<li Class="VNPEReimaginedProgression.VNPERPDefModExtension">
 				<customMeal>MealNutrientPasteKT</customMeal>
-				<storageCost>0.03333</storageCost>
+				<storageCost>0.13333</storageCost>
 			</li>
 		</modExtensions>
 	</ThingDef>
