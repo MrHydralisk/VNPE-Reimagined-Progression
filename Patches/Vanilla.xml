@@ -62,7 +62,7 @@
 					<order>Append</order>
 					<value>
 						<li>VNPERP_HopperShelf</li>
-						<li>VNPERP_FridgeHopperShelf</li>
+						<li MayRequire="Owlchemist.FridgeUtilities">VNPERP_FridgeHopperShelf</li>
 					</value>
 				</match>
 			</li>
