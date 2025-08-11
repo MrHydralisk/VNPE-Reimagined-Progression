@@ -399,23 +399,31 @@ namespace VNPEReimaginedProgression
         public static IEnumerable<CodeInstruction> CRI_CompTickRare_Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             int startIndex = -1;
+            int endIndex = -1;
             List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
             for (int i = 0; i < codes.Count - 5; i++)
             {
-                Log.Message($"[i] {codes[i]}");
+                Log.Message($"[{i}] {codes[i]}");
                 if (codes[i].opcode == OpCodes.Callvirt && codes[i].ToString().Contains("get_AmountStored()"))
                 {
                     startIndex = i;
-                    break;
+                }
+                if (codes[i].opcode == OpCodes.Brfalse_S)
+                {
+                    endIndex = i;
                 }
             }
-            if (startIndex > -1)
+            if (startIndex > -1 && endIndex > -1)
             {
-                codes.RemoveRange(startIndex, 5);
+                codes.RemoveRange(startIndex, endIndex - startIndex);
                 List<CodeInstruction> instructionsToInsert = new List<CodeInstruction>();
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarg_0));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "CompRegisterIngredientsEmpty")));
                 codes.InsertRange(startIndex, instructionsToInsert);
+            }
+            for (int i = 0; i < codes.Count; i++)
+            {
+                Log.Message($"[{i}] {codes[i]}");
             }
             return codes.AsEnumerable();
         }
