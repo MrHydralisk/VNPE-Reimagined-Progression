@@ -403,7 +403,6 @@ namespace VNPEReimaginedProgression
             List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
             for (int i = 0; i < codes.Count - 5; i++)
             {
-                Log.Message($"[{i}] {codes[i]}");
                 if (codes[i].opcode == OpCodes.Callvirt && codes[i].ToString().Contains("get_AmountStored()"))
                 {
                     startIndex = i;
@@ -420,10 +419,6 @@ namespace VNPEReimaginedProgression
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarg_0));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "CompRegisterIngredientsEmpty")));
                 codes.InsertRange(startIndex, instructionsToInsert);
-            }
-            for (int i = 0; i < codes.Count; i++)
-            {
-                Log.Message($"[{i}] {codes[i]}");
             }
             return codes.AsEnumerable();
         }
