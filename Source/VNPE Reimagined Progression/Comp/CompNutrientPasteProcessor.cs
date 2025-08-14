@@ -1,5 +1,6 @@
 ﻿using PipeSystem;
 using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -24,6 +25,9 @@ namespace VNPEReimaginedProgression
 
         private List<ThingDef> IngredientsList = new List<ThingDef>();
         protected List<Thing> ProducedThings = new List<Thing>();
+
+        public BillRepeatModeDef repeatMode = BillRepeatModeDefOf.Forever;
+        public int targetCount = 0;
 
         public int tickNextProduction;
         public int containedItems => ProducedThings.Sum((Thing t) => t.stackCount);
@@ -76,11 +80,29 @@ namespace VNPEReimaginedProgression
             {
                 return;
             }
+            int containedAmount = containedItems;
+            bool isContainedItems = containedAmount > 0;
             isRequireUnloading = false;
-            if (containedItems >= MaxCapacity)
+            if (containedAmount >= MaxCapacity)
             {
                 isRequireUnloading = true;
                 return;
+            }
+            if (repeatMode == BillRepeatModeDefOf.RepeatCount)
+            {
+                if (targetCount <= 0)
+                {
+                    isRequireUnloading = isContainedItems;
+                    return;
+                }
+            }
+            else if (repeatMode == BillRepeatModeDefOf.TargetCount)
+            {
+                if (CountProducts() >= targetCount)
+                {
+                    isRequireUnloading = isContainedItems;
+                    return;
+                }
             }
             pipeNet.DrawAmongStorage(Props.NutrientPasteCost, pipeNet.storages);
             tickNextProduction = Find.TickManager.TicksGame + Props.ticksPerProduction;
@@ -129,6 +151,10 @@ namespace VNPEReimaginedProgression
                     ProducedThings.Add(thingProduced);
                 }
             }
+            if (repeatMode == BillRepeatModeDefOf.RepeatCount)
+            {
+                targetCount -= Props.ItemProducedAmount;
+            }
             isProcessing = false;
         }
 
@@ -139,6 +165,33 @@ namespace VNPEReimaginedProgression
                 Thing thing = ProducedThings.PopFront();
                 GenPlace.TryPlaceThing(thing, parent.Position, parent.Map, ThingPlaceMode.Near);
             }
+        }
+
+        public int CountProducts()
+        {
+            int amount = parent.Map.resourceCounter.GetCount(Props.ItemProducedDef) + containedItems;
+            if (Props.pipeNetTarget != null && isEnabledUnloadingPipe && ResourceCompTarget?.PipeNet is PipeNet pipeNet)
+            {
+                amount += Mathf.RoundToInt(pipeNet.Stored);
+            }
+            return amount;
+        }
+
+        public string RepeatInfoText(int current, int total, BillRepeatModeDef billRepeatModeDef)
+        {
+            if (billRepeatModeDef == BillRepeatModeDefOf.Forever)
+            {
+                return "Forever".Translate();
+            }
+            if (billRepeatModeDef == BillRepeatModeDefOf.RepeatCount)
+            {
+                return total + "x";
+            }
+            if (billRepeatModeDef == BillRepeatModeDefOf.TargetCount)
+            {
+                return current + "/" + total;
+            }
+            throw new InvalidOperationException();
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -159,6 +212,17 @@ namespace VNPEReimaginedProgression
                 defaultLabel = "VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label".Translate(),
                 defaultDesc = "VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc".Translate(),
                 icon = ContentFinder<Texture2D>.Get("UI/Commands/SetTargetFuelLevel"),
+                Order = 30
+            };
+            yield return new Command_Action
+            {
+                action = delegate
+                {
+                    Find.WindowStack.Add(new Dialog_NutrientPasteProcessorSlider("VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Slider".Translate(Props.ItemProducedDef.label), this));
+                },
+                defaultLabel = "VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Label".Translate(),
+                defaultDesc = "VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Desc".Translate(RepeatInfoText(CountProducts(), targetCount, repeatMode)),
+                icon = ContentFinder<Texture2D>.Get("UI/Commands/LaunchReport"),
                 Order = 30
             };
             Command_Toggle command_Toggle = new Command_Toggle();
@@ -240,6 +304,7 @@ namespace VNPEReimaginedProgression
                     inspectStrings.Add("VNPEReimaginedProgression.Processor.InspectString.Require".Translate(Props.NutrientPasteCost));
                 }
             }
+            inspectStrings.Add(RepeatInfoText(CountProducts(), targetCount, repeatMode));
             return string.Join("\n", inspectStrings);
         }
 
@@ -258,6 +323,8 @@ namespace VNPEReimaginedProgression
             Scribe_Values.Look(ref isRequireUnloading, "isRequireUnloading");
             Scribe_Values.Look(ref isEnabledUnloading, "isEnabledUnloading");
             Scribe_Values.Look(ref isEnabledUnloadingPipe, "isEnabledUnloadingPipe");
+            Scribe_Values.Look(ref targetCount, "targetCount", 0);
+            Scribe_Defs.Look(ref repeatMode, "repeatMode");
         }
     }
 }

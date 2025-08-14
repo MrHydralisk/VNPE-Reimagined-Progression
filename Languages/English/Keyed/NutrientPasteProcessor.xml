@@ -4,6 +4,10 @@
 	<VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>Maximum will become {0}</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>
 	<VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>Maximum Stored</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>
 	<VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>Select the maximum amount of processed items, after reaching which it will require unloading.</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>
+
+	<VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Slider>Produce {0}</VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Slider>
+	<VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Label>Set Production Plan</VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Label>
+	<VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Desc>Change production plan from current: {0}.</VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Desc>
 	
 	<VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>Toggle auto unloading</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>
 	<VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>When active, colonists will automatically unload processed items from the processor as it is filling up.</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>

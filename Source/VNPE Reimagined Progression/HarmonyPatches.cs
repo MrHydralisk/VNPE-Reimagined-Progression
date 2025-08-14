@@ -73,7 +73,7 @@ namespace VNPEReimaginedProgression
             val.Patch(AccessTools.Method(typeof(Building_Dripper), "TickRare"), prefix: new HarmonyMethod(patchType, "BD_TickRare_Prefix", (Type[])null));
 
             val.Patch(AccessTools.Method(typeof(PipeNet), "DistributeAmongConverters", (Type[])null, (Type[])null), transpiler: new HarmonyMethod(patchType, "PN_DistributeAmongConverters_Transpiler"));
-            
+
             val.Patch(AccessTools.Method(typeof(CompRegisterIngredients), "CompTickRare"), transpiler: new HarmonyMethod(patchType, "CRI_CompTickRare_Transpiler"));
         }
 

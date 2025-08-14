@@ -4,6 +4,10 @@
 	<VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>Максимум станет {0}</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Slider>
 	<VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>Максимум хранения</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Label>
 	<VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>Выберите максимальное количество произведённых предметов, после достижения которого потребуется выгрузка.</VNPEReimaginedProgression.Processor.Gizmo.MaximumStored.Desc>
+
+	<VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Slider>Произвести {0}</VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Slider>
+	<VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Label>Задать план производства</VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Label>
+	<VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Desc>Изменить текущий план производства: {0}.</VNPEReimaginedProgression.Processor.Gizmo.ProductionBill.Desc>
 	
 	<VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>Переключить автовыгрузку</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Label>
 	<VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>Когда активно, колонисты будут автоматически выгружать произведённые предметы из переработчика по мере его заполнения.</VNPEReimaginedProgression.Processor.Gizmo.Unloading.Desc>
