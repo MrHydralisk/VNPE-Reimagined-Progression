@@ -155,7 +155,7 @@
 			<li>Foods</li>
 		</thingCategories>
 		<statBases>
-			<MarketValue>1</MarketValue>
+			<MarketValue>0.3</MarketValue>
 			<Mass>0.013</Mass>
 			<Nutrition>0.05</Nutrition>
 			<FoodPoisonChanceFixedHuman>0.1</FoodPoisonChanceFixedHuman>
