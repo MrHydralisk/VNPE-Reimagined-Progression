@@ -1,6 +1,5 @@
 ﻿using PipeSystem;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -325,7 +324,7 @@ namespace VNPEReimaginedProgression
             Scribe_Values.Look(ref isEnabledUnloadingPipe, "isEnabledUnloadingPipe");
             Scribe_Values.Look(ref targetCount, "targetCount", 0);
             Scribe_Defs.Look(ref repeatMode, "repeatMode");
-            if (Scribe.mode == LoadSaveMode.PostLoadInit && !(new List<BillRepeatModeDef> { BillRepeatModeDefOf.Forever, BillRepeatModeDefOf.RepeatCount, BillRepeatModeDefOf.TargetCount }).Contains(repeatMode)) 
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && !(new List<BillRepeatModeDef> { BillRepeatModeDefOf.Forever, BillRepeatModeDefOf.RepeatCount, BillRepeatModeDefOf.TargetCount }).Contains(repeatMode))
             {
                 repeatMode = BillRepeatModeDefOf.Forever;
             }

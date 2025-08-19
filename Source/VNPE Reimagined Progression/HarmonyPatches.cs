@@ -336,39 +336,37 @@ namespace VNPEReimaginedProgression
         }
         public static IEnumerable<CodeInstruction> PN_DistributeAmongConverters_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
         {
+            int startCount = 0;
             int startIndex = -1;
             int endIndex = -1;
             List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
             for (int i = 0; i < codes.Count - 1; i++)
             {
-                if (codes[i].IsStloc() && codes[i].ToString().Contains("10 (PipeSystem.CompConvertToThing)") && codes[i + 1].IsLdloc() && codes[i + 1].ToString().Contains("10 (PipeSystem.CompConvertToThing)"))
+                if (codes[i].opcode == OpCodes.Callvirt && codes[i].ToString().Contains("get_CanOutputNow"))
                 {
-                    startIndex = i;
-                    for (int j = startIndex + 1; j < codes.Count; j++)
+                    startCount++;
+                    if (startCount == 2)
                     {
-                        if (codes[j].opcode == OpCodes.Nop && codes[j + 1].IsLdloc() && codes[j + 1].ToString().Contains("9 (System.Int32"))
-                        {
-                            endIndex = j;
-                            break;
-                        }
+                        startIndex = i;
                     }
-                    if (endIndex > -1)
-                    {
-                        break;
-                    }
+                }
+                if (codes[i].opcode == OpCodes.Callvirt && codes[i].ToString().Contains("get_Count") && startCount == 2)
+                {
+                    endIndex = i;
+                    break;
                 }
             }
             if (startIndex > -1 && endIndex > -1)
             {
                 Label labelSkip = il.DefineLabel();
-                codes[endIndex].labels.Add(labelSkip);
+                codes[endIndex - 6].labels.Add(labelSkip);
                 List<CodeInstruction> instructionsToInsert = new List<CodeInstruction>();
-                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 10));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 5));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarga_S, 1));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloca_S, 0));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "DistributeAmongConvertersFloat")));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Brtrue_S, labelSkip));
-                codes.InsertRange(startIndex + 1, instructionsToInsert);
+                codes.InsertRange(startIndex - 1, instructionsToInsert);
             }
             return codes.AsEnumerable();
         }
@@ -386,7 +384,7 @@ namespace VNPEReimaginedProgression
                 int num3 = Mathf.Min(amount, compConvertToThing.MaxCanOutput);
                 if (num3 <= 0)
                 {
-                    return false;
+                    return true;
                 }
                 compConvertToThing.OutputResource(num3);
                 float storageCost = (float)num3 * VNPERP.storageCost;
