@@ -230,6 +230,7 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 			<Uranium>50</Uranium>
 		</costList>
+		<tradeNeverStack>true</tradeNeverStack>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
 			<li>BuildingsMisc</li>
