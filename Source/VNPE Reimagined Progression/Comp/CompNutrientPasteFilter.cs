@@ -186,7 +186,7 @@ namespace VNPEReimaginedProgression
                 int num = (int)(amountLeft / (float)Props.destroyOption.ratio);
                 for (int i = 0; i < num; i++)
                 {
-                    FilthMaker.TryMakeFilth(CellFinder.StandableCellNear(position, previousMap, Props.destroyOption.maxRadius), previousMap, Props.destroyOption.filth);
+                    FilthMaker.TryMakeFilth(CellFinder.StandableCellNear(position, previousMap, Props.destroyOption.maxRadius), previousMap, Props.destroyOption.thing);
                 }
             }
             base.PostDestroy(mode, previousMap);

@@ -12,6 +12,7 @@
 		<statBases>
 			<MarketValue>6.5</MarketValue>
 			<Mass>0.32</Mass>
+			<Nutrition>0.8</Nutrition>
 		</statBases>
 		<ingestible>
 			<preferability>MealAwful</preferability>
@@ -70,6 +71,7 @@
 		</graphicData>
 		<statBases>
 			<MarketValue>35</MarketValue>
+			<Nutrition>1</Nutrition>
 		</statBases>
 		<ingestible>
 			<preferability>MealLavish</preferability>

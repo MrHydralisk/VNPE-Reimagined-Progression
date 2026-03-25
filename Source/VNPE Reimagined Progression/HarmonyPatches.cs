@@ -89,6 +89,10 @@ namespace VNPEReimaginedProgression
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "BNG_Tick_AdditionalPaste")));
                 codes.InsertRange(targetIndex + 2, instructionsToInsert);
             }
+            else
+            {
+                Log.Error("[VNPERP] BNG_Tick_Transpiler failed");
+            }
             return codes.AsEnumerable();
         }
 
@@ -359,14 +363,18 @@ namespace VNPEReimaginedProgression
             if (startIndex > -1 && endIndex > -1)
             {
                 Label labelSkip = il.DefineLabel();
-                codes[endIndex - 6].labels.Add(labelSkip);
+                codes[endIndex - 7].labels.Add(labelSkip);
                 List<CodeInstruction> instructionsToInsert = new List<CodeInstruction>();
-                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 5));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 10));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarga_S, 1));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloca_S, 0));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "DistributeAmongConvertersFloat")));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Brtrue_S, labelSkip));
                 codes.InsertRange(startIndex - 1, instructionsToInsert);
+            }
+            else
+            {
+                Log.Error("[VNPERP] PN_DistributeAmongConverters_Transpiler failed");
             }
             return codes.AsEnumerable();
         }
@@ -417,6 +425,10 @@ namespace VNPEReimaginedProgression
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarg_0));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "CompRegisterIngredientsEmpty")));
                 codes.InsertRange(startIndex, instructionsToInsert);
+            }
+            else
+            {
+                Log.Error("[VNPERP] CRI_CompTickRare_Transpiler failed");
             }
             return codes.AsEnumerable();
         }
