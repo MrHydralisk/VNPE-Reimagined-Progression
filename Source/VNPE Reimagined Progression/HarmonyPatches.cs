@@ -75,6 +75,7 @@ namespace VNPEReimaginedProgression
             val.Patch(AccessTools.Method(typeof(PipeNet), "DistributeAmongConverters", (Type[])null, (Type[])null), transpiler: new HarmonyMethod(patchType, "PN_DistributeAmongConverters_Transpiler"));
 
             val.Patch(AccessTools.Method(typeof(CompRegisterIngredients), "CompTickRare"), transpiler: new HarmonyMethod(patchType, "CRI_CompTickRare_Transpiler"));
+            val.Patch(AccessTools.Method(typeof(CompConvertToThing), "OutputResource"), prefix: new HarmonyMethod(patchType, "CCTT_OutputResource_Prefix"));
         }
 
         public static IEnumerable<CodeInstruction> BNG_Tick_Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
@@ -436,6 +437,42 @@ namespace VNPEReimaginedProgression
         public static bool CompRegisterIngredientsEmpty(CompResourceStorage compResourceStorage, CompRegisterIngredients compRegisterIngredients)
         {
             return compRegisterIngredients.parent.Spawned && (compResourceStorage?.AmountStored ?? 1f) == 0f;
+        }
+
+        public static bool CCTT_OutputResource_Prefix(int amount, CompConvertToThing __instance)
+        {
+            ThingWithComps parent = __instance.parent;
+            if (VNPERPUtility.Defs_Feeder.Contains(parent.def))
+            {
+                PipeNet pipeNet = __instance.PipeNet;
+                VNPERPDefModExtension VNPERP = parent.def.GetModExtension<VNPERPDefModExtension>();
+                ThingDef mealDef = ThingDefOf.MealNutrientPaste;
+                if (VNPERP != null)
+                {
+                    mealDef = VNPERP.customMeal;
+                }
+                Thing thing = ThingMaker.MakeThing(mealDef);
+                CompIngredients compIngredients = thing.TryGetComp<CompIngredients>();
+                if (compIngredients != null)
+                {
+                    for (int i = 0; i < pipeNet.storages.Count; i++)
+                    {
+                        ThingWithComps parent2 = pipeNet.storages[i].parent;
+                        CompRegisterIngredients compRegisterIngredients = parent2.TryGetComp<CompRegisterIngredients>();
+                        if (compRegisterIngredients != null)
+                        {
+                            for (int j = 0; j < compRegisterIngredients.ingredients.Count; j++)
+                            {
+                                compIngredients.RegisterIngredient(compRegisterIngredients.ingredients[j]);
+                            }
+                        }
+                    }
+                }
+                thing.stackCount = amount;
+                GenPlace.TryPlaceThing(thing, parent.Position, parent.Map, ThingPlaceMode.Near);
+                return false;
+            }
+            return true;
         }
     }
 }
