@@ -364,9 +364,9 @@ namespace VNPEReimaginedProgression
             if (startIndex > -1 && endIndex > -1)
             {
                 Label labelSkip = il.DefineLabel();
-                codes[endIndex - 7].labels.Add(labelSkip);
+                codes[endIndex - 6].labels.Add(labelSkip);
                 List<CodeInstruction> instructionsToInsert = new List<CodeInstruction>();
-                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 10));
+                instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloc_S, 5));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldarga_S, 1));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Ldloca_S, 0));
                 instructionsToInsert.Add(new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(HarmonyPatches), "DistributeAmongConvertersFloat")));
